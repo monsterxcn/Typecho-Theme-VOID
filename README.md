@@ -4,7 +4,7 @@
 
 作为计算机术语时，VOID 的意思是「无类型」。
 
-[![](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)](https://github.com/monsterxcn/Typecho-Theme-VOID/actions)  [![](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)](https://github.com/monsterxcn/Typecho-Theme-VOID/releases)  ![](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
+![](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
 ## 特性
 
@@ -55,6 +55,9 @@
 * 新增：GitHub&QQ 账号快速评论
 * 新增：分享到 QQ
 * 新增：Instantpage v3.0
+* 优化：code 字体采用灰度显示
+* 优化：启用文章目录时默认不展开
+* 优化：社交分享图标右对齐
 
 **2020-04-11**
 
