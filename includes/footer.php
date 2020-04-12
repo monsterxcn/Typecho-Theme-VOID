@@ -5,7 +5,7 @@
  * 底栏
  *
  * @author      熊猫小A
- * @version     2019-01-15 0.1
+ * @version     2020-04-10 0.1
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];
@@ -13,12 +13,13 @@ $setting = $GLOBALS['VOIDSetting'];
         <footer>
             <div class="container wide">
                 <section>
-                    <p>© <?php echo date('Y '); ?> <span class="brand"><?php echo $this->options->title; ?></span></p>
-                    <p>感谢陪伴：<span id="uptime"></span></p>
+                    <p>吾有一刻：<span id="uptime"></span></p>
+                    <p>吾有一言：<span id="hitokito"></span></p>
                 </section>
                 <section>
-                    <p>Powered by <a href="http://typecho.org/">Typecho</a> • <a href="https://blog.imalan.cn/archives/247/">Theme VOID</a></p>
+                    <p><?php echo date('Y '); ?> © <span class="brand"><?php echo $this->options->title; ?></span></p>
                     <p><?php echo $setting['footer']; ?></p>
+                    <p>Platform <a href="http://typecho.org/" rel="nofollow">Typecho</a> • Theme <a href="https://blog.imalan.cn/archives/247/" rel="nofollow">VOID</a></p>
                 </section>
             </div>
         </footer>
@@ -115,7 +116,7 @@ $setting = $GLOBALS['VOIDSetting'];
                     console.log('ERROR: ' + error);
                 });
             } else {
-                console.log('Service workers are not supported in the current browser.');
+                console.log('Service worker is not supported in the current browser.');
             }
         </script>
         <?php else: ?>
@@ -168,5 +169,8 @@ $setting = $GLOBALS['VOIDSetting'];
         </script>
         <?php endif; ?>
         <?php $this->footer(); ?>
+
+        <!-- 添加 Instantpage v3.0 -->
+        <script src="<?php Utils::indexTheme('/assets/instantpage.js'); ?>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
     </body>
 </html>

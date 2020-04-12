@@ -4,13 +4,12 @@
 
 作为计算机术语时，VOID 的意思是「无类型」。
 
-![](https://raw.githubusercontent.com/AlanDecode/Typecho-Theme-VOID/master/screenshot.png)
-
-[![Build](https://github.com/AlanDecode/Typecho-Theme-VOID/workflows/Build/badge.svg)](https://github.com/AlanDecode/Typecho-Theme-VOID/actions) [![downloads](https://img.shields.io/github/downloads/AlanDecode/Typecho-Theme-VOID/total.svg?style=flat-square)](https://github.com/AlanDecode/Typecho-Theme-VOID/releases) [![](https://img.shields.io/github/release/AlanDecode/Typecho-Theme-VOID.svg?style=flat-square)](https://github.com/AlanDecode/Typecho-Theme-VOID/releases) ![](https://img.shields.io/github/license/AlanDecode/Typecho-Theme-VOID.svg?style=flat-square)
+[![](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)](https://github.com/monsterxcn/Typecho-Theme-VOID/actions)  [![](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)](https://github.com/monsterxcn/Typecho-Theme-VOID/releases)  ![](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
 ## 特性
 
-> 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)。
+> 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)
+
 > 特色演示：[示例页面](https://blog.imalan.cn/archives/194/)
 
 <details><summary>原始特性</summary><br>
@@ -54,6 +53,8 @@
 **2020-04-12**
 
 * 新增：GitHub&QQ 账号快速评论
+* 新增：分享到 QQ
+* 新增：Instantpage v3.0
 
 **2020-04-11**
 
@@ -108,7 +109,7 @@ gulp build
 
 ## 捐助
 
-**如果本项目对你有所帮助，请考虑捐助 [AlanDecode](https://wx1.sinaimg.cn/large/0060lm7Tly1g0c4cbi71lj30sc0iv453.jpg)**
+**如果本项目对你有所帮助，请考虑捐助 [AlanDecode](https://https://github.com/AlanDecode/Typecho-Theme-VOID)**
 
 ## License
 

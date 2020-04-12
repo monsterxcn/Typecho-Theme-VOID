@@ -641,6 +641,7 @@ article {
         font-size: 1.5rem;
         display: inline-flex;
         vertical-align: bottom;
+        float: right;
         i {
             color: $fadeColor;
             .theme-dark &{

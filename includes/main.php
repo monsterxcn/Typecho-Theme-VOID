@@ -5,7 +5,7 @@
  * 内容页面主要区域，PJAX 作用区域
  * 
  * @author      熊猫小A
- * @version     2019-01-15 0.1
+ * @version     2020-04-10 0.1
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];
@@ -43,15 +43,11 @@ $setting = $GLOBALS['VOIDSetting'];
                     <div class="social-button" 
                         data-url="<?php $this->permalink(); ?>"
                         data-title="<?php Contents::title($this); ?>" 
+                        data-site="<?php $this->options->title(); ?>"
                         data-excerpt="<?php $this->fields->excerpt(); ?>"
-                        data-img="<?php $this->fields->banner(); ?>" 
+                        data-img="<?php if($this->fields->banner != '') echo $this->fields->banner(); else echo $setting['defaultBanner']; ?>" 
                         data-twitter="<?php if($setting['twitterId']!='') echo $setting['twitterId']; else $this->author(); ?>"
-                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>"
-                        <?php if($this->fields->banner != '') echo 'data-image="'.$this->fields->banner.'"';?>>
-                        <?php if(!empty($setting['reward'])):?>
-                            <a data-fancybox="gallery-reward" role=button aria-label="赞赏" data-src="#reward" href="javascript:;" class="btn btn-normal btn-highlight">赏杯咖啡</a>
-                            <div hidden id="reward"><img src="<?php echo $setting['reward']; ?>"></div>
-                        <?php endif; ?>
+                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>">
                         <?php if($setting['VOIDPlugin']):?>
                             <a role=button 
                                 aria-label="为文章点赞" 
@@ -61,12 +57,16 @@ $setting = $GLOBALS['VOIDSetting'];
                                 data-type="up"
                                 data-table="content"
                                 class="btn btn-normal post-like vote-button"
-                            >ENJOY <span class="value"><?php echo $this->likes; ?></span>
-                            </a>
+                            >「赞」<span class="value" style="display:none;"><?php echo $this->likes; ?></span></a>
+                        <?php endif; ?>
+                        <?php if(!empty($setting['reward'])):?>
+                            <a data-fancybox="gallery-reward" role=button aria-label="赞赏" data-src="#reward" href="javascript:;" class="btn btn-normal btn-highlight">「赏」</a>
+                            <div hidden id="reward"><img src="<?php echo $setting['reward']; ?>"></div>
                         <?php endif; ?>
                         
-                        <a aria-label="分享到微博" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
-                        <a aria-label="分享到Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
+                        <a aria-label="分享到 QQ" href="javascript:void(0);" onclick="Share.toQQ(this);" class="social-button-icon"><i class="voidicon-qq"></i></a>
+                        <a aria-label="分享到 微博" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
+                        <a aria-label="分享到 Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
                     </div>
                 </article>
 
