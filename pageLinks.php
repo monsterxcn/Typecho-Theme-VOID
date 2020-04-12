@@ -5,7 +5,7 @@
  * @package custom
  *  
  * @author      Monst.x
- * @version     2020-04-11 0.1
+ * @version     2020-04-12 0.1
  * 
 */ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -57,14 +57,14 @@ if(!Utils::isPjax()){
                                 data-type="up"
                                 data-table="content"
                                 class="btn btn-normal post-like vote-button"
-                            >「赞」<span class="value TOFIX" style="display:none;"><?php echo $this->likes; ?></span></a>
+                            >「赞」<span class="value" style="display:none;"><?php echo $this->likes; ?></span></a>
                         <?php endif; ?>
                         <?php if(!empty($setting['reward'])):?>
                             <a data-fancybox="gallery-reward" role=button aria-label="赞赏" data-src="#reward" href="javascript:;" class="btn btn-normal btn-highlight">「赏」</a>
                             <div hidden id="reward"><img src="<?php echo $setting['reward']; ?>"></div>
                         <?php endif; ?>
                         
-                        
+                        <a aria-label="分享到 QQ" href="javascript:void(0);" onclick="Share.toQQ(this);" class="social-button-icon"><i class="voidicon-qq"></i></a>
                         <a aria-label="分享到 Weibo" href="javascript:void(0);" onclick="Share.toWeibo(this);" class="social-button-icon"><i class="voidicon-weibo"></i></a>
                         <a aria-label="分享到 Twitter" href="javascript:void(0);" onclick="Share.toTwitter(this);" class="social-button-icon"><i class="voidicon-twitter"></i></a>
                     </div>

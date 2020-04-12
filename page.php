@@ -5,7 +5,7 @@
  * 独立页面
  * 
  * @author      熊猫小A
- * @version     2019-01-15 0.1
+ * @version     2020-04-10 0.1
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 

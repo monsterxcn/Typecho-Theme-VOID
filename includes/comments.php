@@ -5,7 +5,7 @@
  * 评论区
  * 
  * @author      熊猫小A
- * @version     2019-01-15 0.1
+ * @version     2020-04-10 0.1
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];
@@ -85,50 +85,50 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                     return typeof obj == "undefined" || obj == null || obj == "";
                 }
                 $(document).on("input propertychange", "#githubNum", function (event) {
-                        event.preventDefault();
-                        let oldVal = $(this).val();
-                        let github = window.setTimeout(function () {
-                            let newVal = $("#githubNum").val();
-                            if (newVal.length > 0 && oldVal === $("#githubNum").val()) {
-                                $.ajax({
-                                    url: 'https://api.github.com/users/' + newVal,
-                                    dataType: 'jsonp',
-                                    scriptCharset: "GBK",
-                                    contentType: "text/html; charset=GBK",
-                                    success: function (data) {
-                                        console.log(data);
-                                        let personal = data["data"];
-                                        $('#author').val(isEmpty(personal["name"]) ? personal["login"] : personal["name"]);
-                                        $('#url').val(isEmpty(personal["blog"]) ? personal["html_url"] : personal["blog"]);
-                                        $('#mail').val(isEmpty(personal["email"]) ? "null@example.com" : personal["email"]);
-                                    }
-                                })
-                            }
-                        // 500ms 发起一次请求
-                        }, 500);
+                    event.preventDefault();
+                    let oldVal = $(this).val();
+                    let github = window.setTimeout(function () {
+                        let newVal = $("#githubNum").val();
+                        if (newVal.length > 0 && oldVal === $("#githubNum").val()) {
+                            $.ajax({
+                                url: 'https://api.github.com/users/' + newVal,
+                                dataType: 'jsonp',
+                                scriptCharset: "GBK",
+                                contentType: "text/html; charset=GBK",
+                                success: function (data) {
+                                    // console.log(data);
+                                    let personal = data["data"];
+                                    $('#author').val(isEmpty(personal["name"]) ? personal["login"] : personal["name"]);
+                                    $('#url').val(isEmpty(personal["blog"]) ? personal["html_url"] : personal["blog"]);
+                                    $('#mail').val(isEmpty(personal["email"]) ? "null@example.com" : personal["email"]);
+                                }
+                            })
+                        }
+                    // 500ms 发起一次请求
+                    }, 500);
                 });
                 $(document).on("input propertychange", "#qqNum", function (event) {
-                        event.preventDefault();
-                        let oldVal = $(this).val();
-                        let qq = window.setTimeout(function () {
-                            let newVal = $("#qqNum").val();
-                            if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
-                                $.ajax({
-                                    url: 'https://api.krait.cn/?interface=personage&target=tencent&object=' + newVal,
-                                    dataType: 'jsonp',
-                                    jsonpCallback: 'portraitCallBack',
-                                    scriptCharset: "GBK",
-                                    contentType: "text/html; charset=GBK",
-                                    success: function (data) {
-                                        console.log(data);
-                                        $('#author').val(isEmpty(data["nickname"]) ? "Mysterio" : data["nickname"]);
-                                        $('#url').val("https://user.qzone.qq.com/");
-                                        $('#mail').val(isEmpty(data["email"]) ? "null@example.com" : data["email"]);
-                                    }
-                                })
-                            }
-                        // 500ms 发起一次请求
-                        }, 500);
+                    event.preventDefault();
+                    let oldVal = $(this).val();
+                    let qq = window.setTimeout(function () {
+                        let newVal = $("#qqNum").val();
+                        if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
+                            $.ajax({
+                                url: 'https://api.krait.cn/?interface=personage&target=tencent&object=' + newVal,
+                                dataType: 'jsonp',
+                                jsonpCallback: 'portraitCallBack',
+                                scriptCharset: "GBK",
+                                contentType: "text/html; charset=GBK",
+                                success: function (data) {
+                                    // console.log(data);
+                                    $('#author').val(isEmpty(data["nickname"]) ? "Mysterio" : data["nickname"]);
+                                    $('#url').val("https://user.qzone.qq.com/");
+                                    $('#mail').val(isEmpty(data["email"]) ? "null@example.com" : data["email"]);
+                                }
+                            })
+                        }
+                    // 500ms 发起一次请求
+                    }, 500);
                 });
             </script>
 
@@ -136,7 +136,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
         
         <!--历史评论-->
         <h3 class="comment-separator">
-            <div class="comment-tab-current">
+            <div class="comment-tab-current" id="pjax-container">
                 <?php if($this->allow('comment')): ?>
                     <span class="comment-num">
                         <?php $this->commentsNum('这里还没有评论呢 >.<', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?>
@@ -148,7 +148,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
         </h3>
         <?php if ($comments->have()): ?>
             <?php $comments->listComments(array(
-            'before'        =>  '<div class="comment-list">',
+            'before'        =>  '<div class="comment-list" id="pjax-container">',
             'after'         =>  '</div>',
             'avatarSize'    =>  64,
             'dateFormat'    =>  'Y-m-d H:i'
