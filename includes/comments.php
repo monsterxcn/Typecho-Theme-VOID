@@ -54,6 +54,12 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                             placeholder="网站<?php echo Helper::options()->commentsRequireURL? '(必填)' : '(选填)' ?>"  
                             value="<?php $this->remember('url'); ?>" />
                         </div>
+                        <!-- 移动端快速评论自动隐藏，否则 input 繁杂难看，中间的 display:none input 用于对齐 -->
+                        <div class="comment-info-input fastcomment">
+                        <input aria-label=" GitHub 账号快速评论" type="text" id="githubNum" for="githubNum" placeholder=" GitHub 账号快速评论" value="<?php $this->remember('githubNum'); ?>" style="margin-right:2px;" />
+                        <input style="display:none;">
+                        <input aria-label=" QQ 账号快速评论" type="text" id="qqNum" for="qqNum" placeholder=" QQ 账号快速评论" value="<?php $this->remember('qqNum'); ?>" style="margin-left:2px;" />
+                        </div>
                     <?php endif; ?>
                     <p style="margin-top:0">
                         <textarea aria-label="评论输入框" class="input-area" rows="5" name="text" id="textarea" 
@@ -72,6 +78,60 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                     </p>
                 </form>
             </div>
+
+            <!-- GitHub&QQ 账号快速评论 -->
+            <script>
+                function isEmpty(obj) {
+                    return typeof obj == "undefined" || obj == null || obj == "";
+                }
+                $(document).on("input propertychange", "#githubNum", function (event) {
+                        event.preventDefault();
+                        let oldVal = $(this).val();
+                        let github = window.setTimeout(function () {
+                            let newVal = $("#githubNum").val();
+                            if (newVal.length > 0 && oldVal === $("#githubNum").val()) {
+                                $.ajax({
+                                    url: 'https://api.github.com/users/' + newVal,
+                                    dataType: 'jsonp',
+                                    scriptCharset: "GBK",
+                                    contentType: "text/html; charset=GBK",
+                                    success: function (data) {
+                                        console.log(data);
+                                        let personal = data["data"];
+                                        $('#author').val(isEmpty(personal["name"]) ? personal["login"] : personal["name"]);
+                                        $('#url').val(isEmpty(personal["blog"]) ? personal["html_url"] : personal["blog"]);
+                                        $('#mail').val(isEmpty(personal["email"]) ? "null@example.com" : personal["email"]);
+                                    }
+                                })
+                            }
+                        // 500ms 发起一次请求
+                        }, 500);
+                });
+                $(document).on("input propertychange", "#qqNum", function (event) {
+                        event.preventDefault();
+                        let oldVal = $(this).val();
+                        let qq = window.setTimeout(function () {
+                            let newVal = $("#qqNum").val();
+                            if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
+                                $.ajax({
+                                    url: 'https://api.krait.cn/?interface=personage&target=tencent&object=' + newVal,
+                                    dataType: 'jsonp',
+                                    jsonpCallback: 'portraitCallBack',
+                                    scriptCharset: "GBK",
+                                    contentType: "text/html; charset=GBK",
+                                    success: function (data) {
+                                        console.log(data);
+                                        $('#author').val(isEmpty(data["nickname"]) ? "Mysterio" : data["nickname"]);
+                                        $('#url').val("https://user.qzone.qq.com/");
+                                        $('#mail').val(isEmpty(data["email"]) ? "null@example.com" : data["email"]);
+                                    }
+                                })
+                            }
+                        // 500ms 发起一次请求
+                        }, 500);
+                });
+            </script>
+
         <?php endif; ?>
         
         <!--历史评论-->
@@ -79,10 +139,10 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
             <div class="comment-tab-current">
                 <?php if($this->allow('comment')): ?>
                     <span class="comment-num">
-                        <?php $this->commentsNum('评论列表', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?>
+                        <?php $this->commentsNum('这里还没有评论呢 >.<', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?>
                     </span>
                 <?php else :?>
-                    <span class="comment-num">此处评论已关闭</span>
+                    <span class="comment-num">此处评论被关闭啦 ~</span>
                 <?php endif;?>
             </div>
         </h3>

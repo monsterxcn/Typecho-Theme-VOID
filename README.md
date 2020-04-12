@@ -11,6 +11,9 @@
 ## 特性
 
 > 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)。
+> 特色演示：[示例页面](https://blog.imalan.cn/archives/194/)
+
+<details><summary>原始特性</summary><br>
 
 * 响应式设计
 * PJAX 无刷新体验
@@ -32,7 +35,9 @@
 * 完整的结构化数据支持
 * 够用的后台设置与丰富的高级设置
 
-结合附带的配套专用插件，还有更多功能：
+</details>
+
+<details><summary>插件功能</summary><br>
 
 * 浏览量统计
 * 文章点赞
@@ -40,9 +45,15 @@
 * 评论投票与自动折叠
 * 访客互动展示
 
-以及其他很多细节，总之用起来还算舒服。我建立了一个示例页面，在这里你可以看到 VOID 对常用写作元素的支持以及一些特色功能演示：[示例页面](https://blog.imalan.cn/archives/194/)。
+</details>
+
+以及其他很多细节，总之用起来还算舒服。
 
 ## 更新日志
+
+**2020-04-12**
+
+* 新增：GitHub&QQ 账号快速评论
 
 **2020-04-11**
 
@@ -51,21 +62,53 @@
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
+## 开发与自定义
+
+**You are on your own.**
+
+准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
+如果你对自己的更改很满意，**欢迎提出 Pull Request**。
+
+> 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
+
+```bash
+git clone https://github.com/monsterxcn/Typecho-Theme-VOID ./VOID && cd ./VOID
+
+# 使用 cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+--cache=$HOME/.npm/.cache/cnpm \
+--disturl=https://npm.taobao.org/mirrors/node \
+--userconfig=$HOME/.cnpmrc"
+
+# 安装依赖
+cnpm install -g gulp
+cnpm install
+
+# 打包依赖的 JS 和 CSS
+gulp dev
+
+# 构建主题，生成的主题位于 ./build 目录下
+gulp build
+
+# 主题的样式是用 SCSS 写的
+# 使用喜欢的方式编译 SCSS，或者使用这个
+gulp sass
+
+# 监听 SCSS 更改然后实时编译。
+# 尽请添加自己想要的功能，满意后就提交代码。然后：
+gulp build
+```
+
+
 ## 鸣谢
 
-### 开源项目
-
 [JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher)
-
-### 其他
 
 [RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
 
 ## 捐助
 
-**如果本项目对你有所帮助，请考虑捐助 AlanDecode**
-
-![谢谢支持](https://wx1.sinaimg.cn/large/0060lm7Tly1g0c4cbi71lj30sc0iv453.jpg)
+**如果本项目对你有所帮助，请考虑捐助 [AlanDecode](https://wx1.sinaimg.cn/large/0060lm7Tly1g0c4cbi71lj30sc0iv453.jpg)**
 
 ## License
 
