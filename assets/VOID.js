@@ -6,8 +6,6 @@
 // Author: 熊猫小A
 // Link: https://blog.imalan.cn/archives/247/
 
-console.log(' %c Theme VOID %c https://blog.imalan.cn/archives/247/ ', 'color: #fadfa3; background: #23b7e5; padding:5px;', 'background: #1c2b36; padding:5px;');
-
 var VOID_Content = {
     countWords: function () {
         if ($('#totalWordCount').length) {
@@ -44,7 +42,7 @@ var VOID_Content = {
             });
             // 检查目录
             if(window.innerWidth >= 1200) {
-                TOC.open();
+                TOC.close();
             } 
         }
     },
@@ -390,12 +388,21 @@ var Share = {
         item = $(item).parent();
         return {
             url: $(item).attr('data-url'),
+            site: $(item).attr('data-site'),
             title: $(item).attr('data-title'),
             excerpt: $(item).attr('data-excerpt'),
             img: $(item).attr('data-img'),
             twitter: $(item).attr('data-twitter'),
             weibo: $(item).attr('data-weibo'),
         };
+    },
+
+    toQQ: function (item) {
+        var content = Share.parseItem(item);
+        var url = 'http://connect.qq.com/widget/shareqq/index.html?url='+ content.url +'&title='+ content.title +'&source='+ content.site
+            +'&summary='+ content.excerpt
+            +'&pics='+ content.img ;
+        window.open(url);
     },
 
     toWeibo: function (item) {
@@ -616,6 +623,6 @@ var AjaxComment = {
         var minutes = Math.floor(times / 60); //separate minutes
         times %= 60; //subtract entire minutes
         var seconds = Math.floor(times / 1); // remainder is seconds
-        $('#uptime').html(days + ' 天 ' + hours + ' 小时 ' + minutes + ' 分 ' + seconds + ' 秒 ');
+        $('#uptime').html(days + ' 天 ' + hours + ' 时 ' + minutes + ' 分 ' + seconds + ' 秒 ');
     }, 1000);
 })();
