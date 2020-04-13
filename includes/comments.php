@@ -114,7 +114,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                         let newVal = $("#qqNum").val();
                         if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
                             $.ajax({
-                                url: 'https://monsterx.cn/API/fastComment?qNum=' + newVal,
+                                url: '<?php Utils::indexTheme('/libs/Qinfo.php'); ?>?qNum=' + newVal,
                                 dataType: 'jsonp',
                                 scriptCharset: "GBK",
                                 contentType: "text/html; charset=GBK",
