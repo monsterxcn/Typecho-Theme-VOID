@@ -242,7 +242,7 @@ header{
         }
     }
     &.pull-up {
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.52);
         .container nav span.dropdown ul {
             box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.7);
         }
@@ -253,10 +253,10 @@ body:not(.theme-dark) header {
     &.force-dark, &.pull-up {
         /* 强制深色，防止在浅色背景下表现差劲 */
         @supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
-            background: rgba(0, 0, 0, 0.86)
+            background: rgba(0, 0, 0, 0.7)
         }
         .container .dropdown ul {
-            background: rgba(0, 0, 0, 0.86)
+            background: rgba(0, 0, 0, 0.7)
         }
     }
 }
