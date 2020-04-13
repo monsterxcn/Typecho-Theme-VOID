@@ -56,7 +56,7 @@ if (isset($_POST['void_action'])) {
 
     <!--CSS-->
     <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/bundle-1e9bf597b1.css');?>">
-    <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/VOID-8c2e3d512d.css');?>">
+    <link rel="stylesheet" href="<?php Utils::indexTheme('/assets/VOID-9462ca8ff6.css');?>">
 
     <!--JS-->
     <script src="<?php Utils::indexTheme('/assets/bundle-header-ce69662a98.js'); ?>"></script>
