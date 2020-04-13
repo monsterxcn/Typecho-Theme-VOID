@@ -390,6 +390,9 @@ article {
     del:not(:hover) {
         color: transparent!important;
         background: #ddd!important;
+        .theme-dark & {
+            background: rgba(#ddd, 0.5);
+        }
         * {
             opacity: 0!important;
         }
@@ -405,6 +408,10 @@ article {
     padding-top: 1em;
     margin-left: -15px;
     width: calc(100% + 15px);
+    .theme-dark & .board-title {
+        color:#b0b0b0;
+        background:#333;
+    }
     .board-item {
         position: relative;
         background: white;
@@ -417,6 +424,9 @@ article {
         border: none !important;
         &.hover {
             transform: scale(0.95);
+        }
+        .theme-dark &.hover {
+            background: #222;
         }
         @media screen and (min-width: 768px) {
             &:hover {
@@ -438,6 +448,9 @@ article {
                 margin: 0;
                 padding: 0;
                 transition: $animationTime-very-slow ease-in-out opacity;
+            }
+            .theme-dark & {
+                filter: brightness(55%);
             }
         }
         .board-title,

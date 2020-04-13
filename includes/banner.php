@@ -3,7 +3,7 @@
  * banner.php
  *  
  * @author      熊猫小A
- * @version     2019-01-17 0.1
+ * @version     2020-04-10 0.1
  * 
 */ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -21,7 +21,7 @@ if($this->is('post') || $this->is('page')) {
     <?php 
         if(empty($banner)) echo ' no-banner';
         else echo ' loading dark';
-        if($this->is('index')) echo ' index';
+        if($this->is('index')) echo ' index lazy-wrap-index';
         if($this->is('archive') && !$this->have()) echo ' not-found'; ?>">
 
     <?php if(!empty($banner)): ?>

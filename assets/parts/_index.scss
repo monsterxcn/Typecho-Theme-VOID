@@ -6,6 +6,9 @@ main{
     .theme-dark & {
         background: $td-bgColor;
     }
+    .lazy-wrap-index{
+        min-height: 100vh;
+    }
     .lazy-wrap{
         width: 100%;
         overflow: hidden;
