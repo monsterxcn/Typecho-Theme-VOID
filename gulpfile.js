@@ -90,6 +90,8 @@ gulp.task('move', function () {
         .pipe(gulp.dest('./build/assets/'));
     gulp.src(['./assets/fonts/*'])
         .pipe(gulp.dest('./build/assets/fonts/'));
+    gulp.src(['./libs/hitokoto.txt'])
+        .pipe(gulp.dest('./build/libs/'));
     return gulp.src(['./LICENSE',
         './README.md',
         './screenshot.png',
