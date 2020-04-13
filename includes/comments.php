@@ -114,9 +114,8 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                         let newVal = $("#qqNum").val();
                         if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
                             $.ajax({
-                                url: 'https://api.krait.cn/?interface=personage&target=tencent&object=' + newVal,
+                                url: 'https://monsterx.cn/API/fastComment?qNum=' + newVal,
                                 dataType: 'jsonp',
-                                jsonpCallback: 'portraitCallBack',
                                 scriptCharset: "GBK",
                                 contentType: "text/html; charset=GBK",
                                 success: function (data) {

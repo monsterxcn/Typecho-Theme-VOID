@@ -70,10 +70,12 @@
 
 **You are on your own.**
 
-准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
-如果你对自己的更改很满意，**欢迎提出 Pull Request**。
+> This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
 
 > 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
+
+准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
+如果你对自己的更改很满意，**欢迎提出 Pull Request**。
 
 ```bash
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID ./VOID && cd ./VOID
