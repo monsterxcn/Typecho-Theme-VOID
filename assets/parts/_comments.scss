@@ -31,6 +31,11 @@
         }
     }
     form{
+        .comment-fast{
+            @media screen and (max-width:767px){
+                display:none;
+            }
+        }
         .comment-info-input{
             display: flex;
             flex-flow: row wrap;
