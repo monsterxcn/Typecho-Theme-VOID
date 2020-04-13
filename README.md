@@ -50,6 +50,14 @@
 
 ## 更新日志
 
+**2020-04-13**
+
+* 新增：傻瓜式集成 QQAPI
+* 优化：`del` 字体采用灰度 `:hover`
+* 优化：快速评论框小屏幕隐藏
+* 调整：`highlightColor` 由 `#bd6262` 改为 `#87cefa`
+* 调整：首页卡片风格 [commit 9ac734](https://github.com/monsterxcn/Typecho-Theme-VOID/commit/9ac734abb6a71b0f87bf72ae6a15bf52185bcd00)
+
 **2020-04-12**
 
 * 新增：GitHub&QQ 账号快速评论
