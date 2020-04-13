@@ -9,12 +9,19 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];
+
+if (isset($setting['assetsCDN'])) {
+    $assetsUrl = $setting['assetsCDN'];
+}
+else {
+    $assetsUrl = $this->options->themeUrl.'/assets';
+}
 ?>
         <footer>
             <div class="container wide">
                 <section>
                     <p>吾有一刻：<span id="uptime"></span></p>
-                    <p>吾有一言：<span id="hitokito"></span></p>
+                    <p>吾有一言：<span id="hitokoto"></span></p>
                 </section>
                 <section>
                     <p><?php echo date('Y '); ?> © <span class="brand"><?php echo $this->options->title; ?></span></p>
@@ -131,18 +138,18 @@ $setting = $GLOBALS['VOIDSetting'];
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php Utils::indexTheme('/assets/bundle.js'); ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle.js'; ?>"></script>
         <?php if($setting['enableMath']): ?>
-        <script src='<?php Utils::indexTheme('/assets/libs/mathjax/2.7.4/MathJax.js'); ?>'></script>
+        <script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>
         <?php endif; ?>
-        <script src="<?php Utils::indexTheme('/assets/VOID.js'); ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>
         <script>
         if($(".OwO").length > 0){
             new OwO({
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: '<?php Utils::indexTheme('/assets/libs/owo/OwO_02.json'); ?>',
+                api: '<?php echo $assetsUrl.'/libs/owo/OwO_03.json'; ?>',
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
@@ -170,7 +177,6 @@ $setting = $GLOBALS['VOIDSetting'];
         <?php endif; ?>
         <?php $this->footer(); ?>
 
-        <!-- 添加 Instantpage v3.0 -->
-        <script src="<?php Utils::indexTheme('/assets/instantpage.js'); ?>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+        <script src="<?php echo $assetsUrl.'/instantpage.js'; ?>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
     </body>
 </html>

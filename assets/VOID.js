@@ -134,6 +134,20 @@ var VOID_Content = {
         }
     },
 
+    hitokoto: function () {
+        $.ajax({
+            url: 'https://test.monsterx.cn/usr/themes/VOID/libs/Hitokoto.php',
+            async: true,
+            dataType: 'jsonp',
+            jsonpCallback: 'portraitCallBack',
+            scriptCharset: "GBK",
+            contentType: "text/html; charset=GBK",
+            success: function (data) {
+                $('#hitokoto').html(data["msg"]);
+            }
+        });
+    },
+
     hyphenate: function() {
         $('div.articleBody p, div.articleBody blockquote').hyphenate('en-us');
     }
@@ -158,6 +172,7 @@ var VOID = {
         VOID_Content.parseUrl();
         VOID_Content.pangu();
         VOID_Content.bigfoot();
+        VOID_Content.hitokoto();
         VOID_Content.math();
         VOID_Content.hyphenate();
         
@@ -212,6 +227,7 @@ var VOID = {
         VOID_Content.hyphenate();
         VOID_Content.pangu();
         VOID_Content.bigfoot();
+        VOID_Content.hitokoto();
 
         VOID_Vote.reload();
 

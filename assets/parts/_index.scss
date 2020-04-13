@@ -7,7 +7,7 @@ main{
         background: $td-bgColor;
     }
     .lazy-wrap-index{
-        min-height: 100vh;
+        min-height: 100vh !important;
     }
     .lazy-wrap{
         width: 100%;
