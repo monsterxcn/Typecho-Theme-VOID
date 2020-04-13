@@ -49,7 +49,7 @@ try {
         ),
         JSON_UNESCAPED_UNICODE
     );
-    echo $json;
+    echo "portraitCallBack(" . $json . ");";
 } catch (Exception $e) {
     echo $e;
 }

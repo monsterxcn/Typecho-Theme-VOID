@@ -55,7 +55,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                             value="<?php $this->remember('url'); ?>" />
                         </div>
                         <!-- 移动端快速评论自动隐藏，否则 input 繁杂难看，中间的 display:none input 用于对齐 -->
-                        <div class="comment-info-input fastcomment">
+                        <div class="comment-info-input comment-fast">
                         <input aria-label=" GitHub 账号快速评论" type="text" id="githubNum" for="githubNum" placeholder=" GitHub 账号快速评论" value="<?php $this->remember('githubNum'); ?>" style="margin-right:2px;" />
                         <input style="display:none;">
                         <input aria-label=" QQ 账号快速评论" type="text" id="qqNum" for="qqNum" placeholder=" QQ 账号快速评论" value="<?php $this->remember('qqNum'); ?>" style="margin-left:2px;" />
@@ -116,6 +116,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                             $.ajax({
                                 url: '<?php Utils::indexTheme('/libs/Qinfo.php'); ?>?qNum=' + newVal,
                                 dataType: 'jsonp',
+                                jsonpCallback: 'portraitCallBack',
                                 scriptCharset: "GBK",
                                 contentType: "text/html; charset=GBK",
                                 success: function (data) {
