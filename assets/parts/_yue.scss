@@ -121,6 +121,9 @@
     max-width: 100%;
     height: auto;
     margin: 0.2em 0;
+    .theme-dark & {
+        filter:brightness(60%);
+    }
 }
 .yue a img {
     /* Remove border on IE */
@@ -250,6 +253,7 @@
     border-radius: 3px;
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     .theme-dark & {
+        color: rgba(176,176,176, 0.76);
         background: $td-bgColor-dark;
     }
 }

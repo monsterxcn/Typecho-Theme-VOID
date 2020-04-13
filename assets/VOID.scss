@@ -16,7 +16,7 @@ html{
 
 .theme-dark ::selection {
     color: white;
-    background-color: #ffe150;
+    background-color: #b3d4fc;
 }
 
 *{
@@ -167,7 +167,7 @@ img.blured-placeholder {
 p.notice {
     padding: 0.5rem;
     padding-left: 0.75rem;
-    border-left: solid 4px #fbbc05;
+    border-left: solid 4px #556FB5;
     background: rgba(0, 0, 25, 0.025);
     .theme-dark & {
         background: rgba(230, 230, 255, 0.03);
@@ -388,7 +388,7 @@ p.notice {
                 width: 62px;
                 height: 62px;
                 line-height: 62px;
-                color: #ffe150;
+                color: #556FB5;
                 border-radius: 50%;
                 &:hover {
                     background: #f5f5f5;
@@ -467,7 +467,7 @@ p.notice {
                     padding: 5px;
                     border-radius: 4px;
                     &.checked {
-                        background: #ffe150;
+                        background: #556FB5;
                         .theme-dark & {
                             background: $headerBgColor;
                         }

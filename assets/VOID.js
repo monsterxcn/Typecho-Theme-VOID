@@ -221,7 +221,7 @@ var VOID = {
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: '/usr/themes/VOID/assets/libs/owo/OwO_02.json',
+                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/OwO.json',
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
