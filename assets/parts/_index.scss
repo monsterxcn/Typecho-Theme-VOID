@@ -8,6 +8,9 @@ main{
     }
     .lazy-wrap-index{
         min-height: 100vh !important;
+        @media screen and (max-width:767px) {
+            min-height: 40vh !important;
+        }
     }
     .lazy-wrap{
         width: 100%;

@@ -140,10 +140,10 @@ var VOID_Content = {
             async: true,
             dataType: 'jsonp',
             jsonpCallback: 'portraitCallBack',
-            scriptCharset: "GBK",
-            contentType: "text/html; charset=GBK",
+            scriptCharset: 'GBK',
+            contentType: 'text/html; charset=GBK',
             success: function (data) {
-                $('#hitokoto').html(data["msg"]);
+                $('#hitokoto').html(data['msg']);
             }
         });
     },
