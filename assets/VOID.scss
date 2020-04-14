@@ -310,10 +310,13 @@ p.notice {
         }
         &#go-top{
             display: none;
-            @media screen and (min-width: 1199.5px){
-                &.show {
-                    display: block;
-                }   
+            //@media screen and (min-width: 1199.5px){
+            //    &.show {
+            //        display: block;
+            //    }
+            //}
+            &.show {
+                display: block !important;
             }
         }
     }
