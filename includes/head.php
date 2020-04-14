@@ -65,7 +65,7 @@ else {
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-1e9bf597b1.css'; ?>">
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-831dfc2be8.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-9c661feb25.css'; ?>">
     <script src="<?php echo $assetsUrl.'/bundle-header-ce69662a98.js'; ?>"></script>
     <script>
     VOIDConfig = {
