@@ -138,7 +138,7 @@ else {
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-0c57b77b73.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-332b3f4d01.js'; ?>"></script>
         <?php if($setting['enableMath']): ?>
         <script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>
         <?php endif; ?>
@@ -149,7 +149,7 @@ else {
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: '<?php echo $assetsUrl.'/libs/owo/OwO_03.json'; ?>',
+                api: '<?php echo $assetsUrl.'/libs/owo/owo.json'; ?>',
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
