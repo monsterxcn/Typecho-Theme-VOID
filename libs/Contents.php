@@ -194,6 +194,8 @@ Class Contents
             array('Contents', 'parseAruBiaoqingCallback'), $content);
         $content = preg_replace_callback('/\:\&\(\s*(.*?)\s*\)/is',
             array('Contents', 'parseQuyinBiaoqingCallback'), $content);
+        $content = preg_replace_callback('/\:\&\(\s*(.*?)\s*\)/is',
+            array('Contents', 'parseQqBiaoqingCallback'), $content);
 
         return $content;
     }
@@ -205,7 +207,7 @@ Class Contents
      */
     private static function parsePaopaoBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/VOID/assets/libs/owo/biaoqing/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="biaoqing" src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/paopao/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -215,7 +217,7 @@ Class Contents
      */
     private static function parseAruBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/VOID/assets/libs/owo/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+        return '<img class="biaoqing" src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
     }
 
     /**
@@ -225,7 +227,17 @@ Class Contents
      */
     private static function parseQuyinBiaoqingCallback($match)
     {
-        return '<img class="biaoqing" src="/usr/themes/VOID/assets/libs/owo/biaoqing/quyin/'. str_replace('%', '', urlencode($match[1])) . '.png">';
+        return '<img class="biaoqing" src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/quyin/'. str_replace('%', '', urlencode($match[1])) . '.png">';
+    }
+
+    /**
+     * QQ 表情回调函数
+     * 
+     * @return string
+     */
+    private static function parseQqBiaoqingCallback($match)
+    {
+        return '<img class="biaoqing" src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/qq/'. str_replace('%', '', urlencode($match[1])) . '.gif">';
     }
 
     /**

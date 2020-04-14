@@ -39,7 +39,7 @@ $(function() {
             logo: 'OωO',
             container: document.getElementsByClassName('OwO')[0],
             target: document.getElementById('text'),
-            api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/OwO.json',
+            api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/owo.json',
             position: 'down',
             width: '400px',
             maxHeight: '250px'

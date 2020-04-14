@@ -130,7 +130,7 @@ class VOID_Widget_Comments_Archive extends Widget_Abstract_Comments
     $this->alt(' comment-odd', ' comment-even');
     echo $commentClass;
 ?>">
-    <div class="comment-content-wrap">
+    <div class="comment-content-wrap" id="pjax-container">
         <div class="comment-meta">
             <div class="comment-author">
                 <span class="comment-avatar<?php echo $avatarClass; ?>"><?php $this->gravatar($singleCommentOptions->avatarSize, $singleCommentOptions->defaultAvatar); ?></span>
