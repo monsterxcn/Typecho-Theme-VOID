@@ -9,6 +9,7 @@
  * 
 */ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+$setting = $GLOBALS['VOIDSetting'];
 
 if(!Utils::isPjax()){
     $this->need('includes/head.php');
@@ -46,11 +47,11 @@ if(!Utils::isPjax()){
                     <div class="social-button" 
                         data-url="<?php $this->permalink(); ?>"
                         data-title="<?php Contents::title($this); ?>" 
+                        data-site="<?php $this->options->title(); ?>"
                         data-excerpt="<?php $this->fields->excerpt(); ?>"
-                        data-img="<?php $this->fields->banner(); ?>" 
+                        data-img="<?php if($this->fields->banner != '') echo $this->fields->banner(); else echo $setting['defaultBanner']; ?>" 
                         data-twitter="<?php if($setting['twitterId']!='') echo $setting['twitterId']; else $this->author(); ?>"
-                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>"
-                        <?php if($this->fields->banner != '') echo 'data-image="'.$this->fields->banner.'"';?>>
+                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>">
                         <?php if($setting['VOIDPlugin']):?>
                             <a role=button 
                                 aria-label="为文章点赞" 
