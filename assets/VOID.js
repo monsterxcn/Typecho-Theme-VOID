@@ -131,6 +131,10 @@ var VOID_Content = {
                 tex2jax: {
                     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
                     displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                },
+                tex: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
                 }
             });
             MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
