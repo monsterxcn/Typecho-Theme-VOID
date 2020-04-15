@@ -37,6 +37,9 @@
     // 在图片下方显示图题
     "parseFigcaption": true,
 
+    // Hitokoto 一言 Api 自定义接口
+    "hitokotoApi": "",
+
     // 社交 ID，用于生成分享链接
     "twitterId": "AlanDecode",
     "weiboId" : "古早日剧成瘾患者",
