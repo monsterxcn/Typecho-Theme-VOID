@@ -142,7 +142,7 @@ else {
         <?php if($setting['enableMath']): ?>
         <script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>
         <?php endif; ?>
-        <script src="<?php echo $assetsUrl.'/VOID-02b2d2a067.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-38e02274fc.js'; ?>"></script>
         <script>
         if($(".OwO").length > 0){
             new OwO({
