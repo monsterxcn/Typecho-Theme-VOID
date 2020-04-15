@@ -21,7 +21,7 @@ else {
             <div class="container wide">
                 <section>
                     <p>吾有一刻：<span id="uptime"></span></p>
-                    <p>吾有一言：<span id="hitokoto"></span></p>
+                    <?php if($setting['enableHitokoto']): ?><p>吾有一言：<span id="hitokoto"></span></p><?php endif; ?>
                 </section>
                 <section>
                     <p><?php echo date('Y '); ?> © <span class="brand"><?php echo $this->options->title; ?></span></p>

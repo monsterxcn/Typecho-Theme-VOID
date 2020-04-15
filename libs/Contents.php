@@ -5,7 +5,7 @@
  * 解析器等内容处理相关
  * 
  * @author      熊猫小A
- * @version     2019-01-15 0.01
+ * @version     2020-04-10 0.01
  */
 
 Class Contents
@@ -194,7 +194,7 @@ Class Contents
             array('Contents', 'parseAruBiaoqingCallback'), $content);
         $content = preg_replace_callback('/\:\&\(\s*(.*?)\s*\)/is',
             array('Contents', 'parseQuyinBiaoqingCallback'), $content);
-        $content = preg_replace_callback('/\:\&\(\s*(.*?)\s*\)/is',
+        $content = preg_replace_callback('/\:\:\(\s*(.*?)\s*\)/is',
             array('Contents', 'parseQqBiaoqingCallback'), $content);
 
         return $content;

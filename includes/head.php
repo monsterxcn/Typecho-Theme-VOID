@@ -74,6 +74,8 @@ else {
         home: "<?php Utils::index("/"); ?>",
         buildTime : "<?php Utils::getBuildTime(); ?>",
         enableMath : <?php echo $setting['enableMath'] ? 'true' : 'false'; ?>,
+        enableHitokoto : <?php echo $setting['enableHitokoto'] ? 'true' : 'false'; ?>,
+        hitokotoApi : "<?php if($setting['hitokotoApi'] != '') echo $setting['hitokotoApi']; else Utils::indexTheme('/libs/Hitokoto.php'); ?>",
         lazyload : <?php echo $setting['lazyload'] ? 'true' : 'false'; ?>,
         colorScheme:  <?php echo $setting['colorScheme']; ?>,
         headerMode: <?php echo $setting['headerMode']; ?>,
