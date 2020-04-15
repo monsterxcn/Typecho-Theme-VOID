@@ -277,7 +277,7 @@ class Utils
         // 主题设置
         $themeSetting = array(
             'defaultBanner' => '',
-            'enableHitokoto' => true,
+            'enableHitokoto' => false,
             'enableMath' => false,
             'head' => '',
             'footer' => '',
@@ -320,6 +320,7 @@ class Utils
             ),
             'desktopBannerHeight' => '',
             'mobileBannerHeight' => '',
+            'hitokotoApi' => '',
             'twitterId' => '',
             'weiboId' => '',
             'headerMode' => 1,
