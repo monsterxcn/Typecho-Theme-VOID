@@ -128,24 +128,29 @@ var VOID_Content = {
     math: function () {
         if (VOIDConfig.enableMath && typeof MathJax !== 'undefined') {
             MathJax.Hub.Config({
-                tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+                tex2jax: {
+                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                }
             });
             MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
         }
     },
 
     hitokoto: function () {
+        if (VOIDConfig.enableHitokoto) {
         $.ajax({
-            url: 'https://test.monsterx.cn/usr/themes/VOID/libs/Hitokoto.php',
-            async: true,
-            dataType: 'jsonp',
-            jsonpCallback: 'portraitCallBack',
-            scriptCharset: 'GBK',
-            contentType: 'text/html; charset=GBK',
-            success: function (data) {
-                $('#hitokoto').html(data['msg']);
-            }
-        });
+                url: VOIDConfig.hitokotoApi,
+                async: true,
+                dataType: 'jsonp',
+                jsonpCallback: 'portraitCallBack',
+                scriptCharset: 'GBK',
+                contentType: 'text/html; charset=GBK',
+                success: function (data) {
+                    $('#hitokoto').html(data['msg']);
+                }
+            });
+        }
     },
 
     hyphenate: function() {
@@ -237,7 +242,7 @@ var VOID = {
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/OwO.json',
+                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/owo.json',
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
