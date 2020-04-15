@@ -5,7 +5,7 @@
  * 初始化主题
  *
  * @author      熊猫小A
- * @version     2019-01-15 1.0
+ * @version     2020-04-10 1.0
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) {
     exit;
@@ -82,6 +82,8 @@ function themeConfig($form)
     $form->addInput($serifincontent);
     $lazyload = new Typecho_Widget_Helper_Form_Element_Radio('lazyload', array('1' => '启用', '0' => '不启用'), '1', '图片懒加载', '是否启用图片懒加载。');
     $form->addInput($lazyload);
+    $enableHitokoto = new Typecho_Widget_Helper_Form_Element_Radio('enableHitokoto', array('1' => '启用', '0' => '不启用'), '1', '启用一言解析', '是否启用一言解析。启用后会在尾部调用自带 API 加载一言。API 地址可在高级设置中修改。');
+    $form->addInput($enableHitokoto);
     $enableMath = new Typecho_Widget_Helper_Form_Element_Radio('enableMath', array('0' => '不启用', '1' => '启用'), '0', '启用数学公式解析', '是否启用数学公式解析。启用后会多加载 1~2M 的资源。');
     $form->addInput($enableMath);
     $head = new Typecho_Widget_Helper_Form_Element_Textarea('head', null, '', 'head 标签输出内容', '统计代码等。');

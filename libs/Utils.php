@@ -5,7 +5,7 @@
  * 工具类
  * 
  * @author      熊猫小A
- * @version     2019-01-15 0.01
+ * @version     2020-04-10 0.01
  */
 
 class Utils
@@ -277,6 +277,7 @@ class Utils
         // 主题设置
         $themeSetting = array(
             'defaultBanner' => '',
+            'enableHitokoto' => true,
             'enableMath' => false,
             'head' => '',
             'footer' => '',
@@ -300,6 +301,7 @@ class Utils
         }
 
         // 一些类型变换
+        $themeSetting['enableHitokoto'] = boolval($themeSetting['enableHitokoto']);
         $themeSetting['enableMath'] = boolval($themeSetting['enableMath']);
         $themeSetting['lazyload'] = boolval($themeSetting['lazyload']);
         $themeSetting['colorScheme'] = intval($themeSetting['colorScheme']);

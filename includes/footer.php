@@ -21,7 +21,7 @@ else {
             <div class="container wide">
                 <section>
                     <p>吾有一刻：<span id="uptime"></span></p>
-                    <p>吾有一言：<span id="hitokoto"></span></p>
+                    <?php if($setting['enableHitokoto']): ?><p>吾有一言：<span id="hitokoto"></span></p><?php endif; ?>
                 </section>
                 <section>
                     <p><?php echo date('Y '); ?> © <span class="brand"><?php echo $this->options->title; ?></span></p>
@@ -142,7 +142,7 @@ else {
         <?php if($setting['enableMath']): ?>
         <script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>
         <?php endif; ?>
-        <script src="<?php echo $assetsUrl.'/VOID-10ae4244ca.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-02b2d2a067.js'; ?>"></script>
         <script>
         if($(".OwO").length > 0){
             new OwO({
