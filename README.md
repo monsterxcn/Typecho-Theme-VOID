@@ -77,21 +77,23 @@
 * 调整：`highlightColor` 由 `#bd6262` 改为 `#87cefa`
 * 调整：首页卡片风格 [commit 9ac734](https://github.com/monsterxcn/Typecho-Theme-VOID/commit/9ac734abb6a71b0f87bf72ae6a15bf52185bcd00)
 
-**2020-04-12**
-
-* 新增：GitHub&QQ 账号快速评论
-* 新增：分享到 QQ
-* 新增：Instantpage v3.0
-* 优化：code 字体采用灰度显示
-* 优化：启用文章目录时默认不展开
-* 优化：社交分享图标右对齐
-
-**2020-04-11**
-
-* 新增：链接、追番、自言独立页面模板
-* 修复：错别字
-
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
+
+## 待办清单
+
+- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 布局 Bug
+- [ ] `.theme-dark` 优化
+- [ ] CDN 配置优化
+- [ ] MathJax v3 支持
+- [ ] Artalk 评论实验性兼容
+- [ ] PandaBangumi 集成
+- [ ] ExSearch 集成
+- [x] 更丰富的表情
+- [x] 静态资源 CDN 设置
+- [x] 一言 API
+- [x] GitHub&QQ 账号快速评论
+- [x] Instantpage v3.0
+- [x] 独立页面模板
 
 ## 开发与自定义
 
