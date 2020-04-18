@@ -50,44 +50,25 @@
 
 ## 更新日志
 
-**2020-04-15**
+**2020-04-18**
 
-* 新增：一言开关
-* 新增：[高级设置]一言接口自定义
-* 修复：QQ 表情解析错误
-
-**2020-04-14**
-
-* 新增：QQ 表情包
-* 新增：添加静态资源 CDN 设置
-* 新增：集成一言 API
-* 修复：作者评论标志 Pjax 加载
-* 修复：子评论 Pjax 错误显示为上一条评论
-* 调整：部分样式颜色修改
-* 调整：首页固定 banner 满屏
-* 调整：夜间模式图片灰度
-* 调整：小屏幕返回顶部按钮
-* 移除：表情包全部改用 jsDelivr 加速
-
-**2020-04-13**
-
-* 新增：傻瓜式集成 QQAPI
-* 优化：`del` 字体采用灰度 `:hover`
-* 优化：快速评论框小屏幕隐藏
-* 调整：`highlightColor` 由 `#bd6262` 改为 `#87cefa`
-* 调整：首页卡片风格 [commit 9ac734](https://github.com/monsterxcn/Typecho-Theme-VOID/commit/9ac734abb6a71b0f87bf72ae6a15bf52185bcd00)
+* 新增：Artalk 实验性测试
+* 优化：MathJax 升级至 2.7.8
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ## 待办清单
 
-- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 布局 Bug
-- [ ] `.theme-dark` 优化
-- [ ] CDN 配置优化
+- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
 - [ ] MathJax v3 支持
 - [ ] Artalk 评论实验性兼容
 - [ ] PandaBangumi 集成
 - [ ] ExSearch 集成
+- [ ] Links 随机输出
+- [ ] 网页压缩及其开关
+- [ ] `.theme-dark` 优化
+- [ ] CDN 配置优化
+- [ ] Console 输出版权
 - [x] 更丰富的表情
 - [x] 静态资源 CDN 设置
 - [x] 一言 API
