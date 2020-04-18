@@ -140,7 +140,8 @@ else {
         <?php endif; ?>
         <script data-manual src="<?php echo $assetsUrl.'/bundle.js'; ?>"></script>
         <?php if($setting['enableMath']): ?>
-        <script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>
+        <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
+        <script src="https://test.monsterx.cn/MathJax-2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>
         <script>
