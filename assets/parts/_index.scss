@@ -285,6 +285,7 @@ section#index-list{
             padding-bottom: 30px;
             border-bottom: 1px solid $borderColor;
             .theme-dark & {
+                box-shadow: none;
                 border-color: $td-borderColor;
             }
             margin-bottom: 30px;
