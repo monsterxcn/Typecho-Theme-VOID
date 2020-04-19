@@ -50,10 +50,10 @@
 
 ## 更新日志
 
-**2020-04-18**
+**2020-04-19**
 
-* 新增：Artalk 实验性测试
-* 优化：MathJax 升级至 2.7.8
+* 新增：压缩 Html 页面及其开关
+* 优化：首页卡片夜间样式
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -65,10 +65,10 @@
 - [ ] PandaBangumi 集成
 - [ ] ExSearch 集成
 - [ ] Links 随机输出
-- [ ] 网页压缩及其开关
 - [ ] `.theme-dark` 优化
 - [ ] CDN 配置优化
-- [ ] Console 输出版权
+- [ ] Console 统一样式输出版权
+- [x] 网页压缩
 - [x] 更丰富的表情
 - [x] 静态资源 CDN 设置
 - [x] 一言 API

@@ -179,5 +179,14 @@ else {
         <?php $this->footer(); ?>
 
         <script src="<?php echo $assetsUrl.'/instantpage.js'; ?>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+        <?php if($setting['enableCompress']): ?>
+        <?php 
+            $html_source = ob_get_contents();
+            ob_clean();
+            print Utils::compressHtml($html_source);
+            ob_end_flush();
+        ?>
+        <?php endif; ?>
     </body>
 </html>
