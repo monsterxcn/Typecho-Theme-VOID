@@ -101,7 +101,7 @@ else {
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
     ExSearchConfig = {
         root : "",
-        api : "<?php echo Helper::options()->plugin('VOID')->exjson; ?>"
+        api : "<?php Utils::getExsApi(); ?>"
     }
     <?php endif; ?>
     </script>

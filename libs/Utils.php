@@ -320,6 +320,30 @@ class Utils
     }
 
     /**
+     * 返回 ExSearch API 地址
+     * 
+     * @return void
+     */
+    public static function getExsApi()
+    {
+        if ((!self::isPluginAvailable('VOID')) || (self::isPluginAvailable('VOID') && Helper::options()->plugin('VOID')->exswitch == 'false')) {
+            $exsConfigapi = '';
+            return $exsConfigapi;
+        } else {
+            $db = Typecho_Db::get();
+            $row = $db->fetchRow($db->select()->from('table.exsearch')
+                ->order('table.exsearch.id', Typecho_Db::SORT_DESC)
+                ->limit(1));
+            $key = $row['key'];
+            if (Helper::options()->plugin('VOID')->static == 'true') {
+                Helper::options()->pluginUrl('VOID/cache/cache-'.$key.'.json');
+            } else {
+                Helper::options()->index('/ExSearch/?action=api&key='.$key);
+            }
+        }
+    }
+
+    /**
      * 超高级设置
      * 
      * @return array
