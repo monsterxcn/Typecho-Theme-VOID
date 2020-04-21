@@ -59,15 +59,13 @@
 
 ## 待办清单
 
-- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
-- [ ] MathJax v3 支持
-- [ ] Artalk 评论实验性兼容
-- [ ] PandaBangumi 集成
-- [ ] ExSearch 集成
-- [ ] Links 随机输出
+- [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
+- [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
 - [ ] `.theme-dark` 优化
 - [ ] CDN 配置优化
+- [ ] Links 随机输出
 - [ ] Console 统一样式输出版权
+- [ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
 - [x] 网页压缩
 - [x] 更丰富的表情
 - [x] 静态资源 CDN 设置
@@ -75,6 +73,10 @@
 - [x] GitHub&QQ 账号快速评论
 - [x] Instantpage v3.0
 - [x] 独立页面模板
+
+
+- [ ] Pjax 下网页压缩 `function` 报错
+- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
 
 ## 开发与自定义
 
