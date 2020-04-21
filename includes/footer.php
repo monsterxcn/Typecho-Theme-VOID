@@ -144,6 +144,9 @@ else {
         <script src="https://test.monsterx.cn/MathJax-2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>
+        <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
+        <script src="<?php echo $assetsUrl.'/exsearch.js'; ?>"></script>
+        <?php endif; ?>
         <script>
         if($(".OwO").length > 0){
             new OwO({

@@ -129,12 +129,12 @@ var VOID_Content = {
         if (VOIDConfig.enableMath && typeof MathJax !== 'undefined') {
             MathJax.Hub.Config({
                 tex2jax: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+                    displayMath: [ ['$$','$$'], ['\\[','\\]'] ]
                 },
                 tex: {
-                    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+                    displayMath: [ ['$$','$$'], ['\\[','\\]'] ]
                 }
             });
             MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
@@ -143,7 +143,7 @@ var VOID_Content = {
 
     hitokoto: function () {
         if (VOIDConfig.enableHitokoto) {
-        $.ajax({
+            $.ajax({
                 url: VOIDConfig.hitokotoApi,
                 async: true,
                 dataType: 'jsonp',

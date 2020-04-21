@@ -50,10 +50,9 @@
 
 ## 更新日志
 
-**2020-04-19**
+**2020-04-21**
 
-* 新增：压缩 Html 页面及其开关
-* 优化：首页卡片夜间样式
+* 新增：[配合插件]兼容 ExSearch 功能
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -77,6 +76,7 @@
 
 - [ ] Pjax 下网页压缩 `function` 报错
 - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
+- [ ] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
 
 ## 开发与自定义
 

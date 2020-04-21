@@ -66,6 +66,9 @@ else {
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle.css'; ?>">
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID.css'; ?>">
+    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/exsearch.css'; ?>">
+    <?php endif; ?>
     <script src="<?php echo $assetsUrl.'/bundle-header.js'; ?>"></script>
     <script>
     VOIDConfig = {
@@ -95,6 +98,12 @@ else {
         version: <?php echo $GLOBALS['VOIDVersion'] ?>,
         isDev: true
     }
+    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
+    ExSearchConfig = {
+        root : "",
+        api : "<?php echo Helper::options()->plugin('VOID')->exjson; ?>"
+    }
+    <?php endif; ?>
     </script>
     <script src="<?php echo $assetsUrl.'/header.js'; ?>"></script>
     
