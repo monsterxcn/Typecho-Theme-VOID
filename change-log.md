@@ -10,7 +10,7 @@
 * 新增：Artalk 实验性测试
 * 优化：MathJax 升级至 2.7.8
 
-**Version 3.4.1 Release Here**
+**🍰 Version 3.4.1 Release Here**
 
 **2020-04-15**
 
