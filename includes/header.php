@@ -72,16 +72,16 @@ if($this->is('post') || $this->is('page')) {
                     </ul>
                 </span>
                 <?php endforeach; } ?>
-                <?php if(!Utils::isPluginAvailable('ExSearch')): ?>
+                <?php if(!Utils::isPluginAvailable('ExSearch') && ($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'false')): ?>
                     <span class="hidden-xs search-form-desktop">
                         <label for="search">搜索</label>
                         <input onkeydown="VOID.enterSearch(this);" type="text" name="search-content" id="search" required />
                     </span>
                 <?php endif; ?>
-                <a <?php if(Utils::isPluginAvailable('ExSearch')) echo 'class="search-form-input" style="display:flex"'; ?> 
+                <a <?php if(Utils::isPluginAvailable('ExSearch') || ($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')) echo 'class="search-form-input" style="display:flex"'; ?> 
                     role=button aria-label="展开搜索" id="toggle-mobile-search" target="_self" 
                     href="javascript:void(0);" 
-                    onclick="<?php if(!Utils::isPluginAvailable('ExSearch')) echo 'VOID_Ui.toggleSearch(this);'; ?>">
+                    onclick="<?php if(!Utils::isPluginAvailable('ExSearch') && ($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'false')) echo 'VOID_Ui.toggleSearch(this);'; ?>">
                     <i class="voidicon-search"></i>
                 </a>
                 <a target="_self" href="javascript:void(0);" id="toggle-setting" onclick="VOID_Ui.toggleSettingPanel();"><i class="voidicon-cog"></i></a>
