@@ -1,5 +1,10 @@
 # Change log | 更新日志
 
+**2020-04-23**
+
+* 新增：[高级设置]Progressive Web Apps
+* 优化：Service Worker 缓存 OwO 表情
+
 **2020-04-21**
 
 * 新增：[配合插件]兼容 ExSearch 功能

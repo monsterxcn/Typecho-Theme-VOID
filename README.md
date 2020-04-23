@@ -50,9 +50,10 @@
 
 ## 更新日志
 
-**2020-04-21**
+**2020-04-23**
 
-* 新增：[配合插件]兼容 ExSearch 功能
+* 新增：[高级设置]Progressive Web Apps
+* 优化：Service Worker 缓存 OwO 表情
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -65,6 +66,7 @@
 - [ ] Links 随机输出
 - [ ] Console 统一样式输出版权
 - [ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
+- [x] Progressive Web Apps
 - [x] 网页压缩
 - [x] 更丰富的表情
 - [x] 静态资源 CDN 设置
@@ -76,7 +78,7 @@
 
 - [ ] Pjax 下网页压缩 `function` 报错
 - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
-- [ ] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
+- [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
 
 ## 开发与自定义
 
@@ -87,6 +89,9 @@
 > 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
 
 准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
+
+关于安装 node-sass 出错请参考《 [安装 node-sass 的正确姿势 - Issue #28 - lmk123/blog](https://github.com/lmk123/blog/issues/28) 》
+
 如果你对自己的更改很满意，**欢迎提出 Pull Request**。
 
 ```bash

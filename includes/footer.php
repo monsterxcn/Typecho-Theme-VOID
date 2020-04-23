@@ -115,15 +115,15 @@ else {
             if ('serviceWorker' in navigator) {  
                 navigator.serviceWorker.register(serviceWorkerUri).then(function() {
                     if (navigator.serviceWorker.controller) {
-                        console.log('Service woker is registered and is controlling.');
+                        console.log('Service Worker is registered and is controlling.');
                     } else {
-                        console.log('Please reload this page to allow the service worker to handle network operations.');
+                        console.log('Please reload this page to allow the Service Worker to handle network operations.');
                     }
                 }).catch(function(error) {
-                    console.log('ERROR: ' + error);
+                    console.log('Service Worker ERROR: ' + error);
                 });
             } else {
-                console.log('Service worker is not supported in the current browser.');
+                console.log('Service Worker is not supported in the current browser.');
             }
         </script>
         <?php else: ?>
@@ -141,7 +141,7 @@ else {
         <script data-manual src="<?php echo $assetsUrl.'/bundle.js'; ?>"></script>
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
-        <script src="https://test.monsterx.cn/MathJax-2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
