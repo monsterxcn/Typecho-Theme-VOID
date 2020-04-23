@@ -406,6 +406,7 @@ class Utils
             'headerMode' => 1,
             'defaultFontSize' => 3,
             'useFiraCodeFont' => false,
+            'webManifest' => false,
             'followSystemColorScheme' => false,
             'largePhotoSet' => true,
             'macStyleCodeBlock' => true,
