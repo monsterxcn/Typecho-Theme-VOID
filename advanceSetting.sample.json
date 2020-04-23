@@ -37,6 +37,11 @@
     // 在图片下方显示图题
     "parseFigcaption": true,
 
+    // 启用 Web App Manifest ，必须先开启 Service Worker
+    // 请根据主题文件夹下 manifest.sample.json 自行修改后放到网站根目录 
+    // 也可以使用 https://www.pwabuilder.com/ 快速创建 manifest.json
+    "webManifest": false,
+
     // Hitokoto 一言 Api 自定义接口
     "hitokotoApi": "",
 

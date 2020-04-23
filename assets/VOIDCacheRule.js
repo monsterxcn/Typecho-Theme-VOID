@@ -38,6 +38,16 @@
     }
   });
 
+  // 缓存 OwO 表情
+  // https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/
+  self.toolbox.router.get('/gh/monsterxcn/Storage/owoEmoji/(.*)', self.toolbox.cacheFirst, {
+    origin: /(cdn\.jsdelivr\.net)/,
+    cache: {
+      name: staticVendorCacheName,
+      maxEntries: maxEntries
+    }
+  });
+
   // 缓存 Google 字体
   self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
     origin: /(fonts\.googleapis\.com)/,

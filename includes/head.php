@@ -62,6 +62,11 @@ else {
     <meta name="twitter:description" content="<?php if($description != '') echo $description; else $this->excerpt(50); ?>" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="<?php if($banner != '') echo $banner; else echo $setting['defaultBanner']; ?>" />
+
+    <?php if($setting['webManifest'] == 'true'): ?>
+    <link rel='manifest' href='/manifest.json'>
+    <?php endif; ?>
+
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle.css'; ?>">
@@ -78,6 +83,7 @@ else {
         buildTime : "<?php Utils::getBuildTime(); ?>",
         enableMath : <?php echo $setting['enableMath'] ? 'true' : 'false'; ?>,
         enableHitokoto : <?php echo $setting['enableHitokoto'] ? 'true' : 'false'; ?>,
+        webManifest : <?php echo $setting['webManifest'] ? 'true' : 'false'; ?>,
         hitokotoApi : "<?php if($setting['hitokotoApi'] != '') echo $setting['hitokotoApi']; else Utils::indexTheme('/libs/Hitokoto.php'); ?>",
         lazyload : <?php echo $setting['lazyload'] ? 'true' : 'false'; ?>,
         colorScheme:  <?php echo $setting['colorScheme']; ?>,

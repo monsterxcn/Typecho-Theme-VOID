@@ -96,6 +96,7 @@ gulp.task('move', function () {
         './README.md',
         './screenshot.png',
         './advanceSetting.sample.json',
+        './manifest.sample.json',
         './change-log.md'])
         .pipe(gulp.dest('./build/'));
 });
