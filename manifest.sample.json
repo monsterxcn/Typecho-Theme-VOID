@@ -1,17 +1,55 @@
+// 这是一份 PWA Manifest 配置示例文件
+// 你可以挑选其中某些设置，填写到自己根目录下 manifest.json 文件中
+// 建议保留基本项，其余可自行取舍
+
+// 填写的内容必须符合 JSON 格式，因此你必须 去掉 以 // 开头的所有注释！！！
+
 {
-	"dir" : "ltr",
-	"lang" : "Chinese",
-	"name" : "Monst.X",
-	"scope" : "/",
-	"display" : "standalone",
-	"start_url" : "https://test.monsterx.cn/",
-	"short_name" : "Monst.X",
-	"theme_color" : "transparent",
-	"description" : "Just So So ...",
-	"orientation" : "portrait-primary",
-	"background_color" : "transparent",
-	"related_applications" : [],
-	"prefer_related_applications" : false,
+    // Web 应用程序的文本显示方向
+    // ltr rtl auto(default)
+    "dir" : "ltr",
+
+    // Web 应用程序的语言
+    // 填写包含单个语言标记的字符串
+    "lang" : "zh-CN",
+
+    // 基本项，Web 应用程序的名称
+    "name" : "Monst.X",
+
+    // 基本项，Web 应用程序的上下文的导航范围
+    // 以相对路径格式填写时将 manifest.json 路径作为基准
+    "scope" : "/",
+
+    // 基本项，Web 应用程序的首选显示模式
+    // fullscreen standalone minimal-ui browser(default)
+    "display" : "standalone",
+
+    // 基本项，设备启动 Web 应用程序时加载的 URL
+    // 以相对路径格式填写时将 manifest.json 路径作为基准
+    "start_url" : "https://test.monsterx.cn/",
+    
+    // 基本项，显示空间不足时 Web 应用程序的短名称
+    "short_name" : "Monst.X",
+
+    // 基本项，Web 应用程序的默认主题颜色
+    "theme_color" : "transparent",
+    
+    // 基本项，Web 应用程序的一般描述
+    "description" : "Just So So ...",
+
+    // 基本项，Web 应用程序所有顶层的默认方向
+    // natural landscape landscape-primary landscape-secondary portrait portrait-primary portrait-secondary any(default)
+    "orientation" : "portrait-primary",
+    
+    // Web 应用程序启动和 Web 应用程序加载内容之间平滑过渡颜色
+    "background_color" : "transparent",
+    
+    // 指定一个“应用程序对象”数组和是否可用，如果需要填那么一定不需要注释
+    "related_applications" : [],
+    "prefer_related_applications" : false,
+
+    // 基本项，各种环境中用作 Web 应用程序图标的图像对象数组，你可以利用网上的工具上传一张图片以生成各种大小的图标
+    // 比如 https://app-manifest.firebaseapp.com/ 
 	"icons" : [
 		{
             "src": "/pwa-icons/icon-72x72.png",
@@ -54,7 +92,12 @@
             "type": "image/png"
         }
     ],
-	"url" : "https://test.monsterx.cn/",
-	"screenshots" : [],
+
+    // Web 应用程序的基本 URL
+    "url" : "https://test.monsterx.cn/",
+    
+    // 旨在展示 Web 应用程序的屏幕截图，格式与上面 icons 一致，用于应用商店
+    "screenshots" : [],
+    
 	"generated" : "true"
 }
