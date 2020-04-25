@@ -9,6 +9,7 @@
  * 
 */ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+$setting = $GLOBALS['VOIDSetting'];
 
 if(!Utils::isPjax()){
     $this->need('includes/head.php');
