@@ -36,7 +36,7 @@ function themeInit()
 }
 
 $GLOBALS['VOIDPluginREQ'] = 1.2;
-$GLOBALS['VOIDVersion'] = 3.40;
+$GLOBALS['VOIDVersion'] = 3.41;
 
 /**
  * 主题设置
@@ -53,7 +53,7 @@ function themeConfig($form)
     }</style>';
 
     if (!Utils::hasVOIDPlugin($GLOBALS['VOIDPluginREQ'])) {
-        echo '<p class="notice">未检测到合适的 VOID 插件！主题部分功能依赖插件支持，推荐安装以获得最佳体验。VOID 插件一般会随主题包发布，开发版主题请前往 https://github.com/AlanDecode/VOID-Plugin 获取。</p>';
+        echo '<p class="notice">未检测到合适的 VOID 插件！主题部分功能依赖插件支持，推荐安装以获得最佳体验。VOID 插件一般会随主题包发布。下载 <a href="https://github.com/monsterxcn/Typecho-Plugin-VOID" target="_blank">Monst.x</a> 二次开发版插件或者 <a href="https://github.com/AlanDecode/VOID-Plugin" target="_blank">AlanDecode</a> 原版插件。</p>';
     }
 
     echo '<p id="void-check-update" class="notice">正在检查更新……</p>';
