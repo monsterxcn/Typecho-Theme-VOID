@@ -1,9 +1,16 @@
 # Change log | 更新日志
 
+**2020-04-26**
+
+* 新增：`VOIDCacheRule.js` 自行开启缓存 MathJax
+* 修复：Service Worker 缓存 OwO 表情超过 Chrome 空间配额
+
+**🍰 Version 3.4.1 Release Here**
+
 **2020-04-23**
 
 * 新增：[高级设置]Progressive Web Apps
-* 优化：Service Worker 缓存 OwO 表情
+* ~~优化：Service Worker 缓存 OwO 表情~~
 
 **2020-04-21**
 
@@ -18,8 +25,6 @@
 
 * 新增：Artalk 实验性测试
 * 优化：MathJax 升级至 2.7.8
-
-**🍰 Version 3.4.1 Release Here**
 
 **2020-04-15**
 

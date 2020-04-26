@@ -39,14 +39,27 @@
   });
 
   // 缓存 OwO 表情
-  // https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/
-  self.toolbox.router.get('/gh/(.*)', self.toolbox.cacheFirst, {
-    origin: /(cdn\.jsdelivr\.net)/,
-    cache: {
-      name: staticVendorCacheName,
-      maxEntries: maxEntries
-    }
-  });
+  // 超过了 Chrome 缓存配额闲置，如果仅考虑 FireFox 可以自行开启
+  // https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/[quyin|aru|paopao|qq]/
+  // 
+  // self.toolbox.router.get('/gh/monsterxcn/Storage/owoEmoji/(.*)', self.toolbox.cacheFirst, {
+  //   origin: /(cdn\.jsdelivr\.net)/,
+  //   cache: {
+  //     name: staticVendorCacheName,
+  //     maxEntries: maxEntries
+  //   }
+  // });
+
+  // 缓存 MathJax
+  // 如果引用 MathJax 此处需要自行开启
+  // https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/
+  // self.toolbox.router.get('/gh/monsterxcn/Storage/MathJax/2.7.8/(.*)', self.toolbox.cacheFirst, {
+  //   origin: /(cdn\.jsdelivr\.net)/,
+  //     cache: {
+  //     name: staticVendorCacheName,
+  //     maxEntries: maxEntries
+  //   }
+  // });
 
   // 缓存 Google 字体
   self.toolbox.router.get('/(.*)', self.toolbox.cacheFirst, {
