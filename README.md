@@ -50,10 +50,10 @@
 
 ## 更新日志
 
-**2020-04-23**
+**2020-04-26**
 
-* 新增：[高级设置]Progressive Web Apps
-* 优化：Service Worker 缓存 OwO 表情
+* 新增：`VOIDCacheRule.js` 自行开启缓存 MathJax
+* 修复：Service Worker 缓存 OwO 表情超过 Chrome 空间配额
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -78,6 +78,7 @@
 
 - [ ] Pjax 下网页压缩 `function` 报错
 - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
+- [x] Service Worker 缓存 OwO 表情（需自行开启）
 - [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
 
 ## 开发与自定义
