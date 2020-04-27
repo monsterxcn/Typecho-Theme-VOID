@@ -4,12 +4,11 @@
 
 作为计算机术语时，VOID 的意思是「无类型」。
 
-![](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
+![Build](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![Download](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![Release](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![License](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
 ## 特性
 
 > 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)
-
 > 特色演示：[示例页面](https://blog.imalan.cn/archives/194/)
 
 <details><summary>原始特性</summary><br>
@@ -50,43 +49,42 @@
 
 ## 更新日志
 
-**2020-04-26**
+### 2020-04-26
 
-* 新增：`VOIDCacheRule.js` 自行开启缓存 MathJax
-* 修复：Service Worker 缓存 OwO 表情超过 Chrome 空间配额
+* 优化：[高级设置]快速评论接口自定义
+* 优化：文档 MarkDown 排版
+* 调整：主题信息
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ## 待办清单
 
-- [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
-- [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
-- [ ] `.theme-dark` 优化
-- [ ] CDN 配置优化
-- [ ] Links 随机输出
-- [ ] Console 统一样式输出版权
-- [ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
-- [x] Progressive Web Apps
-- [x] 网页压缩
-- [x] 更丰富的表情
-- [x] 静态资源 CDN 设置
-- [x] 一言 API
-- [x] GitHub&QQ 账号快速评论
-- [x] Instantpage v3.0
-- [x] 独立页面模板
-
-
-- [ ] Pjax 下网页压缩 `function` 报错
-- [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
-- [x] Service Worker 缓存 OwO 表情（需自行开启）
-- [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
+[ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
+[ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
+[ ] `.theme-dark` 优化
+[ ] CDN 配置优化
+[ ] Links 随机输出
+[ ] Console 统一样式输出版权
+[ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
+[x] Progressive Web Apps
+[x] 网页压缩
+[x] 更丰富的表情
+[x] 静态资源 CDN 设置
+[x] 一言 API
+[x] GitHub&QQ 账号快速评论
+[x] Instantpage v3.0
+[x] 独立页面模板
+[ ] Pjax 下网页压缩 `function` 报错
+[ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
+[x] Service Worker 缓存 OwO 表情（需自行开启）
+[x] 自定义快速评论调用接口
+[x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
 
 ## 开发与自定义
 
 **You are on your own.**
 
 > This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
-
 > 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
 
 准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
@@ -122,7 +120,6 @@ gulp sass
 # 尽请添加自己想要的功能，满意后就提交代码。然后：
 gulp build
 ```
-
 
 ## 鸣谢
 

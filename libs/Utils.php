@@ -401,6 +401,8 @@ class Utils
             'desktopBannerHeight' => '',
             'mobileBannerHeight' => '',
             'hitokotoApi' => '',
+            'GhinfoApi' => '',
+            'QinfoApi' => '',
             'twitterId' => '',
             'weiboId' => '',
             'headerMode' => 1,
