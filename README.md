@@ -9,6 +9,7 @@
 ## 特性
 
 > 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)
+
 > 特色演示：[示例页面](https://blog.imalan.cn/archives/194/)
 
 <details><summary>原始特性</summary><br>
@@ -59,32 +60,33 @@
 
 ## 待办清单
 
-[ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
-[ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
-[ ] `.theme-dark` 优化
-[ ] CDN 配置优化
-[ ] Links 随机输出
-[ ] Console 统一样式输出版权
-[ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
-[x] Progressive Web Apps
-[x] 网页压缩
-[x] 更丰富的表情
-[x] 静态资源 CDN 设置
-[x] 一言 API
-[x] GitHub&QQ 账号快速评论
-[x] Instantpage v3.0
-[x] 独立页面模板
-[ ] Pjax 下网页压缩 `function` 报错
-[ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
-[x] Service Worker 缓存 OwO 表情（需自行开启）
-[x] 自定义快速评论调用接口
-[x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
+ - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
+ - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
+ - [ ] `.theme-dark` 优化
+ - [ ] CDN 配置优化
+ - [ ] Links 随机输出
+ - [ ] Console 统一样式输出版权
+ - [ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
+ - [x] Progressive Web Apps
+ - [x] 网页压缩
+ - [x] 更丰富的表情
+ - [x] 静态资源 CDN 设置
+ - [x] 一言 API
+ - [x] GitHub&QQ 账号快速评论
+ - [x] Instantpage v3.0
+ - [x] 独立页面模板
+ - [ ] Pjax 下网页压缩 `function` 报错
+ - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
+ - [x] Service Worker 缓存 OwO 表情（需自行开启）
+ - [x] 自定义快速评论调用接口
+ - [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
 
 ## 开发与自定义
 
 **You are on your own.**
 
 > This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
+
 > 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
 
 准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
