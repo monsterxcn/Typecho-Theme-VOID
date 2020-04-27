@@ -85,6 +85,8 @@ else {
         enableHitokoto : <?php echo $setting['enableHitokoto'] ? 'true' : 'false'; ?>,
         webManifest : <?php echo $setting['webManifest'] ? 'true' : 'false'; ?>,
         hitokotoApi : "<?php if($setting['hitokotoApi'] != '') echo $setting['hitokotoApi']; else Utils::indexTheme('/libs/Hitokoto.php'); ?>",
+        GhinfoApi : "<?php if($setting['GhinfoApi'] != '') echo $setting['GhinfoApi']; else echo "https://api.github.com/users/"; ?>",
+        QinfoApi : "<?php if($setting['QinfoApi'] != '') echo $setting['QinfoApi']; else Utils::indexTheme('/libs/Qinfo.php?qNum='); ?>",
         lazyload : <?php echo $setting['lazyload'] ? 'true' : 'false'; ?>,
         colorScheme:  <?php echo $setting['colorScheme']; ?>,
         headerMode: <?php echo $setting['headerMode']; ?>,

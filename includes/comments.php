@@ -91,7 +91,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                         let newVal = $("#githubNum").val();
                         if (newVal.length > 0 && oldVal === $("#githubNum").val()) {
                             $.ajax({
-                                url: 'https://api.github.com/users/' + newVal,
+                                url: VOIDConfig.GhinfoApi + newVal,
                                 dataType: 'jsonp',
                                 scriptCharset: "GBK",
                                 contentType: "text/html; charset=GBK",
@@ -114,7 +114,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                         let newVal = $("#qqNum").val();
                         if (newVal.length > 0 && oldVal === $("#qqNum").val() && !newVal.isNaN) {
                             $.ajax({
-                                url: '<?php Utils::indexTheme('/libs/Qinfo.php'); ?>?qNum=' + newVal,
+                                url: VOIDConfig.QinfoApi + newVal,
                                 dataType: 'jsonp',
                                 jsonpCallback: 'portraitCallBack',
                                 scriptCharset: "GBK",

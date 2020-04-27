@@ -1,12 +1,13 @@
 <?php
 /**
- * VOID：无类型
+ * 无类型：✏ 一款简洁优雅的 Typecho 主题
  * 
- * 作者：<a href="https://www.imalan.cn">熊猫小A</a>
+ * 作者：<a href="https://www.imalan.cn" target="_blank">熊猫小A</a>
+ * 修改：<a href="https://monsterx.cn" target="_blank">Monst.x</a>
  * 
- * @package     Typecho-Theme-VOID
+ * @package     VOID
  * @author      熊猫小A
- * @version     3.4.0
+ * @version     3.4.1
  * @link        https://blog.imalan.cn/archives/247/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
