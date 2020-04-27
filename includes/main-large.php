@@ -6,7 +6,7 @@
  * 适用于巨大文字、巨幅图片
  * 
  * @author      熊猫小A
- * @version     2019-05-08 0.1
+ * @version     2020-04-10 0.1
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];

@@ -3,7 +3,7 @@
  * 404.php
  *  
  * @author      熊猫小A
- * @version     2019-01-17 0.1
+ * @version     2020-04-10 0.1
  * 
 */ 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;

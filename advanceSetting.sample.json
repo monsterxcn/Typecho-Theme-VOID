@@ -42,8 +42,14 @@
     // 也可以使用 https://www.pwabuilder.com/ 快速创建 manifest.json
     "webManifest": false,
 
-    // Hitokoto 一言 Api 自定义接口
+    // Hitokoto Api 自定义
     "hitokotoApi": "",
+
+    // GitHub Api 自定义，默认 https://api.github.com/users/
+    "GhinfoApi": "",
+
+    // QQ Api 自定义，默认 ./libs/Qinfo.php?qNum=
+    "QinfoApi": "",
 
     // 社交 ID，用于生成分享链接
     "twitterId": "AlanDecode",
