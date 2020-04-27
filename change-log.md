@@ -11,7 +11,7 @@
 * 新增：`VOIDCacheRule.js` 自行开启缓存 MathJax
 * 修复：Service Worker 缓存 OwO 表情超过 Chrome 空间配额
 
-**🍰 Version 3.4.1 Release Here**
+**🍰 2019-10-26 Version 3.4.1 Release**
 
 **2020-04-23**
 
