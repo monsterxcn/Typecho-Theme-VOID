@@ -336,7 +336,7 @@ class Utils
                 ->limit(1));
             $key = $row['key'];
             if (Helper::options()->plugin('VOID')->static == 'true') {
-                Helper::options()->pluginUrl('VOID/cache/cache-'.$key.'.json');
+                Helper::options()->pluginUrl('VOID/cache/exsearch-'.$key.'.json');
             } else {
                 Helper::options()->index('/ExSearch/?action=api&key='.$key);
             }

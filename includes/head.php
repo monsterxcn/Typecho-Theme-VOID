@@ -71,9 +71,14 @@ else {
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-1e9bf597b1.css'; ?>">
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-3395b65be7.css'; ?>">
+
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/exsearch.css'; ?>">
+    <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.css'); ?>">
     <?php endif; ?>
+    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+    <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
+    <?php endif; ?>
+
     <script src="<?php echo $assetsUrl.'/bundle-header-ce69662a98.js'; ?>"></script>
     <script>
     VOIDConfig = {
@@ -111,6 +116,9 @@ else {
         root : "",
         api : "<?php Utils::getExsApi(); ?>"
     }
+    <?php endif; ?>
+    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+    var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>
     </script>
     <script src="<?php echo $assetsUrl.'/header-1454f3b928.js'; ?>"></script>
