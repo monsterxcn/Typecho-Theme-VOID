@@ -50,11 +50,10 @@
 
 ## 更新日志
 
-### 2020-04-26
+### 2020-04-28
 
-* 优化：[高级设置]快速评论接口自定义
-* 优化：文档 MarkDown 排版
-* 调整：主题信息
+* 新增：[配合插件]兼容 PandaBangumi 功能
+* 移除：配套插件依赖的静态文件
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -75,6 +74,10 @@
  - [x] GitHub&QQ 账号快速评论
  - [x] Instantpage v3.0
  - [x] 独立页面模板
+
+自己写出来的问题：
+
+ - [ ] 独立页面文章末尾赞赏与分享显示问题
  - [ ] Pjax 下网页压缩 `function` 报错
  - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
  - [x] Service Worker 缓存 OwO 表情（需自行开启）
