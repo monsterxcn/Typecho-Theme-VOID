@@ -50,10 +50,11 @@
 
 ## 更新日志
 
-### 2020-04-28
+### 2020-04-29
 
-* 新增：[配合插件]兼容 PandaBangumi 功能
-* 移除：配套插件依赖的静态文件
+* 优化：Console 统一样式输出版权
+* 优化：主题 CDN 地址写法
+* 调整：Artalk 评论系统（错误中）
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -64,8 +65,7 @@
  - [ ] `.theme-dark` 优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
- - [ ] Console 统一样式输出版权
- - [ ] [Artalk](https://github.com/qwqcode/Artalk) 评论实验性兼容
+ - [ ] Artalk 评论实验性兼容
  - [x] Progressive Web Apps
  - [x] 网页压缩
  - [x] 更丰富的表情
@@ -74,6 +74,7 @@
  - [x] GitHub&QQ 账号快速评论
  - [x] Instantpage v3.0
  - [x] 独立页面模板
+ - [x] Console 统一样式输出版权
 
 自己写出来的问题：
 
@@ -128,7 +129,7 @@ gulp build
 
 ## 鸣谢
 
-[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher)
+[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher) | [Artalk](https://github.com/qwqcode/Artalk)
 
 [RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
 

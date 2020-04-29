@@ -91,7 +91,16 @@ if(!Utils::isPjax()){
             </section>
         </div> <!--end .contents-wrap-->
     </div>
-    <?php $this->need('includes/artalk.php'); ?>
+
+    <div class="comments-container float-up">
+    <section id="comments" class="container">
+        <?php $field = $this->fields->artalk; if($field != ''): ?>
+            <!-- <?php echo $this->fields->artalk; ?> -->
+            <div id="ArtalkComments"></div>
+        <?php endif; ?>
+    </section>
+    </div>
+
 </main>
 
 <?php

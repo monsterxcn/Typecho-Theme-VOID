@@ -131,7 +131,6 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                     }, 500);
                 });
             </script>
-
         <?php endif; ?>
         
         <!--历史评论-->
