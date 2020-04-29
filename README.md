@@ -52,6 +52,7 @@
 
 ### 2020-04-29
 
+* 优化：Console 统一样式输出版权
 * 优化：主题 CDN 地址写法
 * 调整：Artalk 评论系统（错误中）
 
@@ -64,7 +65,6 @@
  - [ ] `.theme-dark` 优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
- - [ ] Console 统一样式输出版权
  - [ ] Artalk 评论实验性兼容
  - [x] Progressive Web Apps
  - [x] 网页压缩
@@ -74,6 +74,7 @@
  - [x] GitHub&QQ 账号快速评论
  - [x] Instantpage v3.0
  - [x] 独立页面模板
+ - [x] Console 统一样式输出版权
 
 自己写出来的问题：
 
