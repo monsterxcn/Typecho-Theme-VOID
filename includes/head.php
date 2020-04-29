@@ -9,19 +9,13 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting']; 
+$assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->options->themeUrl.'/assets';
 
 if (isset($_POST['void_action'])) {
     if ($_POST['void_action'] == 'getLoginAction') {
         echo $this->options->loginAction;
         exit;
     }
-}
-
-if (isset($setting['assetsCDN'])) {
-    $assetsUrl = $setting['assetsCDN'];
-}
-else {
-    $assetsUrl = $this->options->themeUrl.'/assets';
 }
 ?>
 <!DOCTYPE HTML>
