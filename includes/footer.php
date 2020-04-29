@@ -9,13 +9,7 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting'];
-
-if (isset($setting['assetsCDN'])) {
-    $assetsUrl = $setting['assetsCDN'];
-}
-else {
-    $assetsUrl = $this->options->themeUrl.'/assets';
-}
+$assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->options->themeUrl.'/assets';
 ?>
         <footer>
             <div class="container wide">
@@ -115,15 +109,15 @@ else {
             if ('serviceWorker' in navigator) {  
                 navigator.serviceWorker.register(serviceWorkerUri).then(function() {
                     if (navigator.serviceWorker.controller) {
-                        console.log('Service Worker is registered and is controlling.');
+                        console.warn('Service Worker is registered and is controlling.');
                     } else {
-                        console.log('Please reload this page to allow the Service Worker to handle network operations.');
+                        console.warn('Please reload this page to allow the Service Worker to handle network operations.');
                     }
                 }).catch(function(error) {
-                    console.log('Service Worker ERROR: ' + error);
+                    console.warn('Service Worker ERROR: ' + error);
                 });
             } else {
-                console.log('Service Worker is not supported in the current browser.');
+                console.warn('Service Worker is not supported in the current browser.');
             }
         </script>
         <?php else: ?>
@@ -133,7 +127,7 @@ else {
             for(let registration of registrations) {
                 registration.unregister()
             }}).catch(function(err) {
-                console.log('Service Worker registration failed: ', err);
+                console.warn('Service Worker registration failed: ', err);
             });
         }
         </script>
@@ -170,7 +164,7 @@ else {
             $(document).on('pjax:complete',function(){
                 <?php echo $setting['pjaxreload']; ?>
             })
-            <?php if(Utils::isPluginAvailable('ExSearch')): ?>
+            <?php if(Utils::isPluginAvailable('ExSearch') || ($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')): ?>
             function ExSearchCall(item){
                 if (item && item.length) {
                     $('.ins-close').click(); // 关闭搜索框
@@ -184,6 +178,36 @@ else {
             <?php endif; ?>
         </script>
         <?php endif; ?>
+
+        <script>
+        <?php $field = $this->fields->artalk; if($field != ''): ?>
+        new Artalk({
+            el: '#ArtalkComments',
+            placeholder: '来啊，快活啊 (/ω＼)',
+            noComment: '快来成为第一个评论的人吧~',
+            defaultAvatar: 'mp',
+            pageKey: '<?php $this->permalink(); ?>',
+            serverUrl: '<?php $this->fields->artalk; ?>',
+            readMore: {
+                pageSize: 10, // 每次请求获取评论数
+                autoLoad: true // 滚动到底部自动加载
+            }
+        });
+        <?php endif; ?>
+        console.log = function() {}
+        console.warn("\n %c "+"VOID v".concat("3.4.1"," %c Simple Typecho Theme \n\n%c")
+        +"> https://github.com/monsterxcn/Typecho-Theme-VOID\n"<?php
+        if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')
+            echo '+"> https://github.com/AlanDecode/Typecho-Plugin-ExSearch\n"';
+        if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true')
+            echo '+"> https://github.com/AlanDecode/Typecho-Plugin-PandaBangumi\n"';
+        if(Utils::isPluginAvailable('Meting') || Utils::isPluginAvailable('Aplayer'))
+            echo '+"> https://aplayer.js.org\n"';
+        if(isset($this->fields->artalk))
+            echo '+"> https://artalk.js.org\n"';
+        ?>,"color: #FFF; background: #1DAAFF; padding:5px 0;","color: #FFF; background: #656565; padding:5px 0;","");
+        </script>
+
         <?php $this->footer(); ?>
 
         <script src="<?php echo $assetsUrl.'/instantpage.js'; ?>" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>

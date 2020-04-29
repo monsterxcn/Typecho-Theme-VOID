@@ -9,19 +9,13 @@
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 $setting = $GLOBALS['VOIDSetting']; 
+$assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->options->themeUrl.'/assets';
 
 if (isset($_POST['void_action'])) {
     if ($_POST['void_action'] == 'getLoginAction') {
         echo $this->options->loginAction;
         exit;
     }
-}
-
-if (isset($setting['assetsCDN'])) {
-    $assetsUrl = $setting['assetsCDN'];
-}
-else {
-    $assetsUrl = $this->options->themeUrl.'/assets';
 }
 ?>
 <!DOCTYPE HTML>
@@ -69,7 +63,7 @@ else {
 
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-1e9bf597b1.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-c28f2b413f.css'; ?>">
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-3395b65be7.css'; ?>">
 
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
@@ -79,7 +73,7 @@ else {
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
-    <script src="<?php echo $assetsUrl.'/bundle-header-ce69662a98.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/bundle-header-c627f808ea.js'; ?>"></script>
     <script>
     VOIDConfig = {
         PJAX : <?php echo $setting['pjax'] ? 'true' : 'false'; ?>,
