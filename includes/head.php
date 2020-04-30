@@ -74,6 +74,11 @@ if (isset($_POST['void_action'])) {
     <?php endif; ?>
 
     <script src="<?php echo $assetsUrl.'/bundle-header.js'; ?>"></script>
+
+    <?php if($this->fields->artalk != ''): ?>
+    <script type="text/javascript" src="<?php echo $assetsUrl.'/artalk.js'; ?>"></script>
+    <?php endif; ?>
+
     <script>
     VOIDConfig = {
         PJAX : <?php echo $setting['pjax'] ? 'true' : 'false'; ?>,
