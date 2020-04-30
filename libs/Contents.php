@@ -384,8 +384,8 @@ Class Contents
     {
         $text = '<div class="board-list link-list">%boards%</div>';
 
-        $reg='/\[(.*?)\]\((.*?)\)\+\((.*?)\)/s';
-        $rp = '<a target="_blank" href="${2}" class="board-item link-item"><div class="board-thumb" data-thumb="${3}"></div><div class="board-title">${1}</div></a>';
+        $reg='/\[\((.*?)\)\+\((.*?)\)\]\((.*?)\)\+\((.*?)\)/s';
+        $rp = '<a target="_blank" href="${3}" class="board-item link-item"><div class="board-thumb" data-thumb="${4}"></div><div class="board-title">${1}</div><div class="board-descri">${2}</div></a>';
         $boards = preg_replace($reg,$rp,$matchs[1]);
 
         return  str_replace('%boards%', $boards, $text);

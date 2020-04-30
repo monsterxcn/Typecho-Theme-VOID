@@ -246,10 +246,26 @@ var VOID = {
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/owo.json',
+                api: VOIDConfig.owoBase,
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
+            });
+        }
+
+        // 重载 Artalk
+        if ($('#ArtalkComments').length > 0) {
+            new Artalk({
+                el: '#ArtalkComments',
+                placeholder: '来啊，快活啊 (/ω＼)',
+                noComment: '快来成为第一个评论的人吧~',
+                defaultAvatar: 'mp',
+                pageKey: VOIDConfig.artKey,
+                serverUrl: VOIDConfig.artServer,
+                readMore: {
+                    pageSize: 10, // 每次请求获取评论数
+                    autoLoad: true // 滚动到底部自动加载
+                }
             });
         }
         

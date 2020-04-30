@@ -1,8 +1,17 @@
 # Change log | 更新日志
 
+**2020-05-01**
+
+* 优化：友情链接卡片排版和夜间样式
+* 调整：Artalk 评论系统 Pjax 加载
+* 调整：首页卡片更大的圆角 ( `18px` )
+* 调整：友链解析格式 `[(name)+(slogan)](url)+(logourl)`
+* 修复：owo 表情 json 路径
+* 移除：友情链接独立页面
+
 **2020-04-30**
 
-* 调整：添加 artalk 自定义字段为 Artalk PHP 后端地址即可开启 Artalk 评论
+* 调整：添加 `artalk` 自定义字段为 Artalk PHP 后端地址即可开启 Artalk 评论
 * 移除：Artalk 独立页面
 
 **2020-04-29**
