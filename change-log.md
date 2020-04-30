@@ -1,5 +1,10 @@
 # Change log | 更新日志
 
+**2020-04-30**
+
+* 调整：添加 artalk 自定义字段为 Artalk PHP 后端地址即可开启 Artalk 评论
+* 移除：Artalk 独立页面
+
 **2020-04-29**
 
 * 优化：Console 统一样式输出版权

@@ -23,6 +23,12 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
     <section id="comments" class="container">
         <!--评论框-->
         <?php if($this->allow('comment')): ?>
+
+            <?php if($this->fields->artalk != ''): ?>
+            <!-- <?php echo $this->fields->artalk; ?> -->
+            <div id="ArtalkComments"></div>
+            <?php else: ?>
+
             <?php $this->header('commentReply=1&description=0&keywords=0&generator=0&template=0&pingback=0&xmlrpc=0&wlw=0&rss2=0&rss1=0&antiSpam=0&atom'); ?>
             <div id="<?php $this->respondId(); ?>" class="respond">
                 <div class="cancel-comment-reply" role=button>
@@ -131,20 +137,25 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
                     }, 500);
                 });
             </script>
+
+            <!--评论总数-->
+            <h3 class="comment-separator">
+                <div class="comment-tab-current" id="pjax-container">
+                    <?php if($this->allow('comment')): ?>
+                        <span class="comment-num">
+                        <?php $this->commentsNum('这里还没有评论呢 >.<', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?>
+                        </span>
+                    <?php else :?>
+                        <span class="comment-num">此处评论被关闭啦 ~</span>
+                    <?php endif;?>
+                </div>
+            </h3>
+
+            <?php endif; ?>
+
         <?php endif; ?>
         
         <!--历史评论-->
-        <h3 class="comment-separator">
-            <div class="comment-tab-current" id="pjax-container">
-                <?php if($this->allow('comment')): ?>
-                    <span class="comment-num">
-                        <?php $this->commentsNum('这里还没有评论呢 >.<', '已有 1 条评论', '已有 <span class="num">%d</span> 条评论'); ?>
-                    </span>
-                <?php else :?>
-                    <span class="comment-num">此处评论被关闭啦 ~</span>
-                <?php endif;?>
-            </div>
-        </h3>
         <?php if ($comments->have()): ?>
             <?php $comments->listComments(array(
             'before'        =>  '<div class="comment-list" id="pjax-container">',
