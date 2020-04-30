@@ -97,7 +97,6 @@ if(!Utils::isPjax()){
         <section id="comments" class="container">
             <!--评论框-->
             <?php if($this->allow('comment')): ?>
-                <?php $this->header('commentReply=0&description=0&keywords=0&generator=0&template=0&pingback=0&xmlrpc=0&wlw=0&rss2=0&rss1=0&antiSpam=0&atom'); ?>
                 <div id="<?php $this->respondId(); ?>" class="respond">
                     <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form">
                         <?php if($this->user->hasLogin()): ?>

@@ -50,22 +50,22 @@
 
 ## 更新日志
 
-### 2020-04-29
+### 2020-04-30
 
-* 优化：Console 统一样式输出版权
-* 优化：主题 CDN 地址写法
-* 调整：Artalk 评论系统（错误中）
+* 调整：添加 artalk 自定义字段为 Artalk PHP 后端地址即可开启 Artalk 评论
+* 移除：Artalk 独立页面
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ## 待办清单
 
+ - [ ] 主题设置备份
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
  - [ ] `.theme-dark` 优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
- - [ ] Artalk 评论实验性兼容
+ - [x] Artalk 评论实验性兼容
  - [x] Progressive Web Apps
  - [x] 网页压缩
  - [x] 更丰富的表情
@@ -78,9 +78,10 @@
 
 自己写出来的问题：
 
- - [ ] 独立页面文章末尾赞赏与分享显示问题
+ - [ ] Pjax 加载 Artalk 评论系统
  - [ ] Pjax 下网页压缩 `function` 报错
  - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
+ - [x] 独立页面文章末尾赞赏与分享显示问题
  - [x] Service Worker 缓存 OwO 表情（需自行开启）
  - [x] 自定义快速评论调用接口
  - [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
