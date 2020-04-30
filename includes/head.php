@@ -64,12 +64,12 @@ if (isset($_POST['void_action'])) {
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-c28f2b413f.css'; ?>">
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-3395b65be7.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-6f62042729.css'; ?>">
 
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.css'); ?>">
     <?php endif; ?>
-    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+    <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
@@ -83,6 +83,7 @@ if (isset($_POST['void_action'])) {
     VOIDConfig = {
         PJAX : <?php echo $setting['pjax'] ? 'true' : 'false'; ?>,
         searchBase : "<?php Utils::index("/search/"); ?>",
+        owoBase : "<?php echo $assetsUrl.'/libs/owo/owo.json'; ?>",
         home: "<?php Utils::index("/"); ?>",
         buildTime : "<?php Utils::getBuildTime(); ?>",
         enableMath : <?php echo $setting['enableMath'] ? 'true' : 'false'; ?>,
@@ -91,6 +92,8 @@ if (isset($_POST['void_action'])) {
         hitokotoApi : "<?php if($setting['hitokotoApi'] != '') echo $setting['hitokotoApi']; else Utils::indexTheme('/libs/Hitokoto.php'); ?>",
         GhinfoApi : "<?php if($setting['GhinfoApi'] != '') echo $setting['GhinfoApi']; else echo "https://api.github.com/users/"; ?>",
         QinfoApi : "<?php if($setting['QinfoApi'] != '') echo $setting['QinfoApi']; else Utils::indexTheme('/libs/Qinfo.php?qNum='); ?>",
+        artKey : "<?php $this->permalink(); ?>",
+        artServer : "<?php $this->fields->artalk(); ?>",
         lazyload : <?php echo $setting['lazyload'] ? 'true' : 'false'; ?>,
         colorScheme:  <?php echo $setting['colorScheme']; ?>,
         headerMode: <?php echo $setting['headerMode']; ?>,
@@ -116,13 +119,12 @@ if (isset($_POST['void_action'])) {
         api : "<?php Utils::getExsApi(); ?>"
     }
     <?php endif; ?>
-    <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+    <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
     var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>
     </script>
     <script src="<?php echo $assetsUrl.'/header-1454f3b928.js'; ?>"></script>
     
-    <?php echo $setting['head']; ?>
     <style>
         <?php if(!empty($setting['desktopBannerHeight'])): ?>
         @media screen and (min-width: 768px){
@@ -159,5 +161,7 @@ if (isset($_POST['void_action'])) {
     <?php if($setting['useFiraCodeFont']): ?>
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
     <?php endif; ?>
+
+    <?php echo $setting['head']; ?>
 
     </head>

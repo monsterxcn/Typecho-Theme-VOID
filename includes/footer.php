@@ -137,12 +137,12 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
-        <script src="<?php echo $assetsUrl.'/VOID-38e02274fc.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-6c1aa0fcaf.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
         <?php endif; ?>
-        <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+        <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.js'); ?>"></script>
         <?php endif; ?>
 
@@ -152,13 +152,29 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
                 logo: 'OωO',
                 container: document.getElementsByClassName('OwO')[0],
                 target: document.getElementsByClassName('input-area')[0],
-                api: '<?php echo $assetsUrl.'/libs/owo/owo.json'; ?>',
+                api: VOIDConfig.owoBase,
                 position: 'down',
                 width: '400px',
                 maxHeight: '250px'
             });
         }
+
+        <?php if($this->fields->artalk != ''): ?>
+        new Artalk({
+            el: '#ArtalkComments',
+            placeholder: '来啊，快活啊 (/ω＼)',
+            noComment: '快来成为第一个评论的人吧~',
+            defaultAvatar: 'mp',
+            pageKey: VOIDConfig.artKey,
+            serverUrl: VOIDConfig.artServer,
+            readMore: {
+                pageSize: 10, // 每次请求获取评论数
+                autoLoad: true // 滚动到底部自动加载
+            }
+        });
+        <?php endif; ?>
         </script>
+
         <?php if($setting['pjax']): ?>
         <script>
             $(document).on('pjax:complete',function(){
@@ -180,21 +196,6 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
 
         <script>
-        <?php if($this->fields->artalk != ''): ?>
-        new Artalk({
-            el: '#ArtalkComments',
-            placeholder: '来啊，快活啊 (/ω＼)',
-            noComment: '快来成为第一个评论的人吧~',
-            defaultAvatar: 'mp',
-            pageKey: '<?php $this->permalink(); ?>',
-            serverUrl: '<?php $this->fields->artalk(); ?>',
-            readMore: {
-                pageSize: 10, // 每次请求获取评论数
-                autoLoad: true // 滚动到底部自动加载
-            }
-        });
-        <?php endif; ?>
-
         // 清理 console 统一输出版权
         console.log = function() {}
         console.warn("\n %c "+"VOID v".concat("3.4.1"," %c Simple Typecho Theme \n\n%c")
@@ -202,9 +203,11 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')
             echo '+"> https://github.com/AlanDecode/Typecho-Plugin-ExSearch\n"';
         if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true')
-            echo '+"> https://github.com/AlanDecode/Typecho-Plugin-PandaBangumi\n"';
-        if(Utils::isPluginAvailable('Meting') || Utils::isPluginAvailable('Aplayer'))
+            echo '+"> https://github.com/AlanDecode/PandaBangumi-Typecho-Plugin\n"';
+        if(Utils::isPluginAvailable('Meting') || Utils::isPluginAvailable('Aplayer')) {
+            echo '+"> https://github.com/metowolf/MetingJS\n"';
             echo '+"> https://aplayer.js.org\n"';
+        }
         if($this->fields->artalk != '')
             echo '+"> https://artalk.js.org\n"';
         ?>,"color: #FFF; background: #1DAAFF; padding:5px 0;","color: #FFF; background: #656565; padding:5px 0;","");

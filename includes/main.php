@@ -47,7 +47,8 @@ $setting = $GLOBALS['VOIDSetting'];
                         data-excerpt="<?php $this->fields->excerpt(); ?>"
                         data-img="<?php if($this->fields->banner != '') echo $this->fields->banner(); else echo $setting['defaultBanner']; ?>" 
                         data-twitter="<?php if($setting['twitterId']!='') echo $setting['twitterId']; else $this->author(); ?>"
-                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>">
+                        data-weibo="<?php if($setting['weiboId']!='') echo $setting['weiboId']; else $this->author(); ?>"
+                        <?php $tags = Contents::getTags($this->cid); if (count($tags) == 0) echo 'style="margin: 4rem 0;"'; ?>>
                         <?php if($setting['VOIDPlugin']):?>
                             <a role=button 
                                 aria-label="为文章点赞" 
