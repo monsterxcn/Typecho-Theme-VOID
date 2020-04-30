@@ -73,7 +73,7 @@ if (isset($_POST['void_action'])) {
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
-    <script src="<?php echo $assetsUrl.'/bundle-header-c627f808ea.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/bundle-header-ed1df4c449.js'; ?>"></script>
     <script>
     VOIDConfig = {
         PJAX : <?php echo $setting['pjax'] ? 'true' : 'false'; ?>,

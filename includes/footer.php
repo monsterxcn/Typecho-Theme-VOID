@@ -180,20 +180,22 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
 
         <script>
-        <?php $field = $this->fields->artalk; if($field != ''): ?>
+        <?php if($this->fields->artalk != ''): ?>
         new Artalk({
             el: '#ArtalkComments',
             placeholder: '来啊，快活啊 (/ω＼)',
             noComment: '快来成为第一个评论的人吧~',
             defaultAvatar: 'mp',
             pageKey: '<?php $this->permalink(); ?>',
-            serverUrl: '<?php $this->fields->artalk; ?>',
+            serverUrl: '<?php $this->fields->artalk(); ?>',
             readMore: {
                 pageSize: 10, // 每次请求获取评论数
                 autoLoad: true // 滚动到底部自动加载
             }
         });
         <?php endif; ?>
+
+        // 清理 console 统一输出版权
         console.log = function() {}
         console.warn("\n %c "+"VOID v".concat("3.4.1"," %c Simple Typecho Theme \n\n%c")
         +"> https://github.com/monsterxcn/Typecho-Theme-VOID\n"<?php
