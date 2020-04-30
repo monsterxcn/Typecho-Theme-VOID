@@ -25,8 +25,7 @@ $this->widget('VOID_Widget_Comments_Archive', $parameter)->to($comments);
         <?php if($this->allow('comment')): ?>
 
             <?php if($this->fields->artalk != ''): ?>
-            <!-- <?php echo $this->fields->artalk; ?> -->
-            <div id="ArtalkComments"></div>
+            <div id="pjax-container"><div id="ArtalkComments"></div></div>
             <?php else: ?>
 
             <?php $this->header('commentReply=1&description=0&keywords=0&generator=0&template=0&pingback=0&xmlrpc=0&wlw=0&rss2=0&rss1=0&antiSpam=0&atom'); ?>
