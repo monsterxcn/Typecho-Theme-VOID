@@ -205,7 +205,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
             echo '+"> https://github.com/AlanDecode/Typecho-Plugin-PandaBangumi\n"';
         if(Utils::isPluginAvailable('Meting') || Utils::isPluginAvailable('Aplayer'))
             echo '+"> https://aplayer.js.org\n"';
-        if(isset($this->fields->artalk))
+        if($this->fields->artalk != '')
             echo '+"> https://artalk.js.org\n"';
         ?>,"color: #FFF; background: #1DAAFF; padding:5px 0;","color: #FFF; background: #656565; padding:5px 0;","");
         </script>

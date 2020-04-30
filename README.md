@@ -59,6 +59,7 @@
 
 ## 待办清单
 
+ - [ ] 主题设置备份
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
  - [ ] `.theme-dark` 优化
