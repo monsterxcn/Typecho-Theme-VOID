@@ -408,14 +408,11 @@ article {
     padding-top: 1em;
     margin-left: -15px;
     width: calc(100% + 15px);
-    .theme-dark & .board-title {
-        color:#b0b0b0;
-        background:#333;
-    }
     .board-item {
         position: relative;
         background: white;
         box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 18px;
         transition: all 0.3s;
         overflow: hidden;
         display: flex;
@@ -425,8 +422,9 @@ article {
         &.hover {
             transform: scale(0.95);
         }
+        .theme-dark &,
         .theme-dark &.hover {
-            background: #222;
+            background: #333;
         }
         @media screen and (min-width: 768px) {
             &:hover {
@@ -450,9 +448,11 @@ article {
                 transition: $animationTime-very-slow ease-in-out opacity;
             }
             .theme-dark & {
-                filter: brightness(55%);
+                filter: brightness(55%) !important;
+                background: #333;
             }
         }
+        .board-descri,
         .board-title,
         .board-title a {
             padding: 8px 0 !important;
@@ -460,12 +460,19 @@ article {
             overflow: hidden !important;
             white-space: nowrap !important;
             text-align: center !important;
-            color: $textColor !important;
+            color: rgba(0,0,0,0.78) !important;
             font-weight: 700 !important;
             border: none;
             &:hover {
                 border: none;
             }
+        }
+        .theme-dark & .board-title{
+            color: #bbb !important;
+        }
+        .board-descri {
+            font-size: 80% !important;
+            color : #5e5b5c !important;
         }
         margin-left: 15px;
         margin-bottom: 15px;

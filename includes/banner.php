@@ -57,7 +57,7 @@ if($this->is('post') || $this->is('page')) {
             </h1>
             <?php if(!$this->is('archive')): ?>
                 <p class="post-meta">
-                    <?php if($this->template == 'Archives.php') {
+                    <?php if($this->template == 'pageArchives.php') {
                         echo Utils::getCatNum()." 分类 × ".Utils::getPostNum()." 文章 × ".Utils::getTagNum()." 标签";
                         if($setting['VOIDPlugin']) echo ' × <span id="totalWordCount"></span> 字';
                     } else{ ?>
