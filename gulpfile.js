@@ -21,7 +21,7 @@ gulp.task('clean', function () {
 
 // 依赖 CSS minify、打包，除 MathJax
 gulp.task('pack:css:dep', function () {
-    return gulp.src(['./assets/libs/**/*.css', '!./assets/libs/mathjax/**/*'])
+    return gulp.src(['./assets/libs/**/*.css', './assets/artalk.css', '!./assets/libs/mathjax/**/*'])
         .pipe(concat('bundle.css'))
         .pipe(minify())
         .pipe(rev())
@@ -86,7 +86,7 @@ gulp.task('md5', function () {
 gulp.task('move', function () {
     gulp.src(['./assets/libs/owo/**/*', './assets/libs/mathjax/**/*'], { base: './assets/libs/' })
         .pipe(gulp.dest('./build/assets/libs/'));
-    gulp.src(['./assets/sw-toolbox.js', './assets/VOIDCacheRule.js', './assets/instantpage.js'])
+    gulp.src(['./assets/sw-toolbox.js', './assets/VOIDCacheRule.js', './assets/artalk.js', './assets/instantpage.js'])
         .pipe(gulp.dest('./build/assets/'));
     gulp.src(['./assets/fonts/*'])
         .pipe(gulp.dest('./build/assets/fonts/'));
@@ -105,7 +105,7 @@ gulp.task('build', gulp.series('clean', gulp.parallel('pack:css:main', 'pack:css
 
 // 开发过程，处理一次依赖
 gulp.task('dev', function () {
-    gulp.src(['./assets/libs/**/*.css', '!./assets/libs/mathjax/**/*'])
+    gulp.src(['./assets/libs/**/*.css', './assets/artalk.css', '!./assets/libs/mathjax/**/*'])
         .pipe(concat('bundle.css'))
         .pipe(gulp.dest('./assets/'));
 
