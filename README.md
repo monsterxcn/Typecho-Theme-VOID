@@ -50,14 +50,9 @@
 
 ## 更新日志
 
-### 2020-05-01
+### 2020-05-03
 
-* 优化：友情链接卡片排版和夜间样式
-* 调整：Artalk 评论系统 Pjax 加载
-* 调整：首页卡片更大的圆角 ( `18px` )
-* 调整：友链解析格式 `[(name)+(slogan)](url)+(logourl)`
-* 修复：owo 表情 json 路径
-* 移除：友情链接独立页面
+* 修复：Safari 平滑滚动无法打断 [commit 2f105c8](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/2f105c8523782984181b0ee1abae6a5ca1955475)
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 

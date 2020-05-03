@@ -1,5 +1,9 @@
 # Change log | 更新日志
 
+**2020-05-03**
+
+* 修复：Safari 平滑滚动无法打断 [commit 2f105c8](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/2f105c8523782984181b0ee1abae6a5ca1955475)
+
 **2020-05-01**
 
 * 优化：友情链接卡片排版和夜间样式
