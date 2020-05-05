@@ -132,12 +132,12 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-332b3f4d01.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-0a9519a485.js'; ?>"></script>
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
-        <script src="<?php echo $assetsUrl.'/VOID-6c1aa0fcaf.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-a13412d175.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>

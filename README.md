@@ -2,15 +2,15 @@
 
 > ✏ 一款简洁优雅的 Typecho 主题
 
-作为计算机术语时，VOID 的意思是「无类型」。
+作为计算机术语时，VOID 的意思是「无类型」。要了解原版 VOID 主题，请先阅读介绍文章《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库说明《[AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)》，本仓库结构、使用方式与原主题相同，请不要直接下载仓库使用，如果你一定要下载仓库，那么请切换 nightly 分支。
+
+本仓库是我从原主题 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020 之后的 git 地址导入的，所以显示了所有 Alan 大佬的 commit history 。至于不 fork 是因为 fork 仓库修改时似乎无法显示我的 Contributions。本仓库的二次开发主要是 **一些针对自用需求的修改** ，所以可能无法像原主题一样适合更多人。而且由于我技术不精，很多地方使用了仿写的方式来实现功能、部分地方代码写的可能不规范、也可能出现莫名其妙的 Bug，请谨慎将本主题投入生产环境。关于本仓库与原主题仓库代码的同步策略：凡是原主题无关样式调整的 commit 本主题都将及时同步，其余看心情同步。关于版本号：从 3.4.1 版本（此版本更新内容基本涵盖了原主题 3.5.0 版本绝大部分修改）为起点发布，所有版本号不会比原主题版本号更高。
+
+如果你使用了本主题且发现 Bug 请务必提出 issues 让我知道。如果你对本仓库某处的修改非常不满意，也请大胆地提出 issues 抨击我以使我停止开发。
 
 ![Build](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![Download](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![Release](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![License](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
 ## 特性
-
-> 介绍文章：[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)
-
-> 特色演示：[示例页面](https://blog.imalan.cn/archives/194/)
 
 <details><summary>原始特性</summary><br>
 
@@ -46,17 +46,15 @@
 
 </details>
 
-以及其他很多细节，总之用起来还算舒服。
+## 更新动态
 
-## 更新日志
+### 2020-05-05
 
-### 2020-05-03
-
-* 修复：Safari 平滑滚动无法打断 [commit 2f105c8](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/2f105c8523782984181b0ee1abae6a5ca1955475)
+* 优化：README 文档
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
-## 待办清单
+### 待办清单
 
  - [ ] 主题设置备份
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
@@ -83,34 +81,32 @@
  - [x] 独立页面文章末尾赞赏与分享显示问题
  - [x] Service Worker 缓存 OwO 表情（需自行开启）
  - [x] 自定义快速评论调用接口
- - [x] 在主题中调用插件中产生的 `ExSearchConfig` `$exjson` 地址
+ - [x] 在主题中调用插件产生的 ExSearch json 地址
 
 ## 开发与自定义
 
-**You are on your own.**
+<details><summary> **You are on your own.** </summary><br>
 
 > This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
 
-> 这个 Fork 仓库是弟弟的练习项目，请到源仓库 PR 。
+指引：安装 NodeJS 环境 > clone repo > 安装依赖 > 打包依赖的 JavaScript & CSS > 你构建的主题
 
-准备好 NodeJS 环境，然后 clone 这个 repo > 安装依赖 > 打包依赖的 JS&CSS > 你构建的主题。
-
-关于安装 node-sass 出错请参考《 [安装 node-sass 的正确姿势 - Issue #28 - lmk123/blog](https://github.com/lmk123/blog/issues/28) 》
-
-如果你对自己的更改很满意，**欢迎提出 Pull Request**。
+ - 关于安装 node-sass 出错请参考《 [安装 node-sass 的正确姿势 - Issue #28 - lmk123/blog](https://github.com/lmk123/blog/issues/28) 》
+ - 如果需要你可以尝试在主题仓库根目录下执行 `rm -rf node-modules package-lock.json` 后再安装依赖
+ - 如果你对自己的更改很满意或者有很妙的修改想法，**欢迎提出 Pull Request 或 Issues**
 
 ```bash
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID ./VOID && cd ./VOID
 
-# 使用 cnpm
+# 使用 cnpm 请参考
 alias cnpm="npm --registry=https://registry.npm.taobao.org \
 --cache=$HOME/.npm/.cache/cnpm \
 --disturl=https://npm.taobao.org/mirrors/node \
 --userconfig=$HOME/.cnpmrc"
 
 # 安装依赖
-cnpm install -g gulp
-cnpm install
+npm install -g gulp
+npm install
 
 # 打包依赖的 JS 和 CSS
 gulp dev
@@ -127,9 +123,11 @@ gulp sass
 gulp build
 ```
 
+</details>
+
 ## 鸣谢
 
-[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher) | [Artalk](https://github.com/qwqcode/Artalk)
+[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher) | [FORMA](https://justgoodthemes.com/ghost-themes/forma/) | [Artalk](https://github.com/qwqcode/Artalk)
 
 [RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
 

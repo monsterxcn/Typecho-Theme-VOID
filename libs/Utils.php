@@ -142,7 +142,7 @@ class Utils
         echo '"></script>';
 
         echo '<script src="';
-        self::indexTheme('/assets/editor-d07fff7d7d.js');
+        self::indexTheme('/assets/editor-8d768cbe98.js');
         echo '"></script>';
 
         echo '<link rel="stylesheet" href="';
