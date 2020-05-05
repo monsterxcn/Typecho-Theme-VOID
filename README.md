@@ -85,7 +85,7 @@
 
 ## 开发与自定义
 
-<details><summary> **You are on your own.** </summary><br>
+<details><summary><b>You are on your own.</b></summary><br>
 
 > This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
 
