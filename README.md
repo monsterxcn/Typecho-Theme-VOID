@@ -48,9 +48,9 @@
 
 ## 更新动态
 
-### 2020-05-05
+### 2020-05-07
 
-* 优化：README 文档
+* 修复：播放器 iframe 错误 [commit aa6d572](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/aa6d57277fef096346a0626f4dda255efe7a4b7e)
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 

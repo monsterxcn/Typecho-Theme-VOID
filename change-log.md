@@ -1,5 +1,9 @@
 # Change log | 更新日志
 
+**2020-05-07**
+
+* 修复：播放器 iframe 错误 [commit aa6d572](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/aa6d57277fef096346a0626f4dda255efe7a4b7e)
+
 **2020-05-05**
 
 * 优化：README 文档
@@ -90,7 +94,7 @@
 * 优化：`del` 字体采用灰度 `:hover`
 * 优化：快速评论框小屏幕隐藏
 * 调整：`highlightColor` 由 `#bd6262` 改为 `#87cefa`
-* 调整：首页卡片风格 [commit 9ac734](https://github.com/monsterxcn/Typecho-Theme-VOID/commit/9ac734abb6a71b0f87bf72ae6a15bf52185bcd00)
+* 调整：首页卡片风格 [commit 9ac734a](https://github.com/monsterxcn/Typecho-Theme-VOID/commit/9ac734abb6a71b0f87bf72ae6a15bf52185bcd00)
 
 **2020-04-12**
 
