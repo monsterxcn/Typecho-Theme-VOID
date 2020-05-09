@@ -48,20 +48,20 @@
 
 ## 更新动态
 
-### 2020-05-07
+### 2020-05-09
 
-* 修复：播放器 iframe 错误 [commit aa6d572](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/aa6d57277fef096346a0626f4dda255efe7a4b7e)
+* 新增：主题设置备份
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ### 待办清单
 
- - [ ] 主题设置备份
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
  - [ ] `.theme-dark` 优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
+ - [x] 主题设置备份
  - [x] Artalk 评论实验性兼容
  - [x] Progressive Web Apps
  - [x] 网页压缩
