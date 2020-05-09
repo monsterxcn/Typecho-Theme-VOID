@@ -60,6 +60,50 @@ function themeConfig($form)
     echo '<script>var VOIDVersion='.$GLOBALS['VOIDVersion'].'</script>';
     echo '<script src="'.Helper::options()->themeUrl.'/assets/check_update.js"></script>';
 
+    $db = Typecho_Db::get();
+    $getConfig = $db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOID'));
+    $getConfigValue = $getConfig['value'];
+    if (isset($_POST['type'])) {
+        if ($_POST["type"] == "备份主题设置") {
+            if ($db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOIDbackup'))) {
+                $update = $db->update('table.options')->rows(array('value'=>$getConfigValue))->where('name = ?', 'theme:VOIDbackup');
+                $updateRows= $db->query($update);
+                echo '<p class="notice">备份更新，等待自动刷新！如未自动刷新请点 <a href="' .Helper::options()->adminUrl. 'options-theme.php">这里</a></p>';
+                echo '<script language="JavaScript">window.setTimeout("location=\'' .Helper::options()->adminUrl. 'options-theme.php\'", 2000);</script>';
+            } else {
+                if ($getConfigValue) {
+                    $insert = $db->insert('table.options')->rows(array('name' => 'theme:VOIDbackup','user' => '0','value' => $getConfigValue));
+                    $insertId = $db->query($insert);
+                    echo '<p class="notice">备份成功，等待自动刷新！如未自动刷新请点 <a href="' .Helper::options()->adminUrl. 'options-theme.php">这里</a></p>';
+                    echo '<script language="JavaScript">window.setTimeout("location=\'' .Helper::options()->adminUrl. 'options-theme.php\'", 2000);</script>';
+                }
+            }
+        }
+        if ($_POST["type"] == "恢复主题设置") {
+            if ($db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOIDbackup'))) {
+                $getConfigBack = $db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOIDbackup'));
+                $getConfigBackValue = $getConfigBack['value'];
+                $update = $db->update('table.options')->rows(array('value'=>$getConfigBackValue))->where('name = ?', 'theme:VOID');
+                $updateRows= $db->query($update);
+                echo '<p class="notice">恢复成功，等待自动刷新！如未自动刷新请点 <a href="' .Helper::options()->adminUrl. 'options-theme.php">这里</a></p>';
+                echo '<script language="JavaScript">window.setTimeout("location=\'' .Helper::options()->adminUrl. 'options-theme.php\'", 2000);</script>';
+            } else {
+                echo '<p class="notice">没有设置备份数据，无法恢复！</p>';
+            }
+        }
+        if ($_POST["type"]=="删除设置备份") {
+            if ($db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOIDbackup'))) {
+                $delete = $db->delete('table.options')->where('name = ?', 'theme:VOIDbackup');
+                $deletedRows = $db->query($delete);
+                echo '<p class="notice">删除成功，等待自动刷新！如未自动刷新请点 <a href="' .Helper::options()->adminUrl. 'options-theme.php">这里</a></p>';
+                echo '<script language="JavaScript">window.setTimeout("location=\'' .Helper::options()->adminUrl. 'options-theme.php\'", 2000);</script>';
+            } else {
+                echo '<p class="notice">没有设置备份数据，无法删除！</p>';
+            }
+        }
+    }
+    echo '<form action="?VOIDbackup" method="post"><input type="submit" name="type" class="btn btn-s" value="备份主题设置" />&nbsp;&nbsp;<input type="submit" name="type" class="btn btn-s" value="恢复主题设置" />&nbsp;&nbsp;<input type="submit" name="type" class="btn btn-s" value="删除设置备份" /></form><br><br>';
+
     $defaultBanner = new Typecho_Widget_Helper_Form_Element_Text('defaultBanner', null, '', '首页顶部大图', '可以填写随机图 API。');
     $form->addInput($defaultBanner);
     $indexBannerTitle = new Typecho_Widget_Helper_Form_Element_Text('indexBannerTitle', null, '', '首页顶部大标题', '不要太长');

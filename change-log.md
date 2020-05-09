@@ -1,5 +1,9 @@
 # Change log | 更新日志
 
+**2020-05-09**
+
+* 新增：主题设置备份
+
 **2020-05-07**
 
 * 修复：播放器 iframe 错误 [commit aa6d572](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/aa6d57277fef096346a0626f4dda255efe7a4b7e)
