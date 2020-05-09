@@ -1,6 +1,5 @@
-# Typecho Theme VOID
+<h1 align="center">Typecho Theme VOID</h1><h3 align="center">✏ 一款简洁优雅的 Typecho 主题</h3></br></br>
 
-> ✏ 一款简洁优雅的 Typecho 主题
 
 作为计算机术语时，VOID 的意思是「无类型」。要了解原版 VOID 主题，请先阅读介绍文章《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库说明《[AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)》，本仓库结构、使用方式与原主题相同，请不要直接下载仓库使用，如果你一定要下载仓库，那么请切换 nightly 分支。
 
