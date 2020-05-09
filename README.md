@@ -1,6 +1,5 @@
-# Typecho Theme VOID
+<h1 align="center">Typecho Theme VOID</h1><h3 align="center">✏ 一款简洁优雅的 Typecho 主题</h3></br></br>
 
-> ✏ 一款简洁优雅的 Typecho 主题
 
 作为计算机术语时，VOID 的意思是「无类型」。要了解原版 VOID 主题，请先阅读介绍文章《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库说明《[AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)》，本仓库结构、使用方式与原主题相同，请不要直接下载仓库使用，如果你一定要下载仓库，那么请切换 nightly 分支。
 
@@ -48,20 +47,20 @@
 
 ## 更新动态
 
-### 2020-05-07
+### 2020-05-09
 
-* 修复：播放器 iframe 错误 [commit aa6d572](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/aa6d57277fef096346a0626f4dda255efe7a4b7e)
+* 新增：主题设置备份
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ### 待办清单
 
- - [ ] 主题设置备份
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
  - [ ] `.theme-dark` 优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
+ - [x] 主题设置备份
  - [x] Artalk 评论实验性兼容
  - [x] Progressive Web Apps
  - [x] 网页压缩
@@ -127,7 +126,7 @@ gulp build
 
 ## 鸣谢
 
-[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher) | [FORMA](https://justgoodthemes.com/ghost-themes/forma/) | [Artalk](https://github.com/qwqcode/Artalk)
+[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://prismjs.com/index.html) | [MathJax](https://www.mathjax.org/) | [fancyBox](http://fancyapps.com/fancybox/3/) | [bigfoot.js](http://www.bigfootjs.com/) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://tscanlin.github.io/tocbot/) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](http://wicky.nillia.ms/headroom.js/) | [hypher](https://github.com/bramstein/hypher) | [Artalk](https://github.com/qwqcode/Artalk)
 
 [RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
 
