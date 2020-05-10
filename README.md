@@ -58,6 +58,7 @@
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
  - [ ] `.theme-dark` 优化
+ - [ ] 单栏样式优化
  - [ ] CDN 配置优化
  - [ ] Links 随机输出
  - [x] 主题设置备份
