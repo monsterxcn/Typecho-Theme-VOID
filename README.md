@@ -1,4 +1,16 @@
-<h1 align="center">Typecho Theme VOID</h1><h3 align="center">✏ 一款简洁优雅的 Typecho 主题</h3></br></br>
+<h1 align="center">Typecho Theme VOID</h1>
+
+<div align="center">
+
+✏ 一款简洁优雅的 Typecho 主题
+
+</div></br>
+
+<div align="center">
+
+![Build](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![Download](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![Release](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![License](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
+
+</div></br>
 
 
 作为计算机术语时，VOID 的意思是「无类型」。要了解原版 VOID 主题，请先阅读介绍文章《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库说明《[AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)》，本仓库结构、使用方式与原主题相同，请不要直接下载仓库使用，如果你一定要下载仓库，那么请切换 nightly 分支。
@@ -6,8 +18,6 @@
 本仓库是我从原主题 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020 之后的 git 地址导入的，所以显示了所有 Alan 大佬的 commit history 。至于不 fork 是因为 fork 仓库修改时似乎无法显示我的 Contributions。本仓库的二次开发主要是 **一些针对自用需求的修改** ，所以可能无法像原主题一样适合更多人。而且由于我技术不精，很多地方使用了仿写的方式来实现功能、部分地方代码写的可能不规范、也可能出现莫名其妙的 Bug，请谨慎将本主题投入生产环境。关于本仓库与原主题仓库代码的同步策略：凡是原主题无关样式调整的 commit 本主题都将及时同步，其余看心情同步。关于版本号：从 3.4.1 版本（此版本更新内容基本涵盖了原主题 3.5.0 版本绝大部分修改）为起点发布，所有版本号不会比原主题版本号更高。
 
 如果你使用了本主题且发现 Bug 请务必提出 issues 让我知道。如果你对本仓库某处的修改非常不满意，也请大胆地提出 issues 抨击我以使我停止开发。
-
-![Build](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![Download](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![Release](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![License](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
 ## 特性
 
@@ -47,40 +57,40 @@
 
 ## 更新动态
 
-### 2020-05-09
+### 2020-05-10
 
-* 新增：主题设置备份
+* 优化：README 文档
 
 更多：[change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ### 待办清单
 
+ - [ ] 夜间样式和单栏样式优化
+ - [ ] Links 随机排序
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
  - [ ] [MermaidJs](https://github.com/mermaid-js/mermaid) 支持
- - [ ] `.theme-dark` 优化
- - [ ] CDN 配置优化
- - [ ] Links 随机输出
- - [x] 主题设置备份
- - [x] Artalk 评论实验性兼容
- - [x] Progressive Web Apps
- - [x] 网页压缩
- - [x] 更丰富的表情
- - [x] 静态资源 CDN 设置
- - [x] 一言 API
- - [x] GitHub&QQ 账号快速评论
- - [x] Instantpage v3.0
- - [x] 独立页面模板
- - [x] Console 统一样式输出版权
+ - [x] CDN 配置优化（写的不是很优雅）
+ - [x] Console 版权统一样式（写的不是很优雅）
+ - [x] 一言 API（写的不是很优雅）
+ - [x] 网页压缩（写的不是很优雅）
+ - [x] 主题设置备份（参考 QQdie [博文](https://qqdie.com/archives/typecho-templates-backup-and-restore.html) 实现）
+ - [x] Artalk 评论实验性兼容（填写自定义字段以开启）
+ - [x] Progressive Web Apps（需自行仿写 manifest.json 文件）
+ - [x] 更丰富的表情（添加了蛆音娘、QQ 表情）
+ - [x] 静态资源 CDN 设置（在主题设置中开启）
+ - [x] GitHub & QQ 账号快速评论（参考 Krait [博文](https://krait.cn/major/1888.html) 实现）
+ - [x] Instantpage v3.0（可有可无，正考虑是否删除）
+ - [x] 独立页面模板（追番页面、自言页面 ~~、友链页面~~ ）
 
 自己写出来的问题：
 
  - [ ] Pjax 下网页压缩 `function` 报错
- - [ ] `.macStyleCodeBlock .yue pre::before` 与 `.OwO .OwO-body` `z-index` 层叠布局冲突
- - [x] Artalk 评论系统 Pjax 加载
- - [x] 独立页面文章末尾赞赏与分享显示问题
- - [x] Service Worker 缓存 OwO 表情（需自行开启）
- - [x] 自定义快速评论调用接口
- - [x] 在主题中调用插件产生的 ExSearch json 地址
+ - [x] `.macStyleCodeBlock .yue pre::before` 与 `.OwO-body` `z-index` 层叠布局冲突（避免在评论区写代码）
+ - [x] Artalk 评论系统 Pjax 加载（通过仿写 OwO 解决）
+ - [x] 独立页面文章末尾赞赏与分享显示问题（更新主题清除缓存解决）
+ - [x] Service Worker 缓存 OwO 表情（需自行开启，非火狐浏览器不推荐开启）
+ - [x] 自定义快速评论调用接口（已加入高级设置）
+ - [x] 在主题中调用插件产生的 ExSearch json 地址（解决）
 
 ## 开发与自定义
 
