@@ -1,8 +1,8 @@
 <h1 align="center">Typecho Theme VOID</h1>
 
-<div style="text-align:center">✏ 一款简洁优雅的 Typecho 主题</div></br>
+<div align="center">✏ 一款简洁优雅的 Typecho 主题</div>
 
-<div style="text-align:center">
+<div align="center">
 
 ![Build](https://img.shields.io/github/workflow/status/monsterxcn/Typecho-Theme-VOID/Build?style=flat-square)  ![Download](https://img.shields.io/github/downloads/monsterxcn/Typecho-Theme-VOID/total?style=flat-square)  ![Release](https://img.shields.io/github/v/release/monsterxcn/Typecho-Theme-VOID?style=flat-square)  ![License](https://img.shields.io/github/license/monsterxcn/Typecho-Theme-VOID?label=GLWTPL&style=flat-square)
 
