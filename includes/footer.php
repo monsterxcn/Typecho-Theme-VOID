@@ -132,7 +132,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-0a9519a485.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-335abd5109.js'; ?>"></script>
 
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->

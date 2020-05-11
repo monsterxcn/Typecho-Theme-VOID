@@ -89,7 +89,7 @@
 
 ### 待办清单
 
- - [ ] [MermaidJS](https://github.com/mermaid-js/mermaid) 匹配规则优化
+ - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
  - [ ] 夜间样式和单栏样式优化
  - [ ] Links 随机排序
  - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
