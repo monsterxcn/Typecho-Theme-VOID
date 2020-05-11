@@ -148,6 +148,9 @@ var VOID_Content = {
                 flowchart:{
                     useMaxWidth:false,
                     htmlLabels:true
+                },
+                sequence:{
+                    showSequenceNumbers:true
                 }
             };
             mermaid.initialize(config);
