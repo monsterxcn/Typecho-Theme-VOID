@@ -203,7 +203,7 @@
 
 <details><summary>Mermaid 图表排版</summary><br>
 
-主题设置中启用 MermaidJS 后在文章中，使用 `[mermaid][/mermaid]` 包起来的代码可显示为相应图标。例如：
+主题设置中启用 MermaidJS 后在文章中，使用 `[mermaid][/mermaid]` 包起来的代码可显示为相应图表。例如：
 
 ```
 [mermaid]
