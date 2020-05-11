@@ -87,6 +87,7 @@ if (isset($_POST['void_action'])) {
         home: "<?php Utils::index("/"); ?>",
         buildTime : "<?php Utils::getBuildTime(); ?>",
         enableMath : <?php echo $setting['enableMath'] ? 'true' : 'false'; ?>,
+        enableMermaid : <?php echo $setting['enableMermaid'] ? 'true' : 'false'; ?>,
         enableHitokoto : <?php echo $setting['enableHitokoto'] ? 'true' : 'false'; ?>,
         webManifest : <?php echo $setting['webManifest'] ? 'true' : 'false'; ?>,
         hitokotoApi : "<?php if($setting['hitokotoApi'] != '') echo $setting['hitokotoApi']; else Utils::indexTheme('/libs/Hitokoto.php'); ?>",

@@ -52,7 +52,7 @@ gulp.task('pack:js:dep', function () {
         .pipe(rev.manifest())
         .pipe(gulp.dest('temp/rev/js_bundle-header'));
 
-    return gulp.src(['./assets/libs/**/*.js', '!./assets/libs/header/**/*', '!./assets/libs/mathjax/**/*'])
+    return gulp.src(['./assets/libs/**/*.js', '!./assets/libs/header/**/*', '!./assets/libs/mathjax/**/*', '!./assets/libs/mermaid/*'])
         .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(rev())
@@ -84,7 +84,7 @@ gulp.task('md5', function () {
 
 // 无需处理的文件
 gulp.task('move', function () {
-    gulp.src(['./assets/libs/owo/**/*', './assets/libs/mathjax/**/*'], { base: './assets/libs/' })
+    gulp.src(['./assets/libs/owo/**/*', './assets/libs/mathjax/**/*', './assets/libs/mermaid/*'], { base: './assets/libs/' })
         .pipe(gulp.dest('./build/assets/libs/'));
     gulp.src(['./assets/sw-toolbox.js', './assets/VOIDCacheRule.js', './assets/artalk.js', './assets/instantpage.js'])
         .pipe(gulp.dest('./build/assets/'));
@@ -105,7 +105,7 @@ gulp.task('build', gulp.series('clean', gulp.parallel('pack:css:main', 'pack:css
 
 // 开发过程，处理一次依赖
 gulp.task('dev', function () {
-    gulp.src(['./assets/libs/**/*.css', './assets/artalk.css', '!./assets/libs/mathjax/**/*'])
+    gulp.src(['./assets/libs/**/*.css', './assets/artalk.css', '!./assets/libs/mathjax/**/*', '!./assets/libs/mermaid/*'])
         .pipe(concat('bundle.css'))
         .pipe(gulp.dest('./assets/'));
 
@@ -113,7 +113,7 @@ gulp.task('dev', function () {
         .pipe(concat('bundle-header.js'))
         .pipe(gulp.dest('./assets/'));
 
-    return gulp.src(['./assets/libs/**/*.js', '!./assets/libs/header/**/*', '!./assets/libs/mathjax/**/*'])
+    return gulp.src(['./assets/libs/**/*.js', '!./assets/libs/header/**/*', '!./assets/libs/mathjax/**/*', '!./assets/libs/mermaid/*'])
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('./assets/'));
 });
