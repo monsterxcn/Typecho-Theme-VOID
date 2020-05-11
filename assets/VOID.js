@@ -141,6 +141,19 @@ var VOID_Content = {
         }
     },
 
+    mermaid: function () {
+        if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+            var config = {
+                startOnLoad:true,
+                flowchart:{
+                    useMaxWidth:false,
+                    htmlLabels:true
+                }
+            };
+            mermaid.initialize(config);
+        }
+    },
+
     hitokoto: function () {
         if (VOIDConfig.enableHitokoto) {
             $.ajax({
@@ -183,6 +196,7 @@ var VOID = {
         VOID_Content.bigfoot();
         VOID_Content.hitokoto();
         VOID_Content.math();
+        VOID_Content.mermaid();
         VOID_Content.hyphenate();
         
         VOID_Vote.reload();
@@ -233,6 +247,7 @@ var VOID = {
         VOID_Content.parseUrl();
         VOID_Content.highlight();
         VOID_Content.math();
+        VOID_Content.mermaid();
         VOID_Content.hyphenate();
         VOID_Content.pangu();
         VOID_Content.bigfoot();
