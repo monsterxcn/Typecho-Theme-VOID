@@ -86,6 +86,7 @@ Class Contents
             $text = self::parseFancyBox($text, $widget->parameter->__get('type') == 'feed');
             $text = self::parseBiaoQing($text);
             $text = self::parsePhotoSet($text);
+            $text = self::parseMermaid($text);
             $text = self::parseNotice($text);
             $text = self::parseHeader($text);
         }
@@ -105,6 +106,9 @@ Class Contents
             // 去除照片集标记
             $text = str_replace('[photos]', '', $text);
             $text = str_replace('[/photos]', '', $text);
+            // 去除 Mermaid 标记
+            $text = str_replace('[mermaid]', '', $text);
+            $text = str_replace('[/mermaid]', '', $text);
         }
         return $text;
     }
@@ -145,6 +149,19 @@ Class Contents
         return $new;
     }
 
+    /**
+     * 解析 Mermaid
+     * 
+     * @return string
+     */
+    static public function parseMermaid($content)
+    {
+        $reg='/\[mermaid.*?\](.*?)\[\/mermaid\]/s';
+        $rp='<div class="mermaid">${1}</div>';
+        $new=preg_replace($reg,$rp,$content);
+        return $new;
+    }
+    
     /**
      * 解析照片集
      *

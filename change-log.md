@@ -1,5 +1,10 @@
 # Change log | 更新日志
 
+**2020-05-11**
+
+* 新增：[MermaidJS](https://github.com/mermaid-js/mermaid) v8.5.0 支持
+* 优化：README 文档
+
 **2020-05-10**
 
 * 优化：README 文档

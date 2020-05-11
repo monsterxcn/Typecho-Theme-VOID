@@ -130,6 +130,8 @@ function themeConfig($form)
     $form->addInput($enableHitokoto);
     $enableMath = new Typecho_Widget_Helper_Form_Element_Radio('enableMath', array('0' => '不启用', '1' => '启用'), '0', '启用数学公式解析', '是否启用数学公式解析。启用后会多加载 1~2M 的资源。');
     $form->addInput($enableMath);
+    $enableMermaid = new Typecho_Widget_Helper_Form_Element_Radio('enableMermaid', array('0' => '不启用', '1' => '启用'), '0', '启用 Mermaid 图表解析', '是否启用 Mermaid 图表解析。启用后会多加载 1~2M 的资源。');
+    $form->addInput($enableMermaid);
     $enableCompress = new Typecho_Widget_Helper_Form_Element_Radio('enableCompress', array('0' => '不启用', '1' => '启用'), '0', '启用页面压缩', '是否启用 Html 页面压缩。启用后会将输出的 HTML 代码压缩，使用 <nocompress> 标签包裹阻止压缩的内容。');
     $form->addInput($enableCompress);
     $head = new Typecho_Widget_Helper_Form_Element_Textarea('head', null, '', 'head 标签输出内容', '统计代码等。');

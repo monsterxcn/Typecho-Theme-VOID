@@ -89,7 +89,8 @@ class Utils
      * 界面大小风格
      * 1: 14px, 2: 16px, 3: 18px, 4: 20px, 5: 22px
      */
-    public static function getTextSize($setting) {
+    public static function getTextSize($setting)
+    {
         if(isset($_COOKIE['textsize'])) {
             return $_COOKIE['textsize'];
         } else {
@@ -126,7 +127,8 @@ class Utils
     /**
      * iOS 判定
      */
-    public static function isIosSafari () {
+    public static function isIosSafari ()
+    {
         return strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') || strpos($_SERVER['HTTP_USER_AGENT'], 'iPad');
     }
 
@@ -270,7 +272,8 @@ class Utils
      * 
      * @return str
      */
-    public static function compressHtml($html_source) {
+    public static function compressHtml($html_source)
+    {
         $chunks = preg_split('/(<!--<nocompress>-->.*?<!--<\/nocompress>-->|<nocompress>.*?<\/nocompress>|<pre.*?\/pre>|<textarea.*?\/textarea>|<script.*?\/script>)/msi', $html_source, -1, PREG_SPLIT_DELIM_CAPTURE);
         $compress = '';
         foreach ($chunks as $c) {
@@ -357,6 +360,7 @@ class Utils
             'defaultBanner' => '',
             'enableHitokoto' => false,
             'enableMath' => false,
+            'enableMermaid' => false,
             'enableCompress' => false,
             'head' => '',
             'footer' => '',
@@ -382,6 +386,7 @@ class Utils
         // 一些类型变换
         $themeSetting['enableHitokoto'] = boolval($themeSetting['enableHitokoto']);
         $themeSetting['enableMath'] = boolval($themeSetting['enableMath']);
+        $themeSetting['enableMermaid'] = boolval($themeSetting['enableMermaid']);
         $themeSetting['enableCompress'] = boolval($themeSetting['enableCompress']);
         $themeSetting['lazyload'] = boolval($themeSetting['lazyload']);
         $themeSetting['colorScheme'] = intval($themeSetting['colorScheme']);
