@@ -132,7 +132,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-335abd5109.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-0a9519a485.js'; ?>"></script>
 
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
@@ -140,10 +140,10 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
         <?php if($setting['enableMermaid']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.min.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MermaidJS/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-6688263d73.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-32b746cf3d.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>

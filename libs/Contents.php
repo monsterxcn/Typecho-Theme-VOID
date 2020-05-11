@@ -143,7 +143,7 @@ Class Contents
      */
     static public function parseNotice($content)
     {
-        $reg='/\[notice.*?\](.*?)\[\/notice\]/s';
+        $reg='/<p>\[notice.*?\](.*?)\[\/notice\]<\/p>/s';
         $rp='<p class="notice">${1}</p>';
         $new=preg_replace($reg,$rp,$content);
         return $new;
