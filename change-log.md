@@ -1,5 +1,9 @@
 # Change log | 更新日志
 
+**2020-05-12**
+
+* 优化：[MermaidJS](https://github.com/mermaid-js/mermaid) 小屏幕显示
+
 **2020-05-11**
 
 * 新增：[MermaidJS](https://github.com/mermaid-js/mermaid) v8.5.0 支持

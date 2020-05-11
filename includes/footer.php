@@ -140,7 +140,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
         <?php if($setting['enableMermaid']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.min.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MermaidJS/mermaid.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
         <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>
