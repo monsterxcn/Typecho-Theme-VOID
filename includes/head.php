@@ -124,7 +124,7 @@ if (isset($_POST['void_action'])) {
     var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>
     </script>
-    <script src="<?php echo $assetsUrl.'/header-ff6bc6b74d.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/header-f8305928d1.js'; ?>"></script>
     
     <style>
         <?php if(!empty($setting['desktopBannerHeight'])): ?>
