@@ -82,13 +82,14 @@
 
 ### 2020-05-12
 
-* 优化：[MermaidJS](https://github.com/mermaid-js/mermaid) 小屏幕显示
+* 新增：[实验性]MermaidJS 前端无刷新切换主题
+* 优化：MermaidJS 小屏幕显示
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ### 待办清单
 
- - [ ] MermaidJS 无刷新切换主题重渲染
+ - [ ] MermaidJS 前端无刷新切换主题
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
  - [ ] 夜间样式和首页单栏样式优化
  - [ ] Links 随机排序
