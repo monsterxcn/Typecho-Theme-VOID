@@ -143,13 +143,15 @@ var VOID_Content = {
 
     mermaid: function () {
         if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+            // https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
             var config = {
-                startOnLoad:true,
-                flowchart:{
+                theme: 'default',
+                startOnLoad: true,
+                flowchart: {
                     useMaxWidth:false,
                     htmlLabels:true
                 },
-                sequence:{
+                sequence: {
                     showSequenceNumbers:true
                 }
             };

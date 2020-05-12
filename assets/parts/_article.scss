@@ -378,7 +378,7 @@ article {
     }
     .mermaid {
         text-align: center;
-        @media screen and (min-width: 768px) {
+        @media screen and (max-width: 768px) {
             svg{
                 max-width: 90% !important;
             }
