@@ -64,7 +64,7 @@ if (isset($_POST['void_action'])) {
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-c28f2b413f.css'; ?>">
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-e60ba0e1ca.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-405e6e0ba3.css'; ?>">
 
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.css'); ?>">
@@ -124,7 +124,7 @@ if (isset($_POST['void_action'])) {
     var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>
     </script>
-    <script src="<?php echo $assetsUrl.'/header-f8305928d1.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/header-ff6bc6b74d.js'; ?>"></script>
     
     <style>
         <?php if(!empty($setting['desktopBannerHeight'])): ?>

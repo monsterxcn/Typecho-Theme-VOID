@@ -143,7 +143,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-32b746cf3d.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-226fde8de7.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
