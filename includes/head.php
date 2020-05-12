@@ -64,7 +64,7 @@ if (isset($_POST['void_action'])) {
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-c28f2b413f.css'; ?>">
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-405e6e0ba3.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-fbe8364404.css'; ?>">
 
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.css'); ?>">

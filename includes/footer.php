@@ -52,7 +52,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <aside hidden id="setting-panel">
             <section>
                 <div id="toggle-night">
-                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();"><i></i></a>
+                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();VOID.MermaidThemeSwitcher.toggleByHand();"><i></i></a>
                 </div>
                 <div id="adjust-text-container">
                     <div class="adjust-text-item">
@@ -139,11 +139,11 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <?php if($setting['enableMermaid']): ?>
-        <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.min.js'; ?>'></script>-->
+        <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.js'; ?>'></script>-->
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-4613ace540.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-6cca0693e1.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
@@ -202,6 +202,8 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
 
         <script>
+        // 弹出公告
+        // VOID.alert('Welcome!');
         // 清理 console 统一输出版权
         console.log = function() {}
         console.warn("\n %c "+"VOID v".concat("3.4.1"," %c Simple Typecho Theme \n\n%c")
