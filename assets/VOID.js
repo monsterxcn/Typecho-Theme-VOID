@@ -141,18 +141,21 @@ var VOID_Content = {
         }
     },
 
-    mermaid: function () {
+    mermaid: function (t) {
         if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
             // https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
             var config = {
-                theme: 'default',
+                theme: t,
                 startOnLoad: true,
+                logLevel: 0,
                 flowchart: {
-                    useMaxWidth:false,
-                    htmlLabels:true
+                    useMaxWidth: false,
+                    curve: 'linear',
+                    htmlLabels: false
                 },
                 sequence: {
-                    showSequenceNumbers:true
+                    actorMargin: 50,
+                    showSequenceNumbers: true
                 }
             };
             mermaid.initialize(config);
@@ -181,6 +184,50 @@ var VOID_Content = {
 };
 
 var VOID = {
+    // emmm 就把 Mermaid 切换主题的功能写在这里吧
+    MermaidThemeSwitcher: {
+        checkColorScheme: function () {
+            // 非自动模式，或不存在 Cookie
+            if (VOIDConfig.colorScheme != 0 || VOID_Util.getCookie('theme_dark') == null) {
+                return;
+            }
+            if (VOIDConfig.followSystemColorScheme && VOID_Util.getPrefersDarkModeState()) {
+                // 自动模式，根据系统
+                // 重新渲染 Mermaid 图表，theme:dark
+                if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
+                    $('.mermaid').removeAttr('data-processed');
+                VOID_Content.mermaid('dark');
+            } else {
+                // 自动模式，根据 cookie
+                night = VOID_Util.getCookie('theme_dark');
+                if (night == '0') {
+                    // 重新渲染 Mermaid 图表，theme:default
+                    if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
+                        $('.mermaid').removeAttr('data-processed');
+                    VOID_Content.mermaid('default');
+                } else if (night == '1') {
+                    // 重新渲染 Mermaid 图表，theme:dark
+                    if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
+                        $('.mermaid').removeAttr('data-processed');
+                    VOID_Content.mermaid('dark');
+                }
+            }
+        },
+    
+        toggleByHand: function () {
+            setTimeout(function () {
+                // 重新渲染 Mermaid 图表，theme:default<>dark
+                if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
+                    $('.mermaid').removeAttr('data-processed');
+                var mmtheme = ($('.theme-dark').length > 0) ? 'dark' : 'default';
+                VOID_Content.mermaid(mmtheme);
+                setTimeout(function () {
+                    console.log('Wait for mermaidjs re-rendering...');
+                }, 1000);
+            }, 600);
+        }
+    },
+
     // 初始化单页应用
     init: function () {
         /* 初始化 UI */
@@ -201,7 +248,8 @@ var VOID = {
         VOID_Content.bigfoot();
         VOID_Content.hitokoto();
         VOID_Content.math();
-        VOID_Content.mermaid();
+        VOID_Content.mermaid('default');
+        VOID.MermaidThemeSwitcher.checkColorScheme();
         VOID_Content.hyphenate();
         
         VOID_Vote.reload();
@@ -252,7 +300,8 @@ var VOID = {
         VOID_Content.parseUrl();
         VOID_Content.highlight();
         VOID_Content.math();
-        VOID_Content.mermaid();
+        VOID_Content.mermaid('default');
+        VOID.MermaidThemeSwitcher.checkColorScheme();
         VOID_Content.hyphenate();
         VOID_Content.pangu();
         VOID_Content.bigfoot();
