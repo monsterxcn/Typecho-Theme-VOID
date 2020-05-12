@@ -438,6 +438,11 @@ VOID_Ui = {
     
             if (VOIDConfig.followSystemColorScheme && VOID_Util.getPrefersDarkModeState()) { // 自动模式跟随系统
                 document.body.classList.add('theme-dark');
+                // 重新渲染 Mermaid 图表，theme:dark
+                // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+                //     $('#mermaid').html().removeAttr('data-processed');
+                //     mermaid.init({ theme: 'dark' });
+                // }
                 var night = VOID_Util.getCookie('theme_dark');
                 if (night != '1') {
                     VOID.alert('已为您开启深色模式。');
@@ -462,6 +467,11 @@ VOID_Ui = {
 
                     if (current_s > sunset_s || current_s < sunrise_s) {
                         document.body.classList.add('theme-dark');
+                        // 重新渲染 Mermaid 图表，theme:dark
+                        // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+                        //     $('#mermaid').removeAttr('data-processed');
+                        //     mermaid.init({ theme: 'dark' });
+                        // }
                         if (current_s > sunset_s) // 如果当前为夜晚，日出时间应该切换至第二日
                             sunrise = new Date(sunrise.getTime() + 3600000 * 24);
                         // 现在距日出还有 (s)
@@ -471,14 +481,29 @@ VOID_Ui = {
                         VOID.alert('日落了，夜间模式已开启。');
                     } else {
                         document.body.classList.remove('theme-dark');
+                        // 重新渲染 Mermaid 图表，theme:default
+                        // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+                        //     $('#mermaid').removeAttr('data-processed');
+                        //     mermaid.init({ theme: 'default' });
+                        // }
                     }
                 } else {
                     // 若存在 cookie，根据 cookie 判断
                     night = VOID_Util.getCookie('theme_dark');
                     if (night == '0') {
                         document.body.classList.remove('theme-dark');
+                        // 重新渲染 Mermaid 图表，theme:default
+                        // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+                        //     $('#mermaid').removeAttr('data-processed');
+                        //     mermaid.init({ theme: 'default' });
+                        // }
                     } else if (night == '1') {
                         document.body.classList.add('theme-dark');
+                        // 重新渲染 Mermaid 图表，theme:dark
+                        // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+                        //     $('#mermaid').removeAttr('data-processed');
+                        //     mermaid.init({ theme: 'dark' });
+                        // }
                     }
                 }
             }
@@ -488,6 +513,14 @@ VOID_Ui = {
             $('#toggle-night').addClass('switching');
             setTimeout(function () {
                 $('body').toggleClass('theme-dark');
+                // 重新渲染 Mermaid 图表，theme:default<>dark
+                // if (VOIDConfig.enableMermaid && $('.mermaid').length > 0 && $('.theme-dark').length > 0) {
+                //     $('#mermaid').removeAttr('data-processed');
+                //     mermaid.init({ theme: 'dark' });
+                // } else {
+                //     $('#mermaid').removeAttr('data-processed');
+                //     mermaid.init({ theme: 'default' });
+                // }
                 if ($('body').hasClass('theme-dark')) {
                     VOID_Util.setCookie('theme_dark', '1', 0);
                 } else {
