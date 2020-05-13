@@ -63,7 +63,7 @@ if (isset($_POST['void_action'])) {
 
     <?php $this->header('generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&description=&'); ?>
 
-    <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-c28f2b413f.css'; ?>">
+    <link rel="stylesheet" href="<?php echo $assetsUrl.'/bundle-2457c24936.css'; ?>">
     <link rel="stylesheet" href="<?php echo $assetsUrl.'/VOID-fbe8364404.css'; ?>">
 
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
@@ -73,7 +73,7 @@ if (isset($_POST['void_action'])) {
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
-    <script src="<?php echo $assetsUrl.'/bundle-header-6abb3ef1df.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/bundle-header-c49a4a0e11.js'; ?>"></script>
 
     <?php if($this->fields->artalk != ''): ?>
     <script type="text/javascript" src="<?php echo $assetsUrl.'/artalk.js'; ?>"></script>

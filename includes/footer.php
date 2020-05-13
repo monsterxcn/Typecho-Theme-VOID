@@ -132,7 +132,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-0a9519a485.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-dc94392c96.js'; ?>"></script>
 
         <script>
         if($(".OwO").length > 0){
