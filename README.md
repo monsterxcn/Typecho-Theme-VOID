@@ -89,7 +89,6 @@
 
 ### 待办清单
 
- - [ ] MermaidJS 前端无刷新切换主题
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
  - [ ] 夜间样式和首页单栏样式优化
  - [ ] Links 随机排序

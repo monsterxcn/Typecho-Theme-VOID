@@ -169,7 +169,6 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
             $.each($('.mermaid'), function (i, item) {
                 $(item).attr('mmid', i);
                 mmarr[i] = $(item).html();
-                console.warn(mmarr[i]);
             });
         }
         <?php endif; ?>
@@ -184,7 +183,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-aa83403228.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-f814740a55.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
