@@ -250,7 +250,9 @@ Future task2               :         des4, after des3, 5d
 !!!
 ```
 
-`!!!` 需要单独占一行。务必保证前一个 Mermaid 图表格式正确，否则后一个将无法显示。
+`!!!` 需要单独占一行。
+
+MermaidJS 按照页面从上向下的顺序依次渲染图表，请务必保证前面的 Mermaid 图表语法格式正确，否则后面的图表无法显示。此外，使用实验性 Mermaid 图表（比如 Git 图）可能导致渲染异常，这不是主题的问题，请检查你的图表语法和 MermaidJS 版本是否兼容。本主题使用的 MermaidJS 为 8.5.0 版本，包含了 Class diagram，Git graph，Entity Relationship Diagram 等图表的实验性兼容。更多关于 MermaidJS 的问题请先参考 [官方文档](https://mermaid-js.github.io/mermaid/#/README) 检查，然后欢迎提出 issue 帮助主题更好的兼容 MermaidJS。
 
 </details>
 
