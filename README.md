@@ -57,8 +57,8 @@
 
 相比 AlanDecode 版本，我尝试 新增/调整 了以下功能：
 
- - 新增：[MermaidJS](https://github.com/mermaid-js/mermaid) v8.5.0 支持，丰富的图表写作体验
- - 新增：[Artalk](https://github.com/qwqcode/Artalk) v1.0.4 支持，简洁的自托管评论系统
+ - 新增：MermaidJS v8.5.0 支持，丰富的图表写作体验
+ - 新增：Artalk v1.0.6 支持，简洁的自托管评论系统
  - 新增：InstantPage v3.0 支持，据说用它体验更佳
  - 新增：Progressive Web Apps 支持，现在可以更方便的启用 PWA
  - 新增：GitHub & QQ 账号快速评论，参考 Krait [博文](https://krait.cn/major/1888.html) 实现更方便的评论
@@ -82,7 +82,8 @@
 
 ### 2020-05-13
 
-* 修复：MermaidJS 前端无刷新切换主题
+* 优化：Artalk 升级至 v1.0.6
+* 优化：MermaidJS 前端无刷新切换主题
 * 修复：Cookie sameSite 警告
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
@@ -92,7 +93,7 @@
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
  - [ ] 夜间样式和首页单栏样式优化
  - [ ] Links 随机排序
- - [ ] [MathJax v3](https://github.com/mathjax/MathJax) 支持
+ - [ ] MathJax v3 支持
 
 自己瞎写出来的问题：
 
@@ -307,9 +308,9 @@ gulp build
 
 ## 鸣谢
 
-[JQuery](https://github.com/jquery/jquery) | [PrismJS](https://github.com/PrismJS/prism/) | [MathJax](https://github.com/mathjax/MathJax-src) | [fancyBox](https://github.com/fancyapps/fancybox) | [bigfoot.js](http://github.com/pxldot/bigfoot) | [OwO](https://github.com/DIYgod/OwO) | [pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://github.com/tscanlin/tocbot) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [Headroom.js](https://github.com/WickyNilliams/headroom.js) | [hypher](https://github.com/bramstein/hypher) | [Artalk](https://github.com/qwqcode/Artalk) | [Mermaid](https://github.com/mermaid-js/mermaid)
+[jquery](https://github.com/jquery/jquery) | [prism](https://github.com/PrismJS/prism/) | [MathJax-src](https://github.com/mathjax/MathJax-src) | [fancybox](https://github.com/fancyapps/fancybox) | [bigfoot](http://github.com/pxldot/bigfoot) | [OwO](https://github.com/DIYgod/OwO) | [jquery-pjax](https://github.com/defunkt/jquery-pjax) | [yue.css](https://github.com/lepture/yue.css) | [tocbot](https://github.com/tscanlin/tocbot) | [pangu.js](https://github.com/vinta/pangu.js) | [social](https://github.com/lepture/social) | [headroom.js](https://github.com/WickyNilliams/headroom.js) | [hypher](https://github.com/bramstein/hypher) | [Artalk](https://github.com/qwqcode/Artalk) | [mermaid](https://github.com/mermaid-js/mermaid)
 
-[RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
+[RAW](https://github.com/AlanDecode/Typecho-Theme-RAW) | [Mirages](https://get233.com/archives/mirages-intro.html) | [Handsome](https://www.ihewro.com/archives/489/) | [Card](https://blog.shuiba.co/bitcron-theme-card) | [Casper](https://github.com/TryGhost/Casper) | [Typlog](https://typlog.com/)
 
 ## 捐助
 
