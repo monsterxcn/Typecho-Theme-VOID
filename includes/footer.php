@@ -52,7 +52,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <aside hidden id="setting-panel">
             <section>
                 <div id="toggle-night">
-                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();VOID.MermaidThemeSwitcher.toggleByHand();"><i></i></a>
+                    <a target="_self" href="javascript:void(0)" onclick="VOID_Ui.DarkModeSwitcher.toggleByHand();VOID_Content.mermaidToggle();"><i></i></a>
                 </div>
                 <div id="adjust-text-container">
                     <div class="adjust-text-item">
@@ -134,24 +134,6 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php endif; ?>
         <script data-manual src="<?php echo $assetsUrl.'/bundle-0a9519a485.js'; ?>"></script>
 
-        <?php if($setting['enableMath']): ?>
-        <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
-        <?php endif; ?>
-        <?php if($setting['enableMermaid']): ?>
-        <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
-        <?php endif; ?>
-
-        <script src="<?php echo $assetsUrl.'/VOID-6cca0693e1.js'; ?>"></script>
-
-        <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
-        <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
-        <?php endif; ?>
-        <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
-        <script src="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.js'); ?>"></script>
-        <?php endif; ?>
-
         <script>
         if($(".OwO").length > 0){
             new OwO({
@@ -179,7 +161,37 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
             }
         });
         <?php endif; ?>
+
+        <?php if($setting['enableMermaid']): ?>
+        // 务必在载入 MermaidJS 之前保存所有 Mermaid 图表源码以供重新渲染
+        var mmarr = [];
+        if ($('.OwO').length > 0) {
+            $.each($('.mermaid'), function (i, item) {
+                $(item).attr('mmid', i);
+                mmarr[i] = $(item).html();
+                console.warn(mmarr[i]);
+            });
+        }
+        <?php endif; ?>
         </script>
+
+        <?php if($setting['enableMath']): ?>
+        <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+        <?php endif; ?>
+        <?php if($setting['enableMermaid']): ?>
+        <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.js'; ?>'></script>-->
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
+        <?php endif; ?>
+
+        <script src="<?php echo $assetsUrl.'/VOID-8513b8b163.js'; ?>"></script>
+
+        <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
+        <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>
+        <?php endif; ?>
+        <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
+        <script src="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.js'); ?>"></script>
+        <?php endif; ?>
 
         <?php if($setting['pjax']): ?>
         <script>

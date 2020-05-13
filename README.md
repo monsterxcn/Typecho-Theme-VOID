@@ -80,10 +80,10 @@
 
 ## 更新动态
 
-### 2020-05-12
+### 2020-05-13
 
-* 新增：[实验性]MermaidJS 前端无刷新切换主题
-* 优化：MermaidJS 小屏幕显示
+* 修复：MermaidJS 前端无刷新切换主题
+* 修复：Cookie sameSite 警告
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 

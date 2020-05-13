@@ -1,5 +1,10 @@
 # Change log | 更新日志
 
+**2020-05-13**
+
+* 修复：MermaidJS 前端无刷新切换主题
+* 修复：Cookie sameSite 警告
+
 **2020-05-12**
 
 * 新增：[实验性]MermaidJS 前端无刷新切换主题
