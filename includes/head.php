@@ -114,12 +114,14 @@ if (isset($_POST['void_action'])) {
         version: <?php echo $GLOBALS['VOIDVersion'] ?>,
         isDev: true
     }
+
     <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
     ExSearchConfig = {
         root : "",
         api : "<?php Utils::getExsApi(); ?>"
     }
     <?php endif; ?>
+
     <?php if($this->template == 'pageBangm.php' && $setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->bgmswitch == 'true'): ?>
     var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>

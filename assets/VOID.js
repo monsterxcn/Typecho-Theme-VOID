@@ -141,24 +141,90 @@ var VOID_Content = {
         }
     },
 
-    mermaid: function (t) {
+    mermaid: function () {
         if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
-            // https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
+            var mmtheme = '';
+            // init https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
+            if (VOID_Util.getCookie('theme_dark') == null) {
+                mmtheme = ($('.theme-dark').length > 0) ? 'dark' : 'default';
+            } else {
+                mmtheme = (VOID_Util.getCookie('theme_dark') == 1) ? 'dark' : 'default';
+            }
+            VOID_Util.setCookie('theme_mermaid', mmtheme, 0);
             var config = {
-                theme: t,
+                theme: mmtheme,
                 startOnLoad: true,
-                logLevel: 0,
+                logLevel: 'fatal',
                 flowchart: {
                     useMaxWidth: false,
-                    curve: 'linear',
-                    htmlLabels: false
+                    htmlLabels: false,
+                    curve: 'linear'
                 },
                 sequence: {
-                    actorMargin: 50,
+                    diagramMarginX:50,
+                    diagramMarginY:10,
+                    actorMargin:50,
+                    width:150,
+                    height:65,
+                    boxMargin:10,
+                    boxTextMargin:5,
+                    noteMargin:10,
+                    messageMargin:35,
+                    messageAlign:'center',
+                    mirrorActors:true,
+                    bottomMarginAdj:1,
+                    useMaxWidth:true,
+                    rightAngles:false,
                     showSequenceNumbers: true
                 }
             };
+            console.log('Initialize mermaid: theme-'+config.theme+'\n\n');
             mermaid.initialize(config);
+            mermaid.init();
+            console.log('Initialize mermaid finished...\n');
+        }
+    },
+
+    mermaidToggle: function () {
+        // 重新渲染 Mermaid 图表，theme:default<>dark
+        if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
+            // re-render 先将所有 .mermaid 恢复为 includes/footer.php L167 保存的初始状态
+            $.each($('.mermaid'), function (i, item) {
+                $(item).html(mmarr[i]).removeAttr('data-processed');
+            });
+            var mmtheme = (VOID_Util.getCookie('theme_mermaid') == 'dark') ? 'default' : 'dark';
+            VOID_Util.setCookie('theme_mermaid', mmtheme, 0);
+            config = {
+                theme: mmtheme,
+                startOnLoad: true,
+                logLevel: 'fatal',
+                flowchart: {
+                    useMaxWidth: false,
+                    htmlLabels: false,
+                    curve: 'linear'
+                },
+                sequence: {
+                    diagramMarginX:50,
+                    diagramMarginY:10,
+                    actorMargin:50,
+                    width:150,
+                    height:65,
+                    boxMargin:10,
+                    boxTextMargin:5,
+                    noteMargin:10,
+                    messageMargin:35,
+                    messageAlign:'center',
+                    mirrorActors:true,
+                    bottomMarginAdj:1,
+                    useMaxWidth:true,
+                    rightAngles:false,
+                    showSequenceNumbers: true
+                }
+            };
+            console.log('Re-render mermaid: theme-'+config.theme+'\n\n');
+            mermaid.initialize(config);
+            mermaid.init();
+            console.log('Re-render mermaid finished...\n');
         }
     },
 
@@ -184,50 +250,6 @@ var VOID_Content = {
 };
 
 var VOID = {
-    // emmm 就把 Mermaid 切换主题的功能写在这里吧
-    MermaidThemeSwitcher: {
-        checkColorScheme: function () {
-            // 非自动模式，或不存在 Cookie
-            if (VOIDConfig.colorScheme != 0 || VOID_Util.getCookie('theme_dark') == null) {
-                return;
-            }
-            if (VOIDConfig.followSystemColorScheme && VOID_Util.getPrefersDarkModeState()) {
-                // 自动模式，根据系统
-                // 重新渲染 Mermaid 图表，theme:dark
-                if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
-                    $('.mermaid').removeAttr('data-processed');
-                VOID_Content.mermaid('dark');
-            } else {
-                // 自动模式，根据 cookie
-                night = VOID_Util.getCookie('theme_dark');
-                if (night == '0') {
-                    // 重新渲染 Mermaid 图表，theme:default
-                    if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
-                        $('.mermaid').removeAttr('data-processed');
-                    VOID_Content.mermaid('default');
-                } else if (night == '1') {
-                    // 重新渲染 Mermaid 图表，theme:dark
-                    if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
-                        $('.mermaid').removeAttr('data-processed');
-                    VOID_Content.mermaid('dark');
-                }
-            }
-        },
-    
-        toggleByHand: function () {
-            setTimeout(function () {
-                // 重新渲染 Mermaid 图表，theme:default<>dark
-                if (VOIDConfig.enableMermaid && $('.mermaid').length > 0)
-                    $('.mermaid').removeAttr('data-processed');
-                var mmtheme = ($('.theme-dark').length > 0) ? 'dark' : 'default';
-                VOID_Content.mermaid(mmtheme);
-                setTimeout(function () {
-                    console.log('Wait for mermaidjs re-rendering...');
-                }, 1000);
-            }, 600);
-        }
-    },
-
     // 初始化单页应用
     init: function () {
         /* 初始化 UI */
@@ -248,8 +270,7 @@ var VOID = {
         VOID_Content.bigfoot();
         VOID_Content.hitokoto();
         VOID_Content.math();
-        VOID_Content.mermaid('default');
-        VOID.MermaidThemeSwitcher.checkColorScheme();
+        VOID_Content.mermaid();
         VOID_Content.hyphenate();
         
         VOID_Vote.reload();
@@ -300,8 +321,7 @@ var VOID = {
         VOID_Content.parseUrl();
         VOID_Content.highlight();
         VOID_Content.math();
-        VOID_Content.mermaid('default');
-        VOID.MermaidThemeSwitcher.checkColorScheme();
+        VOID_Content.mermaid();
         VOID_Content.hyphenate();
         VOID_Content.pangu();
         VOID_Content.bigfoot();

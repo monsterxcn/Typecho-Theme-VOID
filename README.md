@@ -80,16 +80,15 @@
 
 ## 更新动态
 
-### 2020-05-12
+### 2020-05-13
 
-* 新增：[实验性]MermaidJS 前端无刷新切换主题
-* 优化：MermaidJS 小屏幕显示
+* 修复：MermaidJS 前端无刷新切换主题
+* 修复：Cookie sameSite 警告
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
 ### 待办清单
 
- - [ ] MermaidJS 前端无刷新切换主题
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
  - [ ] 夜间样式和首页单栏样式优化
  - [ ] Links 随机排序
@@ -251,7 +250,9 @@ Future task2               :         des4, after des3, 5d
 !!!
 ```
 
-`!!!` 需要单独占一行。务必保证前一个 Mermaid 图表格式正确，否则后一个将无法显示。
+`!!!` 需要单独占一行。
+
+MermaidJS 按照页面从上向下的顺序依次渲染图表，请务必保证前面的 Mermaid 图表语法格式正确，否则后面的图表无法显示。此外，使用实验性 Mermaid 图表（比如 Git 图）可能导致渲染异常，这不是主题的问题，请检查你的图表语法和 MermaidJS 版本是否兼容。本主题使用的 MermaidJS 为 8.5.0 版本，包含了 Class diagram，Git graph，Entity Relationship Diagram 等图表的实验性兼容。更多关于 MermaidJS 的问题请先参考 [官方文档](https://mermaid-js.github.io/mermaid/#/README) 检查，然后欢迎提出 issue 帮助主题更好的兼容 MermaidJS。
 
 </details>
 

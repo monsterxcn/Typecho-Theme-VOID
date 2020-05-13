@@ -65,10 +65,10 @@ VOID_Util = {
 
     setCookie: function (name, value, time) {
         if (time > 0) {
-            document.cookie = name + '=' + escape(value) + ';max-age=' + String(time) + ';path=/';
+            document.cookie = name + '=' + escape(value) + ';SameSite=Strict' + ';max-age=' + String(time) + ';path=/';
         } else {
             // session
-            document.cookie = name + '=' + escape(value) + ';path=/';
+            document.cookie = name + '=' + escape(value) + ';SameSite=Strict' + ';path=/';
         }
     },
 
@@ -468,9 +468,13 @@ VOID_Ui = {
                         var toSunrise = (sunrise.getTime() - current.getTime()) / 1000;
                         // 设置 cookie
                         VOID_Util.setCookie('theme_dark', '1', parseInt(toSunrise));
-                        VOID.alert('日落了，夜间模式已开启。');
+                        // 仅日落时间点后 1 h 之内弹出提示
+                        if (current_s - sunset_s > 0 && current_s - sunset_s < 1)
+                            VOID.alert('日落了，夜间模式已开启。');
                     } else {
                         document.body.classList.remove('theme-dark');
+                        if (current_s - sunrise_s > 0 && current_s - sunrise_s < 1)
+                            VOID.alert('天亮了，夜间模式已关闭。');
                     }
                 } else {
                     // 若存在 cookie，根据 cookie 判断
