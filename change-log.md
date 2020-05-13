@@ -2,7 +2,8 @@
 
 **2020-05-13**
 
-* 修复：MermaidJS 前端无刷新切换主题
+* 优化：Artalk 升级至 v1.0.6
+* 优化：MermaidJS 前端无刷新切换主题
 * 修复：Cookie sameSite 警告
 
 **2020-05-12**
