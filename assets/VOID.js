@@ -157,7 +157,7 @@ var VOID_Content = {
                 logLevel: 'fatal',
                 flowchart: {
                     useMaxWidth: false,
-                    htmlLabels: false,
+                    htmlLabels: true,
                     curve: 'linear'
                 },
                 sequence: {
@@ -178,10 +178,10 @@ var VOID_Content = {
                     showSequenceNumbers: true
                 }
             };
-            console.log('Initialize mermaid: theme-'+config.theme+'\n\n');
+            // console.log('Initialize mermaid: theme-'+config.theme+'\n\n');
             mermaid.initialize(config);
             mermaid.init();
-            console.log('Initialize mermaid finished...\n');
+            // console.log('Initialize mermaid finished...\n');
         }
     },
 
@@ -200,7 +200,7 @@ var VOID_Content = {
                 logLevel: 'fatal',
                 flowchart: {
                     useMaxWidth: false,
-                    htmlLabels: false,
+                    htmlLabels: true,
                     curve: 'linear'
                 },
                 sequence: {
@@ -221,10 +221,10 @@ var VOID_Content = {
                     showSequenceNumbers: true
                 }
             };
-            console.log('Re-render mermaid: theme-'+config.theme+'\n\n');
+            // console.log('Re-render mermaid: theme-'+config.theme+'\n\n');
             mermaid.initialize(config);
             mermaid.init();
-            console.log('Re-render mermaid finished...\n');
+            // console.log('Re-render mermaid finished...\n');
         }
     },
 

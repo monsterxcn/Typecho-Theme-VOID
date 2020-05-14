@@ -80,11 +80,10 @@
 
 ## 更新动态
 
-### 2020-05-13
+### 2020-05-15
 
-* 优化：Artalk 升级至 v1.0.6
-* 优化：MermaidJS 前端无刷新切换主题
-* 修复：Cookie sameSite 警告
+* 优化：MermaidJS 渲染配置
+* 调整：移除 pre-commit 依赖
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
