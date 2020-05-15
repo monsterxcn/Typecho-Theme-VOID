@@ -83,6 +83,7 @@
 ### 2020-05-15
 
 * 优化：MermaidJS 渲染配置
+* 调整：首页单栏样式
 * 调整：移除 pre-commit 依赖
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
@@ -90,7 +91,7 @@
 ### 待办清单
 
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
- - [ ] 夜间样式和首页单栏样式优化
+ - [ ] 夜间样式优化
  - [ ] Links 随机排序
  - [ ] MathJax v3 支持
  - [ ] issues fix

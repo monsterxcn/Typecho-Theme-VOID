@@ -21,7 +21,8 @@ if($this->is('post') || $this->is('page')) {
     <?php 
         if(empty($banner)) echo ' no-banner';
         else echo ' loading dark';
-        if($this->is('index')) echo ' index lazy-wrap-index';
+        if($this->is('index')) echo ' index';
+        if($this->is('index') && $setting['indexStyle'] != 1) echo ' lazy-wrap-index';
         if($this->is('archive') && !$this->have()) echo ' not-found'; ?>">
 
     <?php if(!empty($banner)): ?>
