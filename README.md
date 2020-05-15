@@ -80,11 +80,10 @@
 
 ## 更新动态
 
-### 2020-05-13
+### 2020-05-15
 
-* 优化：Artalk 升级至 v1.0.6
-* 优化：MermaidJS 前端无刷新切换主题
-* 修复：Cookie sameSite 警告
+* 优化：MermaidJS 渲染配置
+* 调整：移除 pre-commit 依赖
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -94,10 +93,7 @@
  - [ ] 夜间样式和首页单栏样式优化
  - [ ] Links 随机排序
  - [ ] MathJax v3 支持
-
-自己瞎写出来的问题：
-
- - [ ] Pjax 下网页压缩 `function` 报错
+ - [ ] issues fix
 
 ## 使用指北
 
