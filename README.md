@@ -107,13 +107,14 @@
 如果不介意 Bug 可以直接从命令行安装主题：
 
 ```bash
-cd /path/to/wwwroot/ust/themes
+cd /path/to/wwwroot/usr/themes
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID.git -b nightly ./VOID
 chmod -R 777 VOID/*
 
-# 后续更新主题直接运行
-cd /path/to/wwwroot/ust/themes/VOID
-git pull
+# 后续小版本更新主题可以直接运行（这将覆盖所有本地主题文件修改）：
+cd /path/to/wwwroot/usr/themes/VOID
+git reset --hard HEAD
+git pull origin nightly
 ```
 
 </details>
