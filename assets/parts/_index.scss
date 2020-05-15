@@ -279,18 +279,24 @@ section#index-list{
         list-style: none;
         padding: 0;
         margin: 0;
+        .narrow & {
+            padding: 0 20px;
+            @media screen and (max-width: 767.5px) {
+                padding: 0 0;
+            }
+        }
         >li{
             overflow: hidden;
             line-height: 1.25;
             padding-bottom: 30px;
             border-bottom: 1px solid $borderColor;
+            margin-bottom: 30px;
+            opacity: 0;
+            transition: $animationTime-fast $animationTimingFunc opacity, $animationTime-fast $animationTimingFunc border;
             .theme-dark & {
                 box-shadow: none;
                 border-color: $td-borderColor;
             }
-            margin-bottom: 30px;
-            opacity: 0;
-            transition: $animationTime-fast $animationTimingFunc opacity, $animationTime-fast $animationTimingFunc border;
             &.done {
                 opacity: 1;
             }
@@ -299,6 +305,20 @@ section#index-list{
                 border: none;
                 border-radius: 18px;
                 box-shadow: 2px 2px 16px #cdcdcd;
+                .narrow & {
+                    margin-top: 48px;
+                    box-shadow: none;
+                    border-radius: 2px;
+                    border: solid 2px rgba(0,0,0,0.06);
+                    &:not(.style-2) {
+                        border: solid 2px rgba(0,0,0,0.86);
+                    }
+                    img {
+                        height: 250px;
+                        border-top-left-radius: 2px;
+                        border-top-right-radius: 2px;
+                    }
+                }
                 .theme-dark &:not(.style-2) {
                     box-shadow: none;
                     border: solid 2px $td-borderColor;
@@ -306,6 +326,9 @@ section#index-list{
                 &.masonry-ready {
                     width: calc(50% - 15px);
                 }
+            }
+            .style-2 &:hover {
+                border: solid 2px $td-borderColor;
             }
             .single-col & {
                 width: 100%;
@@ -394,6 +417,10 @@ section#index-list{
                         object-fit: cover;
                         margin: 0;
                         display: block;
+                        .narrow .style-2 & {
+                            border-bottom-left-radius: 2px;
+                            border-bottom-right-radius: 2px;
+                        }
                         .bluredLazyload &.lazyload {
                             position: absolute;
                             top: 0;
@@ -440,9 +467,18 @@ section#index-list{
                     }   
                 }
             }
+            .narrow &.style-2 {
+                &:hover {
+                    border-color: rgba(0,0,0,0.06) !important;
+                    border: solid 2px rgba(0,0,0,0.06) !important;
+                }
+            }
             @media screen and (min-width: 1024.5px) {
                 &:hover {
                     border-color: $highlightColor;
+                    .narrow &.style-2 {
+                        border-color: rgba(0,0,0,0.06) !important;
+                    }
                     &.style-2 article .content-wrap {
                         background: rgba(0, 0, 0, 0.62);
                     }

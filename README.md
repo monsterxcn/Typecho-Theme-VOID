@@ -75,7 +75,7 @@
  - 调整：返回顶部按钮，现在小屏幕也可以一键到达顶部
  - 调整：一言，弃用功能重新回归
  - 调整：Pjax，修复了子评论错误显示为上一条评论和博主标志显示的问题
- - 调整：样式，主题色彩、首页 banner 固定为满屏、首页回归圆角卡片、友情链接和追番卡片圆角、夜间样式、部分字体灰度显示等
+ - 调整：样式，主题色彩、非单栏首页 banner 固定为满屏、首页回归圆角卡片、友情链接和追番卡片圆角、夜间样式、部分字体灰度显示等
  - 插件：集成 PandaBangumi 和 ExSearch 功能
 
 ## 更新动态
@@ -83,6 +83,7 @@
 ### 2020-05-15
 
 * 优化：MermaidJS 渲染配置
+* 调整：首页单栏样式
 * 调整：移除 pre-commit 依赖
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
@@ -90,7 +91,7 @@
 ### 待办清单
 
  - [ ] Markdown 语法匹配规则优化（见《[Mermaid 示例](https://test.monsterx.cn/Front-end/Mermaid.html)》）
- - [ ] 夜间样式和首页单栏样式优化
+ - [ ] 夜间样式优化
  - [ ] Links 随机排序
  - [ ] MathJax v3 支持
  - [ ] issues fix
@@ -106,13 +107,14 @@
 如果不介意 Bug 可以直接从命令行安装主题：
 
 ```bash
-cd /path/to/wwwroot/ust/themes
+cd /path/to/wwwroot/usr/themes
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID.git -b nightly ./VOID
 chmod -R 777 VOID/*
 
-# 后续更新主题直接运行
-cd /path/to/wwwroot/ust/themes/VOID
-git pull
+# 后续小版本更新主题可以直接运行（这将覆盖所有本地主题文件修改）：
+cd /path/to/wwwroot/usr/themes/VOID
+git reset --hard HEAD
+git pull origin nightly
 ```
 
 </details>
