@@ -100,7 +100,7 @@
 
 <details><summary>下载安装后样式不对？</summary><br>
 
-仓库中的是未压缩的源代码，包含大量实际使用中不需要的文件，并且可能无法直接使用。请一定通过这两个链接下载主题：[发布版](https://github.com/monsterxcn/Typecho-Theme-VOID/releases) | [开发版](https://github.com/monsterxcn/Typecho-Theme-VOID/archive/nightly.zip)。注意其中发布版是下载 VOID-x.x.x.zip 这个压缩包，而不是 Source code。
+仓库中的是未压缩的源代码，包含大量实际使用中不需要的文件，并且可能无法直接使用。请一定通过这两个链接下载主题：[发布版](https://github.com/monsterxcn/Typecho-Theme-VOID/releases) | [开发版](https://github.com/monsterxcn/Typecho-Theme-VOID/archive/nightly.zip)。注意其中发布版是下载 VOID-x.x.x.zip 这个压缩包，而不是 Source code，发布版压缩包中包含了当前最新的主题文件和插件文件。
 
 如果不是上面的问题，请检查你的 CDN 配置结尾是否含 `/` 。
 
@@ -109,11 +109,14 @@
 ```bash
 cd /path/to/wwwroot/usr/themes
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID.git -b nightly ./VOID
+# 如使用国内服务器拉取代码太慢可使用码云仓库极速克隆
+# git clone https://gitee.com/monsterxcn/Typecho-Theme-VOID.git -b nightly ./VOID
 chmod -R 777 VOID/*
 
-# 后续小版本更新主题可以直接运行（这将覆盖所有本地主题文件修改）：
+# 后续小版本更新主题可以直接运行：
 cd /path/to/wwwroot/usr/themes/VOID
-git reset --hard HEAD
+# 拉取失败可尝试撤销所有本地修改
+# git reset --hard HEAD
 git pull origin nightly
 ```
 
