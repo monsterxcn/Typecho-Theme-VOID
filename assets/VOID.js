@@ -145,7 +145,9 @@ var VOID_Content = {
         if (VOIDConfig.enableMermaid && $('.mermaid').length > 0) {
             var mmtheme = '';
             // init https://mermaid-js.github.io/mermaid/#/mermaidAPI?id=mermaidapi-configuration-defaults
-            if (VOID_Util.getCookie('theme_dark') == null) {
+            if (VOIDConfig.colorScheme != 0) {
+                mmtheme = (VOIDConfig.colorScheme == 1) ? 'default' : 'dark';
+            } else if (VOID_Util.getCookie('theme_dark') == null) {
                 mmtheme = ($('.theme-dark').length > 0) ? 'dark' : 'default';
             } else {
                 mmtheme = (VOID_Util.getCookie('theme_dark') == 1) ? 'dark' : 'default';
