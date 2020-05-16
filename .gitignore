@@ -7,7 +7,7 @@ assets/bundle*.js
 assets/bundle*.css
 assets/VOID*.css
 assets/VOID*.css.map
-includes/DONTartalk.php
+pageLinks.php
 advanceSetting.json
 todo.md
 .DS_Store
