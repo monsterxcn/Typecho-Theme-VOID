@@ -156,6 +156,14 @@ git pull origin nightly
 
 </details>
 
+<details><summary>如何开启 Artalk 评论？</summary><br>
+
+Artalk 是一款简洁有趣的可拓展自托管评论系统，需要配合 Artalk 的后端程序（如 [Artalk-API-PHP](https://github.com/qwqcode/Artalk-API-PHP) ）使用，请在开启评论前搭建好自己的后端程序。
+
+新建文章或页面，在自定义字段中填入 `artalk` 和你的 Artalk 后端 `/public` 文件夹可访问地址即可开启 Artalk 评论，快来尝试这款有趣的评论系统吧。
+
+</details>
+
 <details><summary>友情链接排版</summary><br>
 
 新建独立页面，然后如此书写：
