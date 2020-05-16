@@ -58,7 +58,7 @@ function themeConfig($form)
 
     echo '<p id="void-check-update" class="notice">正在检查更新……</p>';
     echo '<script>var VOIDVersion='.$GLOBALS['VOIDVersion'].'</script>';
-    echo '<script src="'.Helper::options()->themeUrl.'/assets/check_update-3fcf1b00ad.js"></script>';
+    echo '<script src="'.Helper::options()->themeUrl.'/assets/check_update-0f154d4155.js"></script>';
 
     $db = Typecho_Db::get();
     $getConfig = $db->fetchRow($db->select()->from('table.options')->where('name = ?', 'theme:VOID'));
