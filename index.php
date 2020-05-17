@@ -80,10 +80,12 @@ if(!Utils::isPjax()){
                                     </a>
                                 <?php endif; ?>
                                 
-                                <?php if($this->fields->excerpt != '') echo "<p class=\"headline content\">{$this->fields->excerpt}</p>"; ?>
+                                <?php if(!$this->hidden && $this->fields->excerpt != '') echo "<p class=\"headline content\">{$this->fields->excerpt}</p>"; ?>
 
                                 <div class="articleBody">
-                                <?php if($this->fields->showfullcontent != '1'): ?>
+                                <?php if($this->hidden): ?>
+                                    <p class="headline content">加密文章，无可奉告</p>
+                                <?php elseif($this->fields->showfullcontent != '1'): ?>
                                     <?php if($this->fields->excerpt == ''): ?>
                                         <p><?php if(Utils::isMobile()) $this->excerpt(60); else $this->excerpt(80); ?></p>
                                     <?php endif; ?>
