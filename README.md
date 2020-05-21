@@ -80,19 +80,12 @@
 
 ## 更新动态
 
-### 2020-05-17
+### 2020-05-21
 
-* 修复：密码保护文章首页摘要泄露
+* 修复：owo 表情仓库失效
+* 优化：滑动条样式
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
-
-### 待办清单
-
- - [ ] issues fix
- - [ ] Markdown 语法匹配规则优化
- - [ ] 夜间样式优化
- - [ ] Links 随机排序
- - [ ] MathJax v3 支持
 
 ## 使用指北
 
@@ -124,6 +117,46 @@ git pull origin nightly
 
 * 首先检查是否有插件重复引入了 JQuery，若有，在插件设置页面关闭。
 * 另外，推荐使用 PHP 7.0 及以上版本搭配 MySQL 数据库。PHP 5.6 或者更低版本以及其它数据库可能出现未知问题（并且我不会去修复）。
+
+</details>
+
+<details><summary>为什么表情包 404？</summary><br>
+
+上一个版本的 OwO 表情全部存储于 GitHub 仓库使用 JsDelivr 加速，但是由于仓库同时存储其他文件体积过大 JsDelivr CDN 失效，所以此版本以后的 OwO 依旧存储于主题文件夹 assets/libs/owo/biaoqing 文件夹下。请检查以下文件中表情路径是否正确：
+
+ - assets\libs\owo\owo.json `表情包名.container.icon`
+ - libs\Contents.php `L227` `L237` `L247` `L257`
+
+使用本地文件时，应该使用以下示例
+
+```
+# assets\libs\owo\owo.json
+{
+    "泡泡": {
+        "type": "image",
+        "container": [
+            {
+                "icon": "<img class=\"biaoqing\" data-src=\"/usr/themes/VOID/assets/libs/owo/biaoqing/paopao/E591B5E591B5_2x.png\">",
+                "data": "::(呵呵)",
+                "text": "呵呵"
+            }
+        ]
+    }
+}
+
+# libs\Contents.php
+    /**
+     * 阿鲁表情回调函数
+     * 
+     * @return string
+     */
+    private static function parseAruBiaoqingCallback($match)
+    {
+        return '<img class="biaoqing" src="/usr/themes/VOID/assets/libs/owo/biaoqing/aru/'. str_replace('%', '', urlencode($match[1])) . '_2x.png">';
+    }
+```
+
+默认的静态资源 CDN 设置对 OwO 表情无法生效，需要 **自行修改** 这两个文件进行。如果你不明白怎么修改请忽略。另外主题 biaoqing 文件夹中还包含很多主题未启用的表情包，喜欢折腾可以自行搭配自己喜欢的表情包组。
 
 </details>
 

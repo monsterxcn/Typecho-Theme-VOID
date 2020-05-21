@@ -217,7 +217,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         // VOID.alert('Welcome!');
         // 清理 console 统一输出版权
         console.log = function() {}
-        console.warn("\n %c "+"VOID v".concat("3.4.1"," %c Simple Typecho Theme \n\n%c")
+        console.warn("\n %c "+"VOID v"+VOIDConfig.version+" ".concat("%c Simple Typecho Theme \n\n%c")
         +"> https://github.com/monsterxcn/Typecho-Theme-VOID\n"<?php
         if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')
             echo '+"> https://github.com/AlanDecode/Typecho-Plugin-ExSearch\n"';
