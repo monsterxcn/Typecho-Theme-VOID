@@ -310,20 +310,15 @@ MermaidJS 按照页面从上向下的顺序依次渲染图表，请务必保证�
 
 > This Is A Fork From [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID) But Show My Contributions.
 
-指引：安装 NodeJS 环境 > clone repo > 安装依赖 > 打包依赖的 JavaScript & CSS > 你构建的主题
+指引：安装 NodeJS 环境 > clone repo > 安装依赖 > 打包依赖的 JavaScript & CSS > 你构建的主题。以下是我的一些未必有用的提示：
 
  - 关于安装 node-sass 出错请参考《 [安装 node-sass 的正确姿势 - Issue #28 - lmk123/blog](https://github.com/lmk123/blog/issues/28) 》
+ - 如果需要你可以尝试将 nodejs 升级至 latest 版本
  - 如果需要你可以尝试在主题仓库根目录下执行 `rm -rf node-modules package-lock.json` 后再安装依赖
  - 如果你对自己的更改很满意或者有很妙的修改想法，**欢迎提出 Pull Request 或 Issues**
 
 ```bash
 git clone https://github.com/monsterxcn/Typecho-Theme-VOID ./VOID && cd ./VOID
-
-# 使用 cnpm 请参考
-alias cnpm="npm --registry=https://registry.npm.taobao.org \
---cache=$HOME/.npm/.cache/cnpm \
---disturl=https://npm.taobao.org/mirrors/node \
---userconfig=$HOME/.cnpmrc"
 
 # 安装依赖
 npm install -g gulp
