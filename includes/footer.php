@@ -195,6 +195,14 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <?php if($setting['pjax']): ?>
         <script>
             $(document).on('pjax:complete',function(){
+                <?php if(Utils::isPluginAvailable('Meting') || Utils::isPluginAvailable('APlayer')): ?>
+                if (typeof aplayers !== 'undefined'){
+                    for (var i = 0; i < aplayers.length; i++) {
+                        try {aplayers[i].destroy()} catch(e){}
+                    }
+                }
+                loadMeting();
+                <?php endif; ?>
                 <?php echo $setting['pjaxreload']; ?>
             })
             <?php if(Utils::isPluginAvailable('ExSearch') || ($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true')): ?>

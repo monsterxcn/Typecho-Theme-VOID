@@ -80,10 +80,9 @@
 
 ## 更新动态
 
-### 2020-05-21
+### 2020-05-25
 
-* 修复：owo 表情仓库失效
-* 优化：滑动条样式
+* 优化：Meting APlayer 播放器 Pjax 兼容
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
