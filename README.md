@@ -15,9 +15,11 @@
 
 作为计算机术语时，VOID 的意思是「无类型」。要了解原版 VOID 主题，请先阅读介绍文章《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库说明《[AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)》，本仓库结构、使用方式与原主题相同，请不要直接下载仓库使用，如果你一定要下载仓库，那么请切换 nightly 分支。
 
-本仓库是我从原主题 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020 之后的 git 地址导入的，所以显示了所有 Alan 大佬的 commit history 。至于不 fork 是因为 fork 仓库修改时似乎无法显示我的 Contributions。本仓库的二次开发主要是 **一些针对自用需求的修改** ，所以可能无法像原主题一样适合更多人。而且由于我技术不精，很多地方使用了仿写的方式来实现功能、部分地方代码写的可能不规范、也可能出现莫名其妙的 Bug，请谨慎将本主题投入生产环境。关于本仓库与原主题仓库代码的同步策略：凡是原主题无关样式调整的 commit 本主题都将及时同步，其余看心情同步。关于版本号：从 3.4.1 版本（此版本更新内容基本涵盖了原主题 3.5.0 版本绝大部分修改）为起点发布，所有版本号不会比原主题版本号更高。
+本仓库是我从原主题 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020 之后的 git 地址导入的，二次开发主要针对 **一些自用需求** 。而且由于我技术不精，很多地方使用了仿写的方式来实现功能、部分地方代码写的可能不规范、也可能出现莫名其妙的 Bug，请谨慎将本主题投入生产环境。
 
-如果你使用了本主题且发现 Bug 请务必提出 issues 让我知道。
+凡是原仓库重要的 commit 本仓库都将及时同步。关于版本号：从 3.4.1 版本（此版本更新内容基本涵盖了原主题 3.5.0 版本绝大部分修改）为起点发布。
+
+如果你使用了本主题且发现 Bug 请提出 issues 帮助改进。
 
 ## 特性
 
@@ -80,9 +82,10 @@
 
 ## 更新动态
 
-### 2020-05-25
+### 2020-06-11
 
-* 优化：Meting APlayer 播放器 Pjax 兼容
+* 修复：CDN 配置错误
+* 调整：桌面端导航栏项目间隔
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -92,7 +95,7 @@
 
 仓库中的是未压缩的源代码，包含大量实际使用中不需要的文件，并且可能无法直接使用。请一定通过这两个链接下载主题：[发布版](https://github.com/monsterxcn/Typecho-Theme-VOID/releases) | [开发版](https://github.com/monsterxcn/Typecho-Theme-VOID/archive/nightly.zip)。注意其中发布版是下载 VOID-x.x.x.zip 这个压缩包，而不是 Source code，发布版压缩包中包含了当前最新的主题文件和插件文件。
 
-如果不是上面的问题，请检查你的 CDN 配置结尾是否含 `/` 。
+如果不是上面的问题，请检查你的 CDN 地址配置结尾是否含 `/` 如果含有请删去。
 
 如果不介意 Bug 可以直接从命令行安装主题：
 
