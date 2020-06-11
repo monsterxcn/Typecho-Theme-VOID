@@ -144,7 +144,7 @@ function themeConfig($form)
     $form->addInput($pjaxreload);
     $serviceworker = new Typecho_Widget_Helper_Form_Element_Text('serviceworker', null, null, '自定义 Service Worker', '如果你知道这是什么，请把你的 SW 文件（例如主题 assets 文件夹下的 VOIDCacheRule.js）复制一份到<b>站点根目录</b>，并在这里填写文件名（例如 VOIDCacheRule.js）。若不知道该选项含义，请留空此项。');
     $form->addInput($serviceworker);
-    $assetsCDN = new Typecho_Widget_Helper_Form_Element_Text('assetsCDN', null, null, '自定义 CDN', '使用 CDN 来加速主题 assets 目录下的静态资源，这里填写 CDN 地址（填写 assets 目录地址，如 https://cdn.monsterx.cn/VOIDassets/）。若不知道该选项含义，请留空此项。');
+    $assetsCDN = new Typecho_Widget_Helper_Form_Element_Text('assetsCDN', null, null, '自定义 CDN', '使用 CDN 来加速主题 assets 目录下的静态资源，这里填写 CDN 地址（填写 assets 目录地址，<b>结尾无 /</b> ，如 https://cdn.monsterx.cn/VOIDassets）。若不知道该选项含义，请留空此项。');
     $form->addInput($assetsCDN);
 
     // 超高级设置
