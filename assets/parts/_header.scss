@@ -42,10 +42,13 @@ header{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 0.3rem 0.55rem;
+                padding: 0.3rem 1.3rem;
                 transition: 0.3s $animationTimingFunc all;
                 color: $headerTextColor;
                 height: 100%;
+                @media screen and (max-width: 767px) {
+                    padding: 0.3rem 0.55rem;
+                }
                 @media screen and (min-width: 1024.5px) {
                     &:hover {
                         color: $headerTextColor-highlight;
