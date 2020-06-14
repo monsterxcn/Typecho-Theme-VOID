@@ -82,10 +82,9 @@
 
 ## 更新动态
 
-### 2020-06-11
+### 2020-06-14
 
-* 修复：CDN 配置错误
-* 调整：桌面端导航栏项目间隔
+* 调整：GitHub Action 优化
 
 在这里查看我的历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
