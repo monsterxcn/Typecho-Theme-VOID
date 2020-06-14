@@ -2,12 +2,10 @@ node_modules/*
 temp/*
 build/*
 .vscode/*
-build.zip
 assets/bundle*.js
 assets/bundle*.css
 assets/VOID*.css
 assets/VOID*.css.map
-pageLinks.php
 advanceSetting.json
 todo.md
 .DS_Store

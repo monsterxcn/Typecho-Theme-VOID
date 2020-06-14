@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "del": "^3.0.0",
     "eslint": "^5.12.1",

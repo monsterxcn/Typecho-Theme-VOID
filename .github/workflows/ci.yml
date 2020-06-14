@@ -11,17 +11,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
 
-    - name: Set up Node 10
+    - name: Setup
       uses: actions/setup-node@v1
       with:
-        node-version: '10.x'
+        node-version: '14.x'
+    
+    - name: Cache
+      uses: actions/cache@v1
+      env:
+        cache-name: dev-node-modules
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
 
     - name: Build
       run: |
-        make
-    - name: Deploy Build
+        npm install
+        npm run build
+    
+    - name: Deploy
       uses: docker://peaceiris/gh-pages:v2
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
