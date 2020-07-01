@@ -176,11 +176,11 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
 
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <?php if($setting['enableMermaid']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/MyBucket/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
         <script src="<?php echo $assetsUrl.'/VOID.js'; ?>"></script>

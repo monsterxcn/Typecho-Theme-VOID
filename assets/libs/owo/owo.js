@@ -55,7 +55,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 position: 'down',
                 width: '100%',
                 maxHeight: '250px',
-                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/Storage/owoEmoji/owo.json'
+                api: 'https://cdn.jsdelivr.net/gh/monsterxcn/MyBucket/owoEmoji/owo.json'
             };
             for (var defaultKey in defaultOption) {
                 if (defaultOption.hasOwnProperty(defaultKey) && !option.hasOwnProperty(defaultKey)) {
