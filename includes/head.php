@@ -73,7 +73,7 @@ if (isset($_POST['void_action'])) {
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
-    <script src="<?php echo $assetsUrl.'/bundle-header-6c33d6425c.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/bundle-header-7550f25c80.js'; ?>"></script>
 
     <?php if($this->fields->artalk != ''): ?>
     <script type="text/javascript" src="<?php echo $assetsUrl.'/artalk.js'; ?>"></script>

@@ -132,7 +132,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-723f868def.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-4727f38f00.js'; ?>"></script>
 
         <script>
         if($(".OwO").length > 0){
@@ -176,14 +176,14 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
 
         <?php if($setting['enableMath']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mathjax/2.7.4/MathJax.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/MathJax/2.7.8/unpacked/MathJax.js?config=TeX-AMS-MML_SVG"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js?config=TeX-AMS-MML_SVG"></script>
         <?php endif; ?>
         <?php if($setting['enableMermaid']): ?>
         <!--<script src='<?php echo $assetsUrl.'/libs/mermaid/mermaid.js'; ?>'></script>-->
-        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/Storage/mermaid/mermaid.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/monsterxcn/MyBucket/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-2d6f72137f.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-118c26fa6e.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>

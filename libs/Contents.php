@@ -82,7 +82,7 @@ Class Contents
     {
         $text = empty($last)?$data:$last;
         if ($widget instanceof Widget_Archive) {
-            $text = self::parseRuby($text);
+            // $text = self::parseRuby($text);
             $text = self::parseFancyBox($text, $widget->parameter->__get('type') == 'feed');
             $text = self::parseBiaoQing($text);
             $text = self::parsePhotoSet($text);
@@ -100,7 +100,7 @@ Class Contents
     {
         $text = empty($last)?$data:$last;
         if ($widget instanceof Widget_Archive) {
-            $text = self::parseRuby($text);
+            // $text = self::parseRuby($text);
             $text = self::parseBiaoQing($text);
             $text = self::parseNotice($text);
             // 去除照片集标记
@@ -412,14 +412,16 @@ Class Contents
      * 解析 ruby
      * 
      * @return string
+     *
+     * static public function parseRuby($string)
+     * {
+     *     $reg='/\{\{(.*?):(.*?)\}\}/s';
+     *     $rp='<ruby>${1}<rp>(</rp><rt>${2}</rt><rp>)</rp></ruby>';
+     *     $new=preg_replace($reg,$rp,$string);
+     *     return $new;
+     * }
+     * 
      */
-    static public function parseRuby($string)
-    {
-        $reg='/\{\{(.*?):(.*?)\}\}/s';
-        $rp='<ruby>${1}<rp>(</rp><rt>${2}</rt><rp>)</rp></ruby>';
-        $new=preg_replace($reg,$rp,$string);
-        return $new;
-    }
 
     /**
      * 最近评论，过滤引用通告，过滤博主评论

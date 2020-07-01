@@ -1,5 +1,10 @@
 # Change log | 更新日志
 
+**2020-07-01**
+
+* 调整：owo 表情包公共 CDN
+* 移除：注音的增强 Markdown 语法
+
 **2020-06-14**
 
 * 调整：GitHub Action 优化
