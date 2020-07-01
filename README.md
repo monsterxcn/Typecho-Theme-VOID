@@ -13,9 +13,9 @@
 </div></br>
 
 
-作为计算机术语时，VOID 的意思是「无类型」。了解原版 VOID 主题请查看《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库 [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)。本主题结构、使用方式与原主题相同，可以切换 nightly 分支下载仓库作为主题使用。
+作为计算机术语时，VOID 的意思是「无类型」。了解原版 VOID 主题请查看《[VOID：现在可以公开的情报](https://blog.imalan.cn/archives/247/)》、特色演示《[示例页面](https://blog.imalan.cn/archives/194/)》以及原 GitHub 仓库 [AlanDecode/Typecho-Theme-VOID](https://github.com/AlanDecode/Typecho-Theme-VOID)。本主题结构、使用方式与原主题相同，可以 **切换 nightly 分支下载仓库** 作为主题使用。
 
-本仓库二次开发起点为原仓库 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020，二次开发主要针对一些 **自用需求** ，请谨慎将本主题投入生产环境。我会及时同步原仓库重要 commit 。另外发布版本图一乐，请不要在意 Release 版本号。如果你使用了本主题且发现 Bug 请提出 issues 帮助改进，谢谢。
+本仓库二次开发起点为原仓库 Commit [4931ecb](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/4931ecb4e3ce21761afaf2fc9f2e414311d2b20a) on Mar 18, 2020，主要针对一些 **自用需求** ，请谨慎将本主题投入生产环境。我会及时同步原仓库重要 commit 。另外发布版本图一乐，请不要在意 Release 版本号。如果你使用了本主题且发现 Bug 请提出 issues 帮助改进，谢谢。
 
 ## 特性
 
@@ -78,9 +78,10 @@
 
 ## 更新动态
 
-### 2020-06-14
+### 2020-07-01
 
-* 调整：GitHub Action 优化
+* 调整：owo 表情包公共 CDN
+* 移除：注音的增强 Markdown 语法
 
 历史更新动态 [change-log.md](https://github.com/monsterxcn/Typecho-Theme-VOID/blob/master/change-log.md)
 
@@ -297,6 +298,9 @@ MermaidJS 按照页面从上向下的顺序依次渲染图表，请务必保证�
 <details><summary>其他增强的 Markdown 语法</summary><br>
 
 * 注音语法：`{{文本:zhu yin}}`，会渲染为：<ruby>文本<rp> (</rp><rt>zhu yin</rt><rp>)</rp></ruby>
+
+  **注音语法的增强 Markdown 写法已经移除，但 HTML 写法依旧可用**
+
 * notice 提示块：`[notice]提示内容[/notice]`
 
 </details>
