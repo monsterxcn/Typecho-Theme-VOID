@@ -7,7 +7,7 @@
  * 
  * @package     VOID
  * @author      熊猫小A
- * @version     3.4.2
+ * @version     3.4.3
  * @link        https://blog.imalan.cn/archives/247/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
