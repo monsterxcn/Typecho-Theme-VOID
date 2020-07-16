@@ -1,5 +1,11 @@
 # Change log | 更新日志
 
+**🍰 2020-07-16 Version 3.4.3 Release**
+
+**2020-07-16**
+
+* 修复：时间轴显示未发布文章 [commit fb8b7e6](https://github.com/AlanDecode/Typecho-Theme-VOID/commit/fb8b7e6af1cb40e627cb77d0a2c2b936c37372d3)
+
 **2020-07-01**
 
 * 调整：owo 表情包公共 CDN
