@@ -132,7 +132,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         }
         </script>
         <?php endif; ?>
-        <script data-manual src="<?php echo $assetsUrl.'/bundle-4727f38f00.js'; ?>"></script>
+        <script data-manual src="<?php echo $assetsUrl.'/bundle-2d83f9728f.js'; ?>"></script>
 
         <script>
         if($(".OwO").length > 0){
@@ -183,7 +183,7 @@ $assetsUrl = (isset($setting['assetsCDN'])) ? $setting['assetsCDN'] : $this->opt
         <script src="https://cdn.jsdelivr.net/gh/monsterxcn/MyBucket/mermaid/mermaid.js"></script>
         <?php endif; ?>
 
-        <script src="<?php echo $assetsUrl.'/VOID-118c26fa6e.js'; ?>"></script>
+        <script src="<?php echo $assetsUrl.'/VOID-52a1ae10bc.js'; ?>"></script>
 
         <?php if($setting['VOIDPlugin'] == 'true' && Helper::options()->plugin('VOID')->exswitch == 'true'): ?>
         <script src="<?php Helper::options()->pluginUrl('/VOID/pages/exsearch.js'); ?>"></script>

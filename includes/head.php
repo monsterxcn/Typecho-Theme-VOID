@@ -73,7 +73,7 @@ if (isset($_POST['void_action'])) {
     <link rel="stylesheet" href="<?php Helper::options()->pluginUrl('/VOID/pages/pandabgm.css'); ?>">
     <?php endif; ?>
 
-    <script src="<?php echo $assetsUrl.'/bundle-header-7550f25c80.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/bundle-header-dee2544709.js'; ?>"></script>
 
     <?php if($this->fields->artalk != ''): ?>
     <script type="text/javascript" src="<?php echo $assetsUrl.'/artalk.js'; ?>"></script>
@@ -126,7 +126,7 @@ if (isset($_POST['void_action'])) {
     var bgmBase = '<?php Utils::index("/PandaBangumi"); ?>';
     <?php endif; ?>
     </script>
-    <script src="<?php echo $assetsUrl.'/header-51d24c3baa.js'; ?>"></script>
+    <script src="<?php echo $assetsUrl.'/header-1c723bfe8c.js'; ?>"></script>
     
     <style>
         <?php if(!empty($setting['desktopBannerHeight'])): ?>
